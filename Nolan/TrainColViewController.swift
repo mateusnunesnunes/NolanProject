@@ -6,7 +6,7 @@ import AVFoundation
  conceito de uma sgc nativa, e um layout editável de
  collection,sendo que essa é uma subclasse de CollectionView
  e aplica praticamente os mesmos métodos que seu pai.
- */
+ *///teste
 class TrainColViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout  {
     //variaveis de ligados a elementos que estão na ViewController
     @IBOutlet weak var viewMainTrain: UIView!
