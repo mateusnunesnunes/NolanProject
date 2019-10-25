@@ -83,7 +83,7 @@ public extension CHTCollectionViewWaterfallLayout.ItemRenderDirection {
     static let chtCollectionViewWaterfallLayoutItemRenderDirectionLeftToRight = 1
     @available(*, unavailable, renamed: "rightToLeft")
     static let chtCollectionViewWaterfallLayoutItemRenderDirectionRightToLeft = 2
-}
+}//teste
 
 extension CHTCollectionViewWaterfallLayout {
     public enum ItemRenderDirection: Int {
