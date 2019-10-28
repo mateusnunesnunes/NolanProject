@@ -21,8 +21,8 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
         let codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Train","Feed","Tonnig"])
         codeSegmented.backgroundColor = .clear
         viewSegmented.addSubview(codeSegmented)
-        viewMainTrain.layer.borderWidth = 2
-        viewMainTrain.layer.borderColor = UIColor.black.cgColor
+//        viewMainTrain.layer.borderWidth = 2
+//        viewMainTrain.layer.borderColor = UIColor.black.cgColor
         print("teste")
         //Configurando a collection view
         model.buildDataSource()
@@ -64,9 +64,9 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
         //Cria a celula e retorna a celula
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageUICollectionViewCell
         // Adiciona as imagem presentes no array
-//        cell.image.image = model.images[indexPath.row]
-        cell.backgroundColor = .lightGray
-        cell.layer.borderWidth = 1
+        cell.image.image = model.images[indexPath.row]
+//        cell.backgroundColor = .lightGray
+        cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.cornerRadius = 10
         return cell

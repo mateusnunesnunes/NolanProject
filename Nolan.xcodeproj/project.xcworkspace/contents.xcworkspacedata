@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Nolan.xcodeproj">
+      location = "group:/Users/mateusnunes/NolanProject/Nolan/LaunchScreen.storyboard">
+   </FileRef>
+   <FileRef
+      location = "group:../Nolan/Base.lproj/Main.storyboard">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
