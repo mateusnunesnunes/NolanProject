@@ -95,21 +95,9 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     
 //      TODO: instanciar a sessaoViewControler
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Secao \(indexPath.section) Linha \(indexPath.row)")
-        
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "SessaoViewController") as? SessaoViewController{
-            
-            let poses = Singleton.shared.poses[indexPath.row]
-            
-            vc.lblTituloSessao.text = poses.name
-            vc.lblDificuldade.text = poses.difficulty
-            vc.imagemSessao.image = poses.photo
-            vc.lblNomeSessao.text = "TYPE"
-            vc.lblLength.text = "LENGTH"
-            vc.lblCategoria.text = poses.category
-            vc.lblTempoDuracao.text = poses.length
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let sessaoViewController = storyBoard.instantiateViewController(withIdentifier: "sessao") as! SessaoViewController
+        sessaoViewController.indice = indexPath.item
+        self.present(sessaoViewController, animated: true, completion: nil)
     }
 }

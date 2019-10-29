@@ -10,8 +10,8 @@ import UIKit
 
 class SessaoViewController: UIViewController {
     
-    var sessions = Singleton.shared.poses
-
+    
+    var indice:Int!
     @IBOutlet weak var imagemSessao: UIImageView!
     @IBOutlet weak var lblTituloSessao: UILabel!
     @IBOutlet weak var lblDificuldade: UILabel!
@@ -22,7 +22,24 @@ class SessaoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        lblTituloSessao.text = Singleton.shared.poses[indice].name
+        lblDificuldade.text = Singleton.shared.poses[indice].difficulty
+        lblCategoria.text = Singleton.shared.poses[indice].category
+        lblNomeSessao.text = "TYPE"
+        lblTempoDuracao.text = Singleton.shared.poses[indice].length
+        lblLength.text = "LENGTH"
     }
+//    init(imagemSessao:UIImage,lblTituloSessao:String,lblDificuldade:String,lblCategoria:String,lblNomeSessao:String,lblTempoDuracao:String,lblLength:String) {
+//
+//        self.imagemSessao.image = imagemSessao
+//        self.lblTituloSessao.text = lblTituloSessao
+//        self.lblDificuldade.text = lblDificuldade
+//        self.lblCategoria.text = lblCategoria
+//        self.lblNomeSessao.text = lblNomeSessao
+//        self.lblTempoDuracao.text = lblTempoDuracao
+//        self.lblLength.text = lblLength
+//
+//    }
+    
     
 }
