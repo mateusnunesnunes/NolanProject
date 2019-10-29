@@ -50,7 +50,7 @@
 		0110A193235E40220064672A /* TrainColViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainColViewController.swift; sourceTree = "<group>"; };
 		0121E0FD236340E900FB3C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01662AB3235E767F00041C35 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
-		0179791E23634050003B9AA2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0179791E23634050003B9AA2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0193A3CC235FB3CA003C3F75 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		0193A3D023607A32003C3F75 /* ImageUICollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageUICollectionViewCell.xib; sourceTree = "<group>"; };
 		0193A3D423607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHTCollectionViewDelegateWaterfallLayout.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0110A190235E3BE80064672A /* Models */ = {
+		0110A190235E3BE80064672A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				0193A3CC235FB3CA003C3F75 /* Singleton.swift */,
@@ -112,17 +112,20 @@
 				0D1AF00723632208000A8F56 /* Session.swift */,
 				0D1AF009236322A0000A8F56 /* Video.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		0110A195235E6F650064672A /* Views */ = {
+		0110A195235E6F650064672A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01662AB2235E75A400041C35 /* Layouts */,
+				0179791E23634050003B9AA2 /* Main.storyboard */,
+				0121E0F8236340A100FB3C06 /* LaunchScreen.storyboard */,
 				0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */,
 				019BF57D23573F2C00F3E164 /* Assets.xcassets */,
 				0193A3D023607A32003C3F75 /* ImageUICollectionViewCell.xib */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		01662AB2235E75A400041C35 /* Layouts */ = {
@@ -157,17 +160,12 @@
 		019BF57323573F2700F3E164 /* Nolan */ = {
 			isa = PBXGroup;
 			children = (
-				0179791E23634050003B9AA2 /* Main.storyboard */,
-				0121E0F8236340A100FB3C06 /* LaunchScreen.storyboard */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
-				0110A190235E3BE80064672A /* Models */,
-				01662AB2235E75A400041C35 /* Layouts */,
-				0110A195235E6F650064672A /* Views */,
-				019BF57823573F2700F3E164 /* ViewController.swift */,
-				0110A193235E40220064672A /* TrainColViewController.swift */,
+				0110A190235E3BE80064672A /* Model */,
+				0110A195235E6F650064672A /* View */,
+				A5187612236868A1001A8ACF /* Controler */,
 				019BF58223573F2C00F3E164 /* Info.plist */,
-				01C88B452363216900B27AFA /* SessaoViewController.swift */,
 			);
 			path = Nolan;
 			sourceTree = "<group>";
@@ -188,6 +186,16 @@
 				019BF59823573F2C00F3E164 /* Info.plist */,
 			);
 			path = NolanUITests;
+			sourceTree = "<group>";
+		};
+		A5187612236868A1001A8ACF /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				019BF57823573F2700F3E164 /* ViewController.swift */,
+				0110A193235E40220064672A /* TrainColViewController.swift */,
+				01C88B452363216900B27AFA /* SessaoViewController.swift */,
+			);
+			path = Controler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
