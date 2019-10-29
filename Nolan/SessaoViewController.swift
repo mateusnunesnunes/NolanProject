@@ -9,6 +9,8 @@
 import UIKit
 
 class SessaoViewController: UIViewController {
+    
+    var sessions = Singleton.shared.poses
 
     @IBOutlet weak var imagemSessao: UIImageView!
     @IBOutlet weak var lblTituloSessao: UILabel!
@@ -21,8 +23,9 @@ class SessaoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
+    
+    
     
 
     /*

@@ -14,7 +14,11 @@ class Singleton {
     static let shared = Singleton()
     var segmentedControlOption: Int!
     
-    let poses: [Session] = [Session(name: "Session 1", difficulty: "Hard", photo: UIImage(named: "image1")!, pose: [Pose(name: "Pose 1", difficulty: "Hard", types: "dont know", steps: ["first- ksdksa, second- jsjadbjam, third- jajsdjsa"], favorite: true), Pose(name: "Pose 2", difficulty: "Easy", types: "ajsndkasdas", steps: ["dknsaias", "ndaidsa", "jsdiasd"], favorite: false), Pose(name: "Pose 3", difficulty: "kdcsk", types: "jdnfsnfsdk", steps: ["sdknfsdkf", "sdnsnsj", "sdjknnasj"], favorite: false)])]
+    let poses: [Session] =
+    [
+        Session(name: "Session 1", difficulty: "Hard", photo: UIImage(named: "image1")!, pose: [Pose(name: "Pose 1", difficulty: "Hard", types: "dont know", steps: ["first- ksdksa, second- jsjadbjam, third- jajsdjsa"], favorite: true), Pose(name: "Pose 2", difficulty: "Easy", types: "ajsndkasdas", steps: ["dknsaias", "ndaidsa", "jsdiasd"], favorite: false), Pose(name: "Pose 3", difficulty: "kdcsk", types: "jdnfsnfsdk", steps: ["sdknfsdkf", "sdnsnsj", "sdjknnasj"], favorite: false)], category: "Focus", length: "5'")
+        
+    ]
     
     private init(){}
     
