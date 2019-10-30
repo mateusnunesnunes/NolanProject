@@ -28,6 +28,10 @@
 		0D1AF00623632113000A8F56 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00523632113000A8F56 /* Pose.swift */; };
 		0D1AF00823632208000A8F56 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00723632208000A8F56 /* Session.swift */; };
 		0D1AF00A236322A0000A8F56 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF009236322A0000A8F56 /* Video.swift */; };
+		472F3C432369C4CC00CDD2DE /* RKImmutableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C3F2369C4CC00CDD2DE /* RKImmutableTree.swift */; };
+		472F3C442369C4CC00CDD2DE /* RKImmutableJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C402369C4CC00CDD2DE /* RKImmutableJoint.swift */; };
+		472F3C452369C4CC00CDD2DE /* RKJointTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C412369C4CC00CDD2DE /* RKJointTree.swift */; };
+		472F3C462369C4CC00CDD2DE /* RKJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C422369C4CC00CDD2DE /* RKJoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,12 +73,16 @@
 		019BF59223573F2C00F3E164 /* NolanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NolanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		019BF59623573F2C00F3E164 /* NolanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NolanUITests.swift; sourceTree = "<group>"; };
 		019BF59823573F2C00F3E164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C88B452363216900B27AFA /* SessaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessaoViewController.swift; sourceTree = "<group>"; };
 		0D1AF00123631E5C000A8F56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0D1AF00323631F97000A8F56 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		0D1AF00523632113000A8F56 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		0D1AF00723632208000A8F56 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0D1AF009236322A0000A8F56 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		01C88B452363216900B27AFA /* SessaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessaoViewController.swift; sourceTree = "<group>"; };
+		472F3C3F2369C4CC00CDD2DE /* RKImmutableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKImmutableTree.swift; path = ../RKJoint/RKImmutableTree.swift; sourceTree = "<group>"; };
+		472F3C402369C4CC00CDD2DE /* RKImmutableJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKImmutableJoint.swift; path = ../RKJoint/RKImmutableJoint.swift; sourceTree = "<group>"; };
+		472F3C412369C4CC00CDD2DE /* RKJointTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKJointTree.swift; path = ../RKJoint/RKJointTree.swift; sourceTree = "<group>"; };
+		472F3C422369C4CC00CDD2DE /* RKJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKJoint.swift; path = ../RKJoint/RKJoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +168,7 @@
 		019BF57323573F2700F3E164 /* Nolan */ = {
 			isa = PBXGroup;
 			children = (
+				472F3C472369C4D400CDD2DE /* RKJointWrapper */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
 				0110A190235E3BE80064672A /* Models */,
@@ -189,6 +198,17 @@
 				019BF59823573F2C00F3E164 /* Info.plist */,
 			);
 			path = NolanUITests;
+			sourceTree = "<group>";
+		};
+		472F3C472369C4D400CDD2DE /* RKJointWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				472F3C402369C4CC00CDD2DE /* RKImmutableJoint.swift */,
+				472F3C3F2369C4CC00CDD2DE /* RKImmutableTree.swift */,
+				472F3C422369C4CC00CDD2DE /* RKJoint.swift */,
+				472F3C412369C4CC00CDD2DE /* RKJointTree.swift */,
+			);
+			path = RKJointWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,13 +350,17 @@
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
 				0D1AF00A236322A0000A8F56 /* Video.swift in Sources */,
+				472F3C452369C4CC00CDD2DE /* RKJointTree.swift in Sources */,
 				0193A3CD235FB3CA003C3F75 /* Singleton.swift in Sources */,
 				019BF57523573F2700F3E164 /* AppDelegate.swift in Sources */,
 				0D1AF00823632208000A8F56 /* Session.swift in Sources */,
 				0193A3D523607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift in Sources */,
 				019BF57723573F2700F3E164 /* SceneDelegate.swift in Sources */,
+				472F3C462369C4CC00CDD2DE /* RKJoint.swift in Sources */,
 				0110A194235E40220064672A /* TrainColViewController.swift in Sources */,
+				472F3C432369C4CC00CDD2DE /* RKImmutableTree.swift in Sources */,
 				0D1AF00223631E5C000A8F56 /* User.swift in Sources */,
+				472F3C442369C4CC00CDD2DE /* RKImmutableJoint.swift in Sources */,
 				01662AB4235E767F00041C35 /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,7 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
