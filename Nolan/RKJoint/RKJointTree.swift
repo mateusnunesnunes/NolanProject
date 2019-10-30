@@ -162,4 +162,30 @@ class RKJointTree: Codable {
         
         return newTree
     }
+    
+    func score(to otherTree: RKImmutableJointTree, consideringJoints jointList: [String]) -> (Float, Float, Float, Float) { //Min, Max, Average, Median
+        
+        var squaredDistances: [Float] = []
+        
+        for jointName in jointList {
+            if let firstPosition = rootJoint?.findDescendantBy(name: jointName)?.absoluteTranslation,
+                let secondPosition = otherTree.rootJoint?.findDescendantBy(name: jointName)?.absoluteTranslation {
+                
+                let deltaX = (secondPosition.x - firstPosition.x) * 100 // Since our values are really small
+                let deltaY = (secondPosition.y - firstPosition.y) * 100 // Since our values are really small
+                let deltaZ = (secondPosition.z - firstPosition.z) * 100 // Since our values are really small
+                
+                let squaredDistance = deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ
+                
+                squaredDistances.append(squaredDistance)
+            }
+        }
+        
+        let min = squaredDistances.min() ?? -1
+        let max = squaredDistances.max() ?? -1
+        let avg = (squaredDistances.reduce(0, { $0 + $1}) / Float(squaredDistances.count)) ?? -1
+        let med = squaredDistances.sorted()[Int(squaredDistances.count/2)]
+        return (min, max, avg, med)
+        
+    }
 }
