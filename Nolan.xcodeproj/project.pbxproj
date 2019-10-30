@@ -27,6 +27,10 @@
 		0D1AF00623632113000A8F56 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00523632113000A8F56 /* Pose.swift */; };
 		0D1AF00823632208000A8F56 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00723632208000A8F56 /* Session.swift */; };
 		0D1AF00A236322A0000A8F56 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF009236322A0000A8F56 /* Video.swift */; };
+		0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */; };
+		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
+		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
+		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,10 @@
 		0D1AF00523632113000A8F56 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		0D1AF00723632208000A8F56 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0D1AF009236322A0000A8F56 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesTableViewCell.swift; sourceTree = "<group>"; };
+		0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePosesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,10 @@
 				0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */,
 				019BF57D23573F2C00F3E164 /* Assets.xcassets */,
 				0193A3D023607A32003C3F75 /* ImageUICollectionViewCell.xib */,
+				0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */,
+				0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */,
+				0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */,
+				0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,15 +342,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D1AF00623632113000A8F56 /* Pose.swift in Sources */,
+				0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */,
 				01C88B462363216900B27AFA /* SessaoViewController.swift in Sources */,
 				0193A3D923607C00003C3F75 /* Model.swift in Sources */,
+				0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */,
 				019BF57923573F2700F3E164 /* ViewController.swift in Sources */,
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
+				0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */,
 				0D1AF00A236322A0000A8F56 /* Video.swift in Sources */,
 				0193A3CD235FB3CA003C3F75 /* Singleton.swift in Sources */,
 				019BF57523573F2700F3E164 /* AppDelegate.swift in Sources */,
 				0D1AF00823632208000A8F56 /* Session.swift in Sources */,
+				0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */,
 				0193A3D523607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift in Sources */,
 				019BF57723573F2700F3E164 /* SceneDelegate.swift in Sources */,
 				0110A194235E40220064672A /* TrainColViewController.swift in Sources */,
