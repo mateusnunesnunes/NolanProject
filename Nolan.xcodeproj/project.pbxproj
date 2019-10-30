@@ -136,10 +136,6 @@
 				01662AB2235E75A400041C35 /* Layouts */,
 				A51876132369BAB1001A8ACF /* Cell */,
 				0179791E23634050003B9AA2 /* Main.storyboard */,
-				A51876192369BD50001A8ACF /* SessionPoseTableViewCell.swift */,
-				0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */,
-				0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */,
-				0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */,
 				0121E0F8236340A100FB3C06 /* LaunchScreen.storyboard */,
 				019BF57D23573F2C00F3E164 /* Assets.xcassets */,
 				0193A3D023607A32003C3F75 /* ImageUICollectionViewCell.xib */,
@@ -223,6 +219,10 @@
 		A51876132369BAB1001A8ACF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A51876192369BD50001A8ACF /* SessionPoseTableViewCell.swift */,
+				0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */,
+				0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */,
+				0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
