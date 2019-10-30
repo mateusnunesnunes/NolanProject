@@ -81,8 +81,8 @@ class RKImmutableJoint: Codable {
         
         // Searches for a descentand in our children, find the first non nil and return it
         let returnJoint = childrenJoints.map( { $0.findDescendantBy(name: name)} ).filter( {$0 != nil} ).first
-        return returnJoint ?? nil //TODO: Entender esse RKImmutableJoint??
         
+        return returnJoint ?? nil //TODO: Entender esse RKImmutableJoint??
     }
     
     /// Searchs for a joint on this joint's descendants by name, but also checks if this joint is the searched one

@@ -32,6 +32,11 @@
 		472F3C442369C4CC00CDD2DE /* RKImmutableJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C402369C4CC00CDD2DE /* RKImmutableJoint.swift */; };
 		472F3C452369C4CC00CDD2DE /* RKJointTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C412369C4CC00CDD2DE /* RKJointTree.swift */; };
 		472F3C462369C4CC00CDD2DE /* RKJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C422369C4CC00CDD2DE /* RKJoint.swift */; };
+		472F3C492369CCA400CDD2DE /* RKJointWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472F3C482369CCA400CDD2DE /* RKJointWeights.swift */; };
+		472F3C4E2369D2FC00CDD2DE /* PeProLado in Resources */ = {isa = PBXBuildFile; fileRef = 472F3C4A2369D2FC00CDD2DE /* PeProLado */; };
+		472F3C4F2369D2FC00CDD2DE /* T in Resources */ = {isa = PBXBuildFile; fileRef = 472F3C4B2369D2FC00CDD2DE /* T */; };
+		472F3C502369D2FC00CDD2DE /* TBugadoDeLado in Resources */ = {isa = PBXBuildFile; fileRef = 472F3C4C2369D2FC00CDD2DE /* TBugadoDeLado */; };
+		472F3C512369D2FC00CDD2DE /* BracoBaixo in Resources */ = {isa = PBXBuildFile; fileRef = 472F3C4D2369D2FC00CDD2DE /* BracoBaixo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		472F3C402369C4CC00CDD2DE /* RKImmutableJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKImmutableJoint.swift; path = ../RKJoint/RKImmutableJoint.swift; sourceTree = "<group>"; };
 		472F3C412369C4CC00CDD2DE /* RKJointTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKJointTree.swift; path = ../RKJoint/RKJointTree.swift; sourceTree = "<group>"; };
 		472F3C422369C4CC00CDD2DE /* RKJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKJoint.swift; path = ../RKJoint/RKJoint.swift; sourceTree = "<group>"; };
+		472F3C482369CCA400CDD2DE /* RKJointWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKJointWeights.swift; sourceTree = "<group>"; };
+		472F3C4A2369D2FC00CDD2DE /* PeProLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PeProLado; sourceTree = "<group>"; };
+		472F3C4B2369D2FC00CDD2DE /* T */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = T; sourceTree = "<group>"; };
+		472F3C4C2369D2FC00CDD2DE /* TBugadoDeLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TBugadoDeLado; sourceTree = "<group>"; };
+		472F3C4D2369D2FC00CDD2DE /* BracoBaixo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BracoBaixo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				472F3C472369C4D400CDD2DE /* RKJointWrapper */,
+				472F3C522369D30F00CDD2DE /* Poses */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
 				0110A190235E3BE80064672A /* Models */,
@@ -207,8 +218,20 @@
 				472F3C3F2369C4CC00CDD2DE /* RKImmutableTree.swift */,
 				472F3C422369C4CC00CDD2DE /* RKJoint.swift */,
 				472F3C412369C4CC00CDD2DE /* RKJointTree.swift */,
+				472F3C482369CCA400CDD2DE /* RKJointWeights.swift */,
 			);
 			path = RKJointWrapper;
+			sourceTree = "<group>";
+		};
+		472F3C522369D30F00CDD2DE /* Poses */ = {
+			isa = PBXGroup;
+			children = (
+				472F3C4D2369D2FC00CDD2DE /* BracoBaixo */,
+				472F3C4A2369D2FC00CDD2DE /* PeProLado */,
+				472F3C4B2369D2FC00CDD2DE /* T */,
+				472F3C4C2369D2FC00CDD2DE /* TBugadoDeLado */,
+			);
+			path = Poses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +341,10 @@
 				019BF58123573F2C00F3E164 /* LaunchScreen.storyboard in Resources */,
 				019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */,
 				0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */,
+				472F3C502369D2FC00CDD2DE /* TBugadoDeLado in Resources */,
+				472F3C512369D2FC00CDD2DE /* BracoBaixo in Resources */,
+				472F3C4F2369D2FC00CDD2DE /* T in Resources */,
+				472F3C4E2369D2FC00CDD2DE /* PeProLado in Resources */,
 				019BF57C23573F2700F3E164 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +377,7 @@
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
 				0D1AF00A236322A0000A8F56 /* Video.swift in Sources */,
+				472F3C492369CCA400CDD2DE /* RKJointWeights.swift in Sources */,
 				472F3C452369C4CC00CDD2DE /* RKJointTree.swift in Sources */,
 				0193A3CD235FB3CA003C3F75 /* Singleton.swift in Sources */,
 				019BF57523573F2700F3E164 /* AppDelegate.swift in Sources */,
