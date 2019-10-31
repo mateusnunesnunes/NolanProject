@@ -1,0 +1,6 @@
+framework module Pods_Nolan_NolanUITests {
+  umbrella header "Pods-Nolan-NolanUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

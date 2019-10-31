@@ -1,6 +1,7 @@
 
 import UIKit
 import AVFoundation
+
 /*Na presente classe são utilizados dois layouts, uma
  de segmented control, sendo que essa aplica o mesmo
  conceito de uma sgc nativa, e um layout editável de
@@ -20,12 +21,11 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     //Funcao chamada toda vez que a tela é carregada
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Configurações SegmentedControl
+                //Configurações SegmentedControl
         let codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Train","Feed","Tonnig"])
         codeSegmented.backgroundColor = .clear
         viewSegmented.addSubview(codeSegmented)
-
+        
 //        viewMainTrain.layer.borderWidth = 2
 //        viewMainTrain.layer.borderColor = UIColor.black.cgColor
         print("teste")
