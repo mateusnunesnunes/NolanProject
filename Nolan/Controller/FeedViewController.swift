@@ -10,17 +10,13 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
-    
-    
-
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var scanButoon: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let allPoses = Singleton.shared.poses.flatMap( {$0.pose} )
+    let allPoses = Singleton.shared.sessions.flatMap( {$0.pose} )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +30,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    //MARK: CollectionView
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return Singleton.shared.sessions[indice].pose.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritePoses", for: indexPath) as! FavoritePosesCollectionViewCell
+        
+        return cell
+    }
+    
+    
+    //MARK: TableView
+    //TODO: popular com um singleton de poses
+    var indice = 0
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allPoses.count
+        
+        return Singleton.shared.sessions[indice].pose.count
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,18 +72,4 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
-    
-    
-    //MARK: CollectionView
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-        return 1
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritePoses", for: indexPath) as! FavoritePosesCollectionViewCell
-//        cell.
-        return cell
-    }
 }

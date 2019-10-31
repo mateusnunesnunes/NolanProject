@@ -41,6 +41,7 @@
 		47B026CC236B07BB00E64011 /* TBugadoDeLado in Resources */ = {isa = PBXBuildFile; fileRef = 47B026C8236B07BB00E64011 /* TBugadoDeLado */; };
 		47B026CD236B07BB00E64011 /* BracoBaixo in Resources */ = {isa = PBXBuildFile; fileRef = 47B026C9236B07BB00E64011 /* BracoBaixo */; };
 		47B026CE236B07BB00E64011 /* PeProLado in Resources */ = {isa = PBXBuildFile; fileRef = 47B026CA236B07BB00E64011 /* PeProLado */; };
+		47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */; };
 		8080B9CF2B4AA5BEC3033700 /* Pods_Nolan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */; };
 		A0BB02E77686BFDE260F99BB /* Pods_Nolan_NolanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */; };
 		A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876172369BC9E001A8ACF /* RoundedImage.swift */; };
@@ -110,6 +111,7 @@
 		47B026C8236B07BB00E64011 /* TBugadoDeLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TBugadoDeLado; sourceTree = "<group>"; };
 		47B026C9236B07BB00E64011 /* BracoBaixo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BracoBaixo; sourceTree = "<group>"; };
 		47B026CA236B07BB00E64011 /* PeProLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PeProLado; sourceTree = "<group>"; };
+		47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewARPoseViewController.swift; sourceTree = "<group>"; };
 		58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.release.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.release.xcconfig"; sourceTree = "<group>"; };
 		6A653460CD644B1726424463 /* Pods-NolanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NolanTests.release.xcconfig"; path = "Target Support Files/Pods-NolanTests/Pods-NolanTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F81813D0A595FD623D8A871 /* Pods-Nolan-NolanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.release.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -217,7 +219,7 @@
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
 				0110A190235E3BE80064672A /* Model */,
 				0110A195235E6F650064672A /* View */,
-				A5187612236868A1001A8ACF /* Controler */,
+				A5187612236868A1001A8ACF /* Controller */,
 				019BF58223573F2C00F3E164 /* Info.plist */,
 				01728AA4236A10E000CB2C18 /* GoogleService-Info.plist */,
 			);
@@ -297,9 +299,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5187612236868A1001A8ACF /* Controler */ = {
+		A5187612236868A1001A8ACF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */,
 				019BF57823573F2700F3E164 /* ViewController.swift */,
 				0110A193235E40220064672A /* TrainColViewController.swift */,
 				01C88B452363216900B27AFA /* SessaoViewController.swift */,
@@ -307,7 +310,7 @@
 				0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */,
 				A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */,
 			);
-			path = Controler;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A51876132369BAB1001A8ACF /* Cell */ = {
@@ -578,6 +581,7 @@
 				47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */,
 				47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */,
 				01C88B462363216900B27AFA /* SessaoViewController.swift in Sources */,
+				47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */,
 				0193A3D923607C00003C3F75 /* Model.swift in Sources */,
 				0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */,
 				47B026C6236B07AF00E64011 /* RKJointTree.swift in Sources */,

@@ -9,11 +9,28 @@
 import UIKit
 
 class PoseDescriptionViewController: UIViewController {
+    
+    var pose: Pose?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let singletonIndex = indexPath.row
+        self.performSegue(withIdentifier: "viewPose", sender: pose)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPose" {
+            if let destination = segue.destination as? ViewARPoseViewController, let pose = sender as? Pose {
+                
+                destination.pose = pose
+                
+            }
+        }
     }
     
 

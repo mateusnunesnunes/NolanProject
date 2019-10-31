@@ -2,12 +2,12 @@
 import UIKit
 import AVFoundation
 
-/*Na presente classe são utilizados dois layouts, uma
+/** Na presente classe são utilizados dois layouts, uma
  de segmented control, sendo que essa aplica o mesmo
  conceito de uma sgc nativa, e um layout editável de
  collection,sendo que essa é uma subclasse de CollectionView
  e aplica praticamente os mesmos métodos que seu pai.
- *///teste
+ */
 class TrainColViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout  {
     //variaveis de ligados a elementos que estão na ViewController
     @IBOutlet weak var viewMainTrain: UIView!
@@ -15,14 +15,14 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     
     //constante chamada model do tipo Model() e singleton tipo Singleton()
-    var sessions = Singleton.shared.poses
+    var sessions = Singleton.shared.sessions
     let model = Model()
     
     //Funcao chamada toda vez que a tela é carregada
     override func viewDidLoad() {
         super.viewDidLoad()
                 //Configurações SegmentedControl
-        let codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Train","Feed","Tonnig"])
+        let codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Train","Feed","Tonning"])
         codeSegmented.backgroundColor = .clear
         viewSegmented.addSubview(codeSegmented)
         
@@ -93,11 +93,26 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
         return imageSize
     }
     
-//      TODO: instanciar a sessaoViewControler
+    
+    // ==========  Segue stuff =========
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let sessaoViewController = storyBoard.instantiateViewController(withIdentifier: "sessao") as! SessaoViewController
-        sessaoViewController.indice = indexPath.item
-        self.present(sessaoViewController, animated: true, completion: nil)
+        let singletonIndex = indexPath.item
+        print("Performing segue to session")
+        self.performSegue(withIdentifier: "showSession", sender: singletonIndex)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Preparing segue to session")
+        if segue.identifier == "showSession" {
+            if let destination = segue.destination as? SessaoViewController, let index = sender as? Int {
+                
+                print("Index \(index) set in SessaoViewController")
+                destination.indice = index
+                
+            }
+        }
+    }
+    
+    
 }

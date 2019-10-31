@@ -14,7 +14,7 @@ class Singleton {
     static let shared = Singleton()
     var segmentedControlOption: Int!
     
-    let poses: [Session] =
+    let sessions: [Session] =
     [
         Session(name: "Yang TaiChiChuan", difficulty: "Begginer", photo: UIImage(named: "image1")!, pose: [
             Pose(
@@ -26,7 +26,8 @@ class Singleton {
                 "Dobrar os braços e esticar a palma das mãos",
                 "Imagine-se acariciando a crina de um cavalo"
                 ],
-                favorite: true
+                favorite: true,
+                jsonFilename: ""
             ),
             Pose(
                 name: "BAI HE LIANG CHI",
@@ -36,7 +37,8 @@ class Singleton {
                 "Flexionar os joelhos e se imaginar na mata",
                 "Abrir e fechar seus braços, encostando uma mão na outra",
                 "Repetir esse movimento delicadamente, imitando uma garça abrindo e fechando suas asas"],
-                favorite: false
+                favorite: false,
+                jsonFilename: ""
             ),
             Pose(
                 name: "SHOU HUI PIPA",
@@ -46,7 +48,9 @@ class Singleton {
                     "Flexionar os joelhos e deixar as costas eretas",
                     "Respirar levemente e se imaginar em contato com a natureza",
                     "Se imaginar tocando harpa em um local bem silencioso"],
-                favorite: false),
+                favorite: false,
+                jsonFilename: ""
+            ),
             Pose(
                 name: "DAO-NIAN-HOU",
                 difficulty: "Easy",
@@ -56,7 +60,8 @@ class Singleton {
                 "Repetir esses movimento calmamente",
                 "Imagine-se empurrando e puxando um macaco"
                 ],
-                favorite: true
+                favorite: true,
+                jsonFilename: ""
             ),
             Pose(
                 name: "LAN QUE WEI",
@@ -67,7 +72,8 @@ class Singleton {
                 "Imagine-se alisando a calda de um pardal",
                 "Flexione os joelhos e os braços e repita"
                 ],
-                favorite: true
+                favorite: true,
+                jsonFilename: ""
             ),
             Pose(
                 name: "YUN SHOU",
@@ -78,7 +84,8 @@ class Singleton {
                 "Siga as nuvens com suas mão, realizando movimentos delicados",
                 "Realize movimentos laterais com calma e se imagine no meio das nuvens"
                 ],
-                favorite: true
+                favorite: true,
+                jsonFilename: ""
             )
             ],
                 category: "Focus",
