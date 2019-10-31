@@ -1,6 +1,0 @@
-framework module Pods_NolanTests {
-  umbrella header "Pods-NolanTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
