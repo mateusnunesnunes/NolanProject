@@ -13,4 +13,6 @@ class FavoritePosesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     
+    
+    
 }
