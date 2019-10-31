@@ -217,7 +217,7 @@
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
 				0110A190235E3BE80064672A /* Model */,
 				0110A195235E6F650064672A /* View */,
-				A5187612236868A1001A8ACF /* Controler */,
+				A5187612236868A1001A8ACF /* Controller */,
 				019BF58223573F2C00F3E164 /* Info.plist */,
 				01728AA4236A10E000CB2C18 /* GoogleService-Info.plist */,
 			);
@@ -297,7 +297,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A5187612236868A1001A8ACF /* Controler */ = {
+		A5187612236868A1001A8ACF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				019BF57823573F2700F3E164 /* ViewController.swift */,
@@ -307,7 +307,7 @@
 				0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */,
 				A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */,
 			);
-			path = Controler;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A51876132369BAB1001A8ACF /* Cell */ = {

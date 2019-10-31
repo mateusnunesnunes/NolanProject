@@ -32,7 +32,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK: CollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return Singleton.shared.poses[indice].pose.count
+        return Singleton.shared.sessions[indice].pose.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -47,7 +47,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var indice = 0
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return Singleton.shared.poses[indice].pose.count
+        return Singleton.shared.sessions[indice].pose.count
         
     }
     

@@ -9,6 +9,8 @@
 import UIKit
 
 class PoseDescriptionViewController: UIViewController {
+    
+    var pose: Pose?
 
     override func viewDidLoad() {
         super.viewDidLoad()

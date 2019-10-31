@@ -30,36 +30,50 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     // chamar os itens do singleton para popular a tela
-    func updateInterface(){
+    func updateInterface() {
         
         // popular tela com infos da sessão
-        imagemSessao.image = Singleton.shared.poses[indice].photo
-        lblTituloSessao.text = Singleton.shared.poses[indice].name
-        lblDificuldade.text = Singleton.shared.poses[indice].difficulty
-        lblCategoria.text = Singleton.shared.poses[indice].category
+        imagemSessao.image = Singleton.shared.sessions[indice].photo
+        lblTituloSessao.text = Singleton.shared.sessions[indice].name
+        lblDificuldade.text = Singleton.shared.sessions[indice].difficulty
+        lblCategoria.text = Singleton.shared.sessions[indice].category
         lblNomeSessao.text = "TYPE"
-        lblTempoDuracao.text = Singleton.shared.poses[indice].length
+        lblTempoDuracao.text = Singleton.shared.sessions[indice].length
         lblLength.text = "LENGTH"
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let session = Singleton.shared.poses[indice].pose.count
+        let session = Singleton.shared.sessions[indice].pose.count
         
-        return Singleton.shared.poses[indice].pose.count
+        return Singleton.shared.sessions[indice].pose.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SessionPose", for: indexPath) as! SessionPoseTableViewCell
-        
-        
 
         return cell
     }
     
     
+    // Segue stuff ===
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let singletonIndex = indexPath.row
+        self.performSegue(withIdentifier: "showPose", sender: Singleton.shared.sessions[singletonIndex])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPose" {
+            if let destination = segue.destination as? PoseDescriptionViewController, let pose = sender as? Pose {
+                
+                destination.pose = pose
+                
+            }
+        }
+    }
     
 }

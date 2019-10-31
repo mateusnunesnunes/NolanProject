@@ -19,11 +19,14 @@ class Pose {
 //    var videoGif:
     var favorite: Bool
     
-    init(name: String, difficulty: String, types: String, steps: [String], favorite: Bool) {
+    var jsonFilename: String
+    
+    init(name: String, difficulty: String, types: String, steps: [String], favorite: Bool, jsonFilename: String) {
         self.name = name
         self.difficulty = difficulty
         self.types = types
         self.steps = steps
         self.favorite = favorite
+        self.jsonFilename = jsonFilename
     }
 }
