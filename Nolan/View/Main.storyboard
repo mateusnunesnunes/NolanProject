@@ -305,14 +305,43 @@
                     <view key="view" contentMode="scaleToFill" id="Rjz-EX-5wU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-ws-olL">
+                                <rect key="frame" x="160" y="433" width="95" height="30"/>
+                                <state key="normal" title="View AR Pose"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B3V-ws-olL" firstAttribute="centerY" secondItem="zKf-oJ-Ilq" secondAttribute="centerY" id="1hb-I9-KNW"/>
+                            <constraint firstItem="B3V-ws-olL" firstAttribute="centerX" secondItem="zKf-oJ-Ilq" secondAttribute="centerX" id="4VU-it-qYj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zKf-oJ-Ilq"/>
                     </view>
                     <navigationItem key="navigationItem" id="fk5-pl-nyr"/>
+                    <connections>
+                        <segue destination="za1-Of-ETf" kind="show" identifier="viewPose" id="8yA-yG-uDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8P-De-Wnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3460.8695652173915" y="-735.26785714285711"/>
+        </scene>
+        <!--ViewAR Pose View Controller-->
+        <scene sceneID="WCm-N1-Sa2">
+            <objects>
+                <viewController id="za1-Of-ETf" customClass="ViewARPoseViewController" customModule="Nolan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QVD-1B-vkY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cUx-wl-h5a"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OiS-Dq-5BS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5r-FL-0lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4213" y="-735"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="1em-A9-U8g">
