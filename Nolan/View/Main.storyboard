@@ -341,11 +341,45 @@
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Lx-Udh">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </arView>
+                            <stackView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sxo-qR-3yV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="145"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVb-Lj-jLZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nq5-4g-z1M">
+                                        <rect key="frame" x="0.0" y="37" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYa-zA-lQ4">
+                                        <rect key="frame" x="0.0" y="74" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75b-9Z-3Dd">
+                                        <rect key="frame" x="0.0" y="111" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Emi-Lx-Udh" secondAttribute="trailing" id="0EO-aE-b16"/>
+                            <constraint firstItem="sxo-qR-3yV" firstAttribute="leading" secondItem="Emi-Lx-Udh" secondAttribute="leading" id="2NO-LR-HGy"/>
                             <constraint firstItem="Emi-Lx-Udh" firstAttribute="top" secondItem="cUx-wl-h5a" secondAttribute="top" id="S9N-8e-f7A"/>
+                            <constraint firstItem="sxo-qR-3yV" firstAttribute="height" secondItem="Emi-Lx-Udh" secondAttribute="height" multiplier="0.2" id="VnX-iI-EQW"/>
+                            <constraint firstItem="sxo-qR-3yV" firstAttribute="trailing" secondItem="Emi-Lx-Udh" secondAttribute="trailing" id="b19-NX-56n"/>
+                            <constraint firstItem="sxo-qR-3yV" firstAttribute="top" secondItem="Emi-Lx-Udh" secondAttribute="top" id="gu3-7w-TgS"/>
                             <constraint firstItem="Emi-Lx-Udh" firstAttribute="leading" secondItem="QVD-1B-vkY" secondAttribute="leading" id="hX4-4T-u9F"/>
                             <constraint firstItem="cUx-wl-h5a" firstAttribute="bottom" secondItem="Emi-Lx-Udh" secondAttribute="bottom" id="lFU-da-OS0"/>
                         </constraints>
@@ -354,6 +388,10 @@
                     <navigationItem key="navigationItem" id="OiS-Dq-5BS"/>
                     <connections>
                         <outlet property="arView" destination="Emi-Lx-Udh" id="Pj9-yV-sEY"/>
+                        <outlet property="avgLabel" destination="pYa-zA-lQ4" id="aL9-7q-n9C"/>
+                        <outlet property="maxLabel" destination="Nq5-4g-z1M" id="Ogy-yx-Yw9"/>
+                        <outlet property="medLabel" destination="75b-9Z-3Dd" id="AqS-Mh-sk5"/>
+                        <outlet property="minLabel" destination="CVb-Lj-jLZ" id="TPC-fv-Ulf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5r-FL-0lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

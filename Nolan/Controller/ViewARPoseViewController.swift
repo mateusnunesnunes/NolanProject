@@ -14,6 +14,12 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
     var pose: Pose?
     
+    @IBOutlet weak var minLabel: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var avgLabel: UILabel!
+    @IBOutlet weak var medLabel: UILabel!
+    
+    
     // AR STUFF
     @IBOutlet weak var arView: ARView!
     
@@ -95,28 +101,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
             for anchor in anchors {
                 guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
-    
-                if timerUpdater == nil {
-                    timerUpdater = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (_) in
-                        
-                        if let character = self.character, let characterTree = self.characterTree {
-                            
-                            let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
-                            let jointNames = character.jointNames
-                            
-                            let joints = Array(zip(jointNames, jointModelTransforms))
-                            
-                            characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
-                            
-                            // TODO: Compare both trees
-                            
-                        }
-                        
-                    })
-                    
-                    timerUpdater?.fire()
-                }
-                
+
                 // Update the position of the character anchor's position.
                 let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
                 characterAnchor.position = bodyPosition + characterOffset
@@ -136,6 +121,31 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
                     
                     let joints = Array(zip(jointNames, jointModelTransforms))
                     characterTree = RKJointTree(from: joints, usingAbsoluteTranslation: true)
+                }
+                
+                if let characterTree = self.characterTree, let character = self.character {
+                    let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
+                    let jointNames = character.jointNames
+                    
+                    let joints = Array(zip(jointNames, jointModelTransforms))
+                    
+                    characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
+                    
+                    if let poseTree = self.poseTree {
+                        
+                        print("Updating labels")
+                        
+                        let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
+                        
+                        print("New values are \(min), \(max), \(avg), \(med)")
+                        
+                        self.minLabel.text = "min: " + min.description
+                        self.maxLabel.text = "max: " + max.description
+                        self.avgLabel.text = "avg: " + avg.description
+                        self.medLabel.text = "med: " + med.description
+                        
+                        
+                    }
                 }
             }
         }
