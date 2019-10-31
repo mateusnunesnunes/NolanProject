@@ -184,7 +184,8 @@ class RKJointTree: Codable {
         
         let min = squaredDistances.min() ?? -1
         let max = squaredDistances.max() ?? -1
-        let avg = (squaredDistances.reduce(0, { $0 + $1}) / Float(squaredDistances.count)>0 ? Float(squaredDistances.count) : 1)
+        let totalSum = squaredDistances.reduce(0, { $0 + $1})
+        let avg = totalSum / Float(squaredDistances.count > 0 ? squaredDistances.count : 1)
         let med = squaredDistances.sorted()[Int(squaredDistances.count/2)]
         return (min, max, avg, med)
         

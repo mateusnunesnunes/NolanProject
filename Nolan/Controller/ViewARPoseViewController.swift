@@ -32,6 +32,8 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     var timerUpdater: Timer?
     
     var poseTree: RKImmutableJointTree?
+    
+    var shouldUpdate = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +77,9 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         })
         
         // start timer
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+            self.shouldUpdate = true
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -123,30 +128,34 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
                     characterTree = RKJointTree(from: joints, usingAbsoluteTranslation: true)
                 }
                 
-                if let characterTree = self.characterTree, let character = self.character {
-                    let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
-                    let jointNames = character.jointNames
+                if shouldUpdate {
                     
-                    let joints = Array(zip(jointNames, jointModelTransforms))
-                    
-                    characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
-                    
-                    if let poseTree = self.poseTree {
+                    if let characterTree = self.characterTree, let character = self.character {
+                        let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
+                        let jointNames = character.jointNames
                         
-                        print("Updating labels")
+                        let joints = Array(zip(jointNames, jointModelTransforms))
                         
-                        let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
+                        characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
                         
-                        print("New values are \(min), \(max), \(avg), \(med)")
-                        
-                        self.minLabel.text = "min: " + min.description
-                        self.maxLabel.text = "max: " + max.description
-                        self.avgLabel.text = "avg: " + avg.description
-                        self.medLabel.text = "med: " + med.description
-                        
-                        
+                        if let poseTree = self.poseTree {
+                            
+                            print("Updating labels")
+                            
+                            let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
+                            
+                            print("New values are \(min), \(max), \(avg), \(med)")
+                            
+                            self.minLabel.text = "min: " + min.description
+                            self.maxLabel.text = "max: " + max.description
+                            self.avgLabel.text = "avg: " + avg.description
+                            self.medLabel.text = "med: " + med.description
+                        }
+
+                        shouldUpdate = false
                     }
                 }
+                
             }
         }
 
