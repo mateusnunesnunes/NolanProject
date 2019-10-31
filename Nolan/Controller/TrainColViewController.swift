@@ -108,7 +108,7 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
             if let destination = segue.destination as? SessaoViewController, let index = sender as? Int {
                 
                 print("Index \(index) set in SessaoViewController")
-                destination.indice = index
+                destination.sessionIndex = index
                 
             }
         }

@@ -309,6 +309,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-ws-olL">
                                 <rect key="frame" x="160" y="433" width="95" height="30"/>
                                 <state key="normal" title="View AR Pose"/>
+                                <connections>
+                                    <action selector="viewPosePressed:" destination="Njb-oD-Bf9" eventType="touchUpInside" id="iFU-LJ-heC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -334,10 +337,24 @@
                     <view key="view" contentMode="scaleToFill" id="QVD-1B-vkY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Lx-Udh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </arView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Emi-Lx-Udh" secondAttribute="trailing" id="0EO-aE-b16"/>
+                            <constraint firstItem="Emi-Lx-Udh" firstAttribute="top" secondItem="cUx-wl-h5a" secondAttribute="top" id="S9N-8e-f7A"/>
+                            <constraint firstItem="Emi-Lx-Udh" firstAttribute="leading" secondItem="QVD-1B-vkY" secondAttribute="leading" id="hX4-4T-u9F"/>
+                            <constraint firstItem="cUx-wl-h5a" firstAttribute="bottom" secondItem="Emi-Lx-Udh" secondAttribute="bottom" id="lFU-da-OS0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cUx-wl-h5a"/>
                     </view>
                     <navigationItem key="navigationItem" id="OiS-Dq-5BS"/>
+                    <connections>
+                        <outlet property="arView" destination="Emi-Lx-Udh" id="Pj9-yV-sEY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5r-FL-0lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -522,7 +539,6 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-KH-jGU">
                                                                     <rect key="frame" x="364" y="31" width="30" height="34"/>
-                                                                    <rect key="frame" x="376.66666666666669" y="31" width="17.333333333333314" height="22"/>
                                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </button>
                                                             </subviews>

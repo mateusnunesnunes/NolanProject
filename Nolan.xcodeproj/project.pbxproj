@@ -42,6 +42,7 @@
 		47B026CD236B07BB00E64011 /* BracoBaixo in Resources */ = {isa = PBXBuildFile; fileRef = 47B026C9236B07BB00E64011 /* BracoBaixo */; };
 		47B026CE236B07BB00E64011 /* PeProLado in Resources */ = {isa = PBXBuildFile; fileRef = 47B026CA236B07BB00E64011 /* PeProLado */; };
 		47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */; };
+		47BCD617236B98BA008D18B8 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 47BCD616236B98BA008D18B8 /* robot.usdz */; };
 		8080B9CF2B4AA5BEC3033700 /* Pods_Nolan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */; };
 		A0BB02E77686BFDE260F99BB /* Pods_Nolan_NolanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */; };
 		A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876172369BC9E001A8ACF /* RoundedImage.swift */; };
@@ -112,6 +113,7 @@
 		47B026C9236B07BB00E64011 /* BracoBaixo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BracoBaixo; sourceTree = "<group>"; };
 		47B026CA236B07BB00E64011 /* PeProLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PeProLado; sourceTree = "<group>"; };
 		47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewARPoseViewController.swift; sourceTree = "<group>"; };
+		47BCD616236B98BA008D18B8 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
 		58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.release.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.release.xcconfig"; sourceTree = "<group>"; };
 		6A653460CD644B1726424463 /* Pods-NolanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NolanTests.release.xcconfig"; path = "Target Support Files/Pods-NolanTests/Pods-NolanTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F81813D0A595FD623D8A871 /* Pods-Nolan-NolanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.release.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		019BF57323573F2700F3E164 /* Nolan */ = {
 			isa = PBXGroup;
 			children = (
+				47BCD616236B98BA008D18B8 /* robot.usdz */,
 				47B026D1236B07D400E64011 /* RKJointComparison */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
@@ -442,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47B026CC236B07BB00E64011 /* TBugadoDeLado in Resources */,
+				47BCD617236B98BA008D18B8 /* robot.usdz in Resources */,
 				019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */,
 				47B026CD236B07BB00E64011 /* BracoBaixo in Resources */,
 				0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */,

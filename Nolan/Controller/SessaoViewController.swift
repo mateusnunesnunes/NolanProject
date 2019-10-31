@@ -10,7 +10,7 @@ import UIKit
 
 class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var indice:Int!
+    var sessionIndex:Int!
     
     @IBOutlet weak var imagemSessao: UIImageView!
     @IBOutlet weak var lblTituloSessao: UILabel!
@@ -33,20 +33,20 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func updateInterface() {
         
         // popular tela com infos da sessão
-        imagemSessao.image = Singleton.shared.sessions[indice].photo
-        lblTituloSessao.text = Singleton.shared.sessions[indice].name
-        lblDificuldade.text = Singleton.shared.sessions[indice].difficulty
-        lblCategoria.text = Singleton.shared.sessions[indice].category
+        imagemSessao.image = Singleton.shared.sessions[sessionIndex].photo
+        lblTituloSessao.text = Singleton.shared.sessions[sessionIndex].name
+        lblDificuldade.text = Singleton.shared.sessions[sessionIndex].difficulty
+        lblCategoria.text = Singleton.shared.sessions[sessionIndex].category
         lblNomeSessao.text = "TYPE"
-        lblTempoDuracao.text = Singleton.shared.sessions[indice].length
+        lblTempoDuracao.text = Singleton.shared.sessions[sessionIndex].length
         lblLength.text = "LENGTH"
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let session = Singleton.shared.sessions[indice].pose.count
+        let session = Singleton.shared.sessions[sessionIndex].pose.count
         
-        return Singleton.shared.sessions[indice].pose.count
+        return Singleton.shared.sessions[sessionIndex].pose.count
         
     }
     
@@ -61,8 +61,8 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let singletonIndex = indexPath.row
-        self.performSegue(withIdentifier: "showPose", sender: Singleton.shared.sessions[singletonIndex])
+        let poseIndex = indexPath.row
+        self.performSegue(withIdentifier: "showPose", sender: Singleton.shared.sessions[sessionIndex].pose[poseIndex])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,6 +71,7 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 destination.pose = pose
                 
+                print("Setting PoseDescriptionView Pose as \(pose)")
             }
         }
     }

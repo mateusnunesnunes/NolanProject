@@ -18,17 +18,19 @@ class PoseDescriptionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let singletonIndex = indexPath.row
-        self.performSegue(withIdentifier: "viewPose", sender: pose)
+    @IBAction func viewPosePressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "viewPose", sender: self.pose)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showPose" {
+        if segue.identifier == "viewPose" {
             if let destination = segue.destination as? ViewARPoseViewController, let pose = sender as? Pose {
                 
+                print("Setting viewARPose file as \(pose.jsonFilename) and name \(pose.name)")
                 destination.pose = pose
                 
+            } else{
+                print("Failed creating view OR sender")
             }
         }
     }
