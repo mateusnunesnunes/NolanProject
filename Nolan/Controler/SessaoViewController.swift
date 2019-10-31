@@ -45,7 +45,6 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let session = Singleton.shared.poses[indice].pose.count
         
         return Singleton.shared.poses[indice].pose.count
         
