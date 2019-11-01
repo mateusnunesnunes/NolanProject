@@ -15,17 +15,28 @@ class PosesTableViewCell: UITableViewCell {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var buttonFavorite: UIButton!
     
+    var sessionSelected = 0
+    var poseSelected = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        poseImage.image = Singleton.shared.poses[sessionSelected].photo
+        poseLabel.text = Singleton.shared.poses[sessionSelected].name
+        levelLabel.text = Singleton.shared.poses[sessionSelected].difficulty
+        
+        if Singleton.shared.poses[sessionSelected].pose[poseSelected].favorite {
+            buttonFavorite.backgroundColor = UIColor.gray
+        }
+        
+        
     }
-//TESTE
-    //TESTE
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

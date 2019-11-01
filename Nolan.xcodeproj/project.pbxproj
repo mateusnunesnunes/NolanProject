@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0110A194235E40220064672A /* TrainColViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0110A193235E40220064672A /* TrainColViewController.swift */; };
 		0121E0FE2363411C00FB3C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0179791E23634050003B9AA2 /* Main.storyboard */; };
 		01662AB4235E767F00041C35 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01662AB3235E767F00041C35 /* CustomSegmentedControl.swift */; };
+		01728AA5236A10E000CB2C18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01728AA4236A10E000CB2C18 /* GoogleService-Info.plist */; };
 		0193A3CD235FB3CA003C3F75 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0193A3CC235FB3CA003C3F75 /* Singleton.swift */; };
 		0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0193A3D023607A32003C3F75 /* ImageUICollectionViewCell.xib */; };
 		0193A3D523607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0193A3D423607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift */; };
@@ -27,13 +28,26 @@
 		0D1AF00623632113000A8F56 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00523632113000A8F56 /* Pose.swift */; };
 		0D1AF00823632208000A8F56 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00723632208000A8F56 /* Session.swift */; };
 		0D1AF00A236322A0000A8F56 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF009236322A0000A8F56 /* Video.swift */; };
+		0D44835D236B19BB00C9914D /* RKJointWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D44835C236B19BB00C9914D /* RKJointWeights.swift */; };
 		0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */; };
 		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
+		47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */; };
+		47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C0236B07AF00E64011 /* RKImmutableTree.swift */; };
+		47B026C5236B07AF00E64011 /* RKJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C1236B07AF00E64011 /* RKJoint.swift */; };
+		47B026C6236B07AF00E64011 /* RKJointTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C2236B07AF00E64011 /* RKJointTree.swift */; };
+		47B026CB236B07BB00E64011 /* T in Resources */ = {isa = PBXBuildFile; fileRef = 47B026C7236B07BB00E64011 /* T */; };
+		47B026CC236B07BB00E64011 /* TBugadoDeLado in Resources */ = {isa = PBXBuildFile; fileRef = 47B026C8236B07BB00E64011 /* TBugadoDeLado */; };
+		47B026CD236B07BB00E64011 /* BracoBaixo in Resources */ = {isa = PBXBuildFile; fileRef = 47B026C9236B07BB00E64011 /* BracoBaixo */; };
+		47B026CE236B07BB00E64011 /* PeProLado in Resources */ = {isa = PBXBuildFile; fileRef = 47B026CA236B07BB00E64011 /* PeProLado */; };
+		47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */; };
+		8080B9CF2B4AA5BEC3033700 /* Pods_Nolan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */; };
+		A0BB02E77686BFDE260F99BB /* Pods_Nolan_NolanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */; };
 		A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876172369BC9E001A8ACF /* RoundedImage.swift */; };
 		A518761A2369BD50001A8ACF /* SessionPoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876192369BD50001A8ACF /* SessionPoseTableViewCell.swift */; };
 		A518761C2369C140001A8ACF /* PoseDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */; };
+		E158E018EE92A2910A000061 /* Pods_NolanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9806DF4BE5A483F606AFDC18 /* Pods_NolanTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +71,7 @@
 		0110A193235E40220064672A /* TrainColViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainColViewController.swift; sourceTree = "<group>"; };
 		0121E0FD236340E900FB3C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01662AB3235E767F00041C35 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		01728AA4236A10E000CB2C18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0179791E23634050003B9AA2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0193A3CC235FB3CA003C3F75 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		0193A3D023607A32003C3F75 /* ImageUICollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageUICollectionViewCell.xib; sourceTree = "<group>"; };
@@ -81,13 +96,32 @@
 		0D1AF00523632113000A8F56 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		0D1AF00723632208000A8F56 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0D1AF009236322A0000A8F56 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		0D44835C236B19BB00C9914D /* RKJointWeights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKJointWeights.swift; path = Nolan/RKJointComparison/RKJoints/RKJointWeights.swift; sourceTree = SOURCE_ROOT; };
 		0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesTableViewCell.swift; sourceTree = "<group>"; };
 		0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePosesCollectionViewCell.swift; sourceTree = "<group>"; };
+		22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.debug.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.debug.xcconfig"; sourceTree = "<group>"; };
+		2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableJoint.swift; sourceTree = "<group>"; };
+		47B026C0236B07AF00E64011 /* RKImmutableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableTree.swift; sourceTree = "<group>"; };
+		47B026C1236B07AF00E64011 /* RKJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKJoint.swift; sourceTree = "<group>"; };
+		47B026C2236B07AF00E64011 /* RKJointTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKJointTree.swift; sourceTree = "<group>"; };
+		47B026C7236B07BB00E64011 /* T */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = T; sourceTree = "<group>"; };
+		47B026C8236B07BB00E64011 /* TBugadoDeLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TBugadoDeLado; sourceTree = "<group>"; };
+		47B026C9236B07BB00E64011 /* BracoBaixo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BracoBaixo; sourceTree = "<group>"; };
+		47B026CA236B07BB00E64011 /* PeProLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PeProLado; sourceTree = "<group>"; };
+		47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewARPoseViewController.swift; sourceTree = "<group>"; };
+		58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.release.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.release.xcconfig"; sourceTree = "<group>"; };
+		6A653460CD644B1726424463 /* Pods-NolanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NolanTests.release.xcconfig"; path = "Target Support Files/Pods-NolanTests/Pods-NolanTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F81813D0A595FD623D8A871 /* Pods-Nolan-NolanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.release.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9806DF4BE5A483F606AFDC18 /* Pods_NolanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NolanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nolan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51876172369BC9E001A8ACF /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		A51876192369BD50001A8ACF /* SessionPoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPoseTableViewCell.swift; sourceTree = "<group>"; };
 		A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDescriptionViewController.swift; sourceTree = "<group>"; };
+		C04C4AFAD9D32BDEA1A8830F /* Pods-NolanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NolanTests.debug.xcconfig"; path = "Target Support Files/Pods-NolanTests/Pods-NolanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nolan_NolanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8080B9CF2B4AA5BEC3033700 /* Pods_Nolan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E158E018EE92A2910A000061 /* Pods_NolanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BB02E77686BFDE260F99BB /* Pods_Nolan_NolanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +196,8 @@
 				019BF58A23573F2C00F3E164 /* NolanTests */,
 				019BF59523573F2C00F3E164 /* NolanUITests */,
 				019BF57223573F2700F3E164 /* Products */,
+				3102CDFA106BA81F3B4BE350 /* Pods */,
+				7F40586E038D9F0978464935 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,12 +214,14 @@
 		019BF57323573F2700F3E164 /* Nolan */ = {
 			isa = PBXGroup;
 			children = (
+				47B026D1236B07D400E64011 /* RKJointComparison */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
 				0110A190235E3BE80064672A /* Model */,
 				0110A195235E6F650064672A /* View */,
-				A5187612236868A1001A8ACF /* Controler */,
+				A5187612236868A1001A8ACF /* Controller */,
 				019BF58223573F2C00F3E164 /* Info.plist */,
+				01728AA4236A10E000CB2C18 /* GoogleService-Info.plist */,
 			);
 			path = Nolan;
 			sourceTree = "<group>";
@@ -203,9 +244,65 @@
 			path = NolanUITests;
 			sourceTree = "<group>";
 		};
-		A5187612236868A1001A8ACF /* Controler */ = {
+		3102CDFA106BA81F3B4BE350 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */,
+				58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */,
+				2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */,
+				6F81813D0A595FD623D8A871 /* Pods-Nolan-NolanUITests.release.xcconfig */,
+				C04C4AFAD9D32BDEA1A8830F /* Pods-NolanTests.debug.xcconfig */,
+				6A653460CD644B1726424463 /* Pods-NolanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		47B026CF236B07BF00E64011 /* Poses */ = {
+			isa = PBXGroup;
+			children = (
+				47B026C9236B07BB00E64011 /* BracoBaixo */,
+				47B026CA236B07BB00E64011 /* PeProLado */,
+				47B026C7236B07BB00E64011 /* T */,
+				47B026C8236B07BB00E64011 /* TBugadoDeLado */,
+			);
+			path = Poses;
+			sourceTree = "<group>";
+		};
+		47B026D0236B07C800E64011 /* RKJoints */ = {
+			isa = PBXGroup;
+			children = (
+				0D44835C236B19BB00C9914D /* RKJointWeights.swift */,
+				47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */,
+				47B026C0236B07AF00E64011 /* RKImmutableTree.swift */,
+				47B026C1236B07AF00E64011 /* RKJoint.swift */,
+				47B026C2236B07AF00E64011 /* RKJointTree.swift */,
+			);
+			path = RKJoints;
+			sourceTree = "<group>";
+		};
+		47B026D1236B07D400E64011 /* RKJointComparison */ = {
+			isa = PBXGroup;
+			children = (
+				47B026CF236B07BF00E64011 /* Poses */,
+				47B026D0236B07C800E64011 /* RKJoints */,
+			);
+			path = RKJointComparison;
+			sourceTree = "<group>";
+		};
+		7F40586E038D9F0978464935 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */,
+				CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */,
+				9806DF4BE5A483F606AFDC18 /* Pods_NolanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5187612236868A1001A8ACF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */,
 				019BF57823573F2700F3E164 /* ViewController.swift */,
 				0110A193235E40220064672A /* TrainColViewController.swift */,
 				01C88B452363216900B27AFA /* SessaoViewController.swift */,
@@ -213,7 +310,7 @@
 				0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */,
 				A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */,
 			);
-			path = Controler;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A51876132369BAB1001A8ACF /* Cell */ = {
@@ -242,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 019BF59B23573F2C00F3E164 /* Build configuration list for PBXNativeTarget "Nolan" */;
 			buildPhases = (
+				26CEE1DBA7A9763B4F32AFE6 /* [CP] Check Pods Manifest.lock */,
 				019BF56D23573F2700F3E164 /* Sources */,
 				019BF56E23573F2700F3E164 /* Frameworks */,
 				019BF56F23573F2700F3E164 /* Resources */,
+				F081F7EAABC4086191687045 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +358,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 019BF59E23573F2C00F3E164 /* Build configuration list for PBXNativeTarget "NolanTests" */;
 			buildPhases = (
+				C555EC07ABB112424346AAFF /* [CP] Check Pods Manifest.lock */,
 				019BF58323573F2C00F3E164 /* Sources */,
 				019BF58423573F2C00F3E164 /* Frameworks */,
 				019BF58523573F2C00F3E164 /* Resources */,
@@ -277,9 +377,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 019BF5A123573F2C00F3E164 /* Build configuration list for PBXNativeTarget "NolanUITests" */;
 			buildPhases = (
+				3F33D05A34745B946E00DBB8 /* [CP] Check Pods Manifest.lock */,
 				019BF58E23573F2C00F3E164 /* Sources */,
 				019BF58F23573F2C00F3E164 /* Frameworks */,
 				019BF59023573F2C00F3E164 /* Resources */,
+				6BE977CE75082449036C1F18 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,9 +441,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B026CC236B07BB00E64011 /* TBugadoDeLado in Resources */,
 				019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */,
+				47B026CD236B07BB00E64011 /* BracoBaixo in Resources */,
 				0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */,
 				0121E0FE2363411C00FB3C06 /* Main.storyboard in Resources */,
+				47B026CB236B07BB00E64011 /* T in Resources */,
+				01728AA5236A10E000CB2C18 /* GoogleService-Info.plist in Resources */,
+				47B026CE236B07BB00E64011 /* PeProLado in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +468,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26CEE1DBA7A9763B4F32AFE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nolan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F33D05A34745B946E00DBB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nolan-NolanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BE977CE75082449036C1F18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C555EC07ABB112424346AAFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NolanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F081F7EAABC4086191687045 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nolan/Pods-Nolan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nolan/Pods-Nolan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nolan/Pods-Nolan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		019BF56D23573F2700F3E164 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -368,13 +578,18 @@
 			files = (
 				0D1AF00623632113000A8F56 /* Pose.swift in Sources */,
 				0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */,
+				47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */,
+				47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */,
 				01C88B462363216900B27AFA /* SessaoViewController.swift in Sources */,
+				47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */,
 				0193A3D923607C00003C3F75 /* Model.swift in Sources */,
 				0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */,
+				47B026C6236B07AF00E64011 /* RKJointTree.swift in Sources */,
 				A518761A2369BD50001A8ACF /* SessionPoseTableViewCell.swift in Sources */,
 				A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */,
 				019BF57923573F2700F3E164 /* ViewController.swift in Sources */,
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
+				0D44835D236B19BB00C9914D /* RKJointWeights.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
 				0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */,
 				0D1AF00A236322A0000A8F56 /* Video.swift in Sources */,
@@ -386,6 +601,7 @@
 				019BF57723573F2700F3E164 /* SceneDelegate.swift in Sources */,
 				A518761C2369C140001A8ACF /* PoseDescriptionViewController.swift in Sources */,
 				0110A194235E40220064672A /* TrainColViewController.swift in Sources */,
+				47B026C5236B07AF00E64011 /* RKJoint.swift in Sources */,
 				0D1AF00223631E5C000A8F56 /* User.swift in Sources */,
 				01662AB4235E767F00041C35 /* CustomSegmentedControl.swift in Sources */,
 			);
@@ -550,10 +766,11 @@
 		};
 		019BF59C23573F2C00F3E164 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,10 +785,11 @@
 		};
 		019BF59D23573F2C00F3E164 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,6 +804,7 @@
 		};
 		019BF59F23573F2C00F3E164 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C04C4AFAD9D32BDEA1A8830F /* Pods-NolanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -608,6 +827,7 @@
 		};
 		019BF5A023573F2C00F3E164 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A653460CD644B1726424463 /* Pods-NolanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,6 +850,7 @@
 		};
 		019BF5A223573F2C00F3E164 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,6 +871,7 @@
 		};
 		019BF5A323573F2C00F3E164 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F81813D0A595FD623D8A871 /* Pods-Nolan-NolanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
