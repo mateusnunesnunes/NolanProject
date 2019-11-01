@@ -43,6 +43,8 @@
 		47B026CE236B07BB00E64011 /* PeProLado in Resources */ = {isa = PBXBuildFile; fileRef = 47B026CA236B07BB00E64011 /* PeProLado */; };
 		47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */; };
 		47BCD617236B98BA008D18B8 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 47BCD616236B98BA008D18B8 /* robot.usdz */; };
+		47BCD619236C66BB008D18B8 /* RKFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD618236C66BB008D18B8 /* RKFeedback.swift */; };
+		47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD61A236C6729008D18B8 /* RKFeedbackGenerator.swift */; };
 		8080B9CF2B4AA5BEC3033700 /* Pods_Nolan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */; };
 		A0BB02E77686BFDE260F99BB /* Pods_Nolan_NolanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */; };
 		A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876172369BC9E001A8ACF /* RoundedImage.swift */; };
@@ -114,6 +116,8 @@
 		47B026CA236B07BB00E64011 /* PeProLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PeProLado; sourceTree = "<group>"; };
 		47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewARPoseViewController.swift; sourceTree = "<group>"; };
 		47BCD616236B98BA008D18B8 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		47BCD618236C66BB008D18B8 /* RKFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKFeedback.swift; sourceTree = "<group>"; };
+		47BCD61A236C6729008D18B8 /* RKFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKFeedbackGenerator.swift; sourceTree = "<group>"; };
 		58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.release.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.release.xcconfig"; sourceTree = "<group>"; };
 		6A653460CD644B1726424463 /* Pods-NolanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NolanTests.release.xcconfig"; path = "Target Support Files/Pods-NolanTests/Pods-NolanTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F81813D0A595FD623D8A871 /* Pods-Nolan-NolanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.release.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +292,8 @@
 			children = (
 				47B026CF236B07BF00E64011 /* Poses */,
 				47B026D0236B07C800E64011 /* RKJoints */,
+				47BCD618236C66BB008D18B8 /* RKFeedback.swift */,
+				47BCD61A236C6729008D18B8 /* RKFeedbackGenerator.swift */,
 			);
 			path = RKJointComparison;
 			sourceTree = "<group>";
@@ -593,7 +599,9 @@
 				A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */,
 				019BF57923573F2700F3E164 /* ViewController.swift in Sources */,
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
+				47BCD619236C66BB008D18B8 /* RKFeedback.swift in Sources */,
 				0D44835D236B19BB00C9914D /* RKJointWeights.swift in Sources */,
+				47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
 				0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */,
 				0D1AF00A236322A0000A8F56 /* Video.swift in Sources */,

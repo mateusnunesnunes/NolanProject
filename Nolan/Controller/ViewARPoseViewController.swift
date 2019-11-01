@@ -37,12 +37,17 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
         print("Creating poseTree with pose file as \(pose?.jsonFilename)")
         
         createPoseTree()
         
         // start AR stuff
+        arView.session = ARSession()
         arView.session.delegate = self
         
         // If the iOS device doesn't support body tracking, raise a developer error for
@@ -77,11 +82,14 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         })
         
         // start timer
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+        timerUpdater = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
             self.shouldUpdate = true
         }
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        timerUpdater?.invalidate()
+        timerUpdater = nil
     }
     
     func createPoseTree() {
