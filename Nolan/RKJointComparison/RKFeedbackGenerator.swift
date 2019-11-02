@@ -10,7 +10,7 @@ import Foundation
 
 class RKFeedbackGenerator {
     
-    let shared = RKFeedbackGenerator()
+    static  let shared = RKFeedbackGenerator()
     
     private init() {}
     
@@ -28,9 +28,11 @@ class RKFeedbackGenerator {
                 
                 let distance = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ)
                 
-                if distance > 0.10 {
-                    print("Generating feedback for  \(jointName)")
+                if distance > 0.15 {
+                    print("Generating feedback for \(jointName)")
                     let feedback = findAppropriateEnum(for: jointName, withCurrentPosition: firstPosition, andShouldBe: secondPosition)
+                    
+                    break
                 }
             }
         }

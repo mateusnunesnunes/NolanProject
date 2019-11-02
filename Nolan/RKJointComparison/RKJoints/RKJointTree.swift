@@ -93,7 +93,7 @@ class RKJointTree: Codable {
     ///TODO: Optimize since we already know where each joint is in the tree
     func updateJoints(from list: [(String, Transform)], usingAbsoluteTranslation: Bool) {
         
-        print("Updating joints!")
+//        print("Updating joints!")
         if canUpdate {
             // Separates our joint name in a list with it`s original hierarchy
             var hierachicalJoints = list.map( { ($0.0.components(separatedBy: "/"), $0.1)} )

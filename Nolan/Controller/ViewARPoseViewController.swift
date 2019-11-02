@@ -148,11 +148,13 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
                         
                         if let poseTree = self.poseTree {
                             
-                            print("Updating labels")
+                            //print("Updating labels")
                             
                             let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
                             
-                            print("New values are \(min), \(max), \(avg), \(med)")
+                            RKFeedbackGenerator.shared.generateFeedback(forTracked: characterTree, andPose: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
+                            
+                            //print("New values are \(min), \(max), \(avg), \(med)")
                             
                             self.minLabel.text = "min: " + min.description
                             self.maxLabel.text = "max: " + max.description
