@@ -23,6 +23,10 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var playViewLayout: UIView!
     
     
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

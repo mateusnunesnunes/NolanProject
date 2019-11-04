@@ -18,6 +18,11 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     var sessions = Singleton.shared.sessions
     let model = Model()
     
+    
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     //Funcao chamada toda vez que a tela é carregada
     override func viewDidLoad() {
         super.viewDidLoad()

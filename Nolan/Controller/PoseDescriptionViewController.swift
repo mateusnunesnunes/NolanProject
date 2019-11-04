@@ -13,6 +13,10 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     
     var pose: Pose?
+    
+    override var shouldAutorotate: Bool {
+        false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
