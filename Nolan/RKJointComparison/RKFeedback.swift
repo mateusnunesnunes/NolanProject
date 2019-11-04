@@ -8,15 +8,16 @@
 
 import Foundation
 
-enum RKFeedback {
-    case moveLeftArmUp
-    case moveLeftArmDown
-    case moveLeftArmBack
-    case moveLeftArmFront
-    case moveRightArmUp
-    case moveRightArmDown
-    case moveRightArmBack
-    case moveRightArmFront
-    case moveLeftLegCenter
-    case moveRightLegCenter
+class RKFeedback {
+    
+    let jointName: String
+    let difference: Float
+    let direction: RKFeedbackDirection
+    
+    init(jointName: String, difference: Float, direction: RKFeedbackDirection) {
+        self.jointName = jointName
+        self.difference = difference
+        self.direction = direction
+    }
+    
 }

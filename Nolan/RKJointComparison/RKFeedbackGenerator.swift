@@ -16,7 +16,7 @@ class RKFeedbackGenerator {
     
     let feedbackableJoints = ["hips_joint", "left_upLeg_joint", "left_leg_joint", "left_foot_joint", "right_upLeg_joint", "right_leg_joint", "right_foot_joint", "spine_1_joint", "spine_4_joint", "spine_7_joint", "neck_4_joint", "head_joint", "right_shoulder_1_joint", "right_arm_joint", "right_forearm_joint", "right_hand_joint", "left_shoulder_1_joint", "left_arm_joint", "left_forearm_joint", "left_hand_joint"]
     
-    func generateFeedback(forTracked trackedTree: RKJointTree, andPose poseTree: RKImmutableJointTree, consideringJoints jointList: [String]) {
+    func generateFeedback(forTracked trackedTree: RKJointTree, andPose poseTree: RKImmutableJointTree, consideringJoints jointList: [String], maxDistance threshold: Float) -> RKFeedback? {
         
         for jointName in jointList {
             if let firstPosition = trackedTree.rootJoint?.findDescendantBy(name: jointName)?.absoluteTranslation,
@@ -28,26 +28,37 @@ class RKFeedbackGenerator {
                 
                 let distance = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ)
                 
-                if distance > 0.15 {
+                if distance > threshold {
                     print("Generating feedback for \(jointName)")
-                    let feedback = findAppropriateEnum(for: jointName, withCurrentPosition: firstPosition, andShouldBe: secondPosition)
                     
-                    break
+                    let (direction, totalDifference) = findAppropriateDirection(forCurrentPosition: firstPosition, andShouldBe: secondPosition)
+                    
+                    return RKFeedback(jointName: jointName, difference: totalDifference, direction: direction)
                 }
             }
         }
         
+        return nil
+        
     }
     
-    func findAppropriateEnum(for jointName: String, withCurrentPosition currentPosition: SIMD3<Float>, andShouldBe posePosition: SIMD3<Float>) -> RKFeedback? {
-        guard feedbackableJoints.contains(jointName) else {
-            return nil
-        }
-        
-        if jointName == "right_arm_joint" {
+    func findAppropriateDirection(forCurrentPosition currentPosition: SIMD3<Float>, andShouldBe posePosition: SIMD3<Float>) -> (
+        RKFeedbackDirection, Float) {
             
-        }
-        
-        return nil
+            let xDifference = posePosition[0] - currentPosition[0]
+            let yDifference = posePosition[1] - currentPosition[1]
+            let zDifference = posePosition[2] - currentPosition[2]
+            
+            if xDifference >= yDifference && xDifference >= zDifference {
+                let direction: RKFeedbackDirection = xDifference > 0 ? .outward : .inward
+                return (direction, xDifference)
+            } else if yDifference >= xDifference && yDifference >= zDifference {
+                let direction: RKFeedbackDirection = xDifference > 0 ? .upward : .downward
+                return (direction, yDifference)
+            } else {
+                let direction: RKFeedbackDirection = xDifference > 0 ? .forward : .backward
+                return (direction, zDifference)
+            }
+            
     }
 }
