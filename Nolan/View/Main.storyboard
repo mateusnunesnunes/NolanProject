@@ -363,6 +363,9 @@
                                             <constraint firstAttribute="width" secondItem="B3V-ws-olL" secondAttribute="height" multiplier="1:1" id="Dxn-9O-UPg"/>
                                         </constraints>
                                         <state key="normal" image="startSessionButton"/>
+                                        <connections>
+                                            <action selector="viewARPressed:" destination="Njb-oD-Bf9" eventType="touchUpInside" id="Wz3-3x-Fgh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

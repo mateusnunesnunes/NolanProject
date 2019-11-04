@@ -45,12 +45,10 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
     }
     
     
-    // Método chamado quando row é clicado
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    @IBAction func viewARPressed(_ sender: Any) {
         // Executamos a segue - criada no Storyboard - com o  nome de viewPose enviando junto, como dado, a pose atual
         self.performSegue(withIdentifier: "viewPose", sender: pose)
     }
-    
     // O prepare é chamado  sempre que uma segue é executada
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Vejo se a segue sendo executada é a "viewPose"
