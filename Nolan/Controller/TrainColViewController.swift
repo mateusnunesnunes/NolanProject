@@ -87,7 +87,7 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // cria o tamanho da celula de acordo com o tamanho da imagem e a retorna
         
-        var imageSize = model.images[indexPath.row].size
+        let imageSize = model.images[indexPath.row].size
 //        imageSize.width -= 30
 //        imageSize.height -= 30
         return imageSize
@@ -113,6 +113,21 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Hide the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Show the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     
     
 }

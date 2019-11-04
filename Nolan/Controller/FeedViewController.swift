@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var filterButton: UIButton!
@@ -27,7 +27,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+//        collectionView.contentInset.top = max((collectionView.frame.height - collectionView.contentSize.height) / 2, 0)
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200  , height: 200)
     }
     
     //MARK: CollectionView
@@ -71,5 +76,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         return cell
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Hide the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Show the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 }
