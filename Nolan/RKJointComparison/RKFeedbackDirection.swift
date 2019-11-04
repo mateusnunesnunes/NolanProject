@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum RKFeedbackDirection {
+enum RKFeedbackDirection: String {
     case upward
     case downward
     case inward

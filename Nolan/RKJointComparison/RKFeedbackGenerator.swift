@@ -29,9 +29,13 @@ class RKFeedbackGenerator {
                 let distance = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ)
                 
                 if distance > threshold {
-                    print("Generating feedback for \(jointName)")
                     
                     let (direction, totalDifference) = findAppropriateDirection(forCurrentPosition: firstPosition, andShouldBe: secondPosition)
+                    
+                    print("Generating feedback for \(jointName)")
+                    print("First position: \(firstPosition)")
+                    print("Second position: \(secondPosition)")
+                    print(direction, totalDifference)
                     
                     return RKFeedback(jointName: jointName, difference: totalDifference, direction: direction)
                 }
@@ -49,10 +53,12 @@ class RKFeedbackGenerator {
             let yDifference = posePosition[1] - currentPosition[1]
             let zDifference = posePosition[2] - currentPosition[2]
             
-            if xDifference >= yDifference && xDifference >= zDifference {
+            print(xDifference, yDifference, zDifference)
+            
+            if abs(xDifference) >= abs(yDifference) && abs(xDifference) >= abs(zDifference) {
                 let direction: RKFeedbackDirection = xDifference > 0 ? .outward : .inward
                 return (direction, xDifference)
-            } else if yDifference >= xDifference && yDifference >= zDifference {
+            } else if abs(yDifference) >= abs(xDifference) && abs(yDifference) >= abs(zDifference) {
                 let direction: RKFeedbackDirection = xDifference > 0 ? .upward : .downward
                 return (direction, yDifference)
             } else {

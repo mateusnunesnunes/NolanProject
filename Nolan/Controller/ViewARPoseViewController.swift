@@ -30,11 +30,13 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     var characterTree: RKJointTree?
     
     var timerUpdater: Timer?
+    var timerFeedback: Timer?
     
     var poseTree: RKImmutableJointTree?
     
     var shouldUpdate = true
-
+    var shouldGiveFeedback = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -55,7 +57,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         guard ARBodyTrackingConfiguration.isSupported else {
             fatalError("This feature is only supported on devices with an A12 chip")
         }
-
+        
         // Run a body tracking configration.
         let configuration = ARBodyTrackingConfiguration()
         arView.session.run(configuration)
@@ -85,11 +87,19 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         timerUpdater = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
             self.shouldUpdate = true
         }
+        
+        timerFeedback = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (_) in
+            self.shouldGiveFeedback = true
+        }
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         timerUpdater?.invalidate()
         timerUpdater = nil
+        
+        timerFeedback?.invalidate()
+        timerFeedback = nil
     }
     
     func createPoseTree() {
@@ -111,61 +121,75 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         }
     }
     
+    
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-            for anchor in anchors {
-                guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
-
-                // Update the position of the character anchor's position.
-                let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
-                characterAnchor.position = bodyPosition + characterOffset
+        for anchor in anchors {
+            guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
+            
+            // Update the position of the character anchor's position.
+            let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
+            characterAnchor.position = bodyPosition + characterOffset
+            
+            // Also copy over the rotation of the body anchor, because the skeleton's pose
+            // in the world is relative to the body anchor's rotation.
+            characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
+            
+            if let character = character, character.parent == nil {
+                // Attach the character to its anchor as soon as
+                // 1. the body anchor was detected and
+                // 2. the character was loaded.
+                characterAnchor.addChild(character)
                 
-                // Also copy over the rotation of the body anchor, because the skeleton's pose
-                // in the world is relative to the body anchor's rotation.
-                characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
-       
-                if let character = character, character.parent == nil {
-                    // Attach the character to its anchor as soon as
-                    // 1. the body anchor was detected and
-                    // 2. the character was loaded.
-                    characterAnchor.addChild(character)
-                    
+                let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
+                let jointNames = character.jointNames
+                
+                let joints = Array(zip(jointNames, jointModelTransforms))
+                characterTree = RKJointTree(from: joints, usingAbsoluteTranslation: true)
+            }
+            
+            if shouldUpdate {
+                
+                if let characterTree = self.characterTree, let character = self.character {
                     let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
                     let jointNames = character.jointNames
                     
                     let joints = Array(zip(jointNames, jointModelTransforms))
-                    characterTree = RKJointTree(from: joints, usingAbsoluteTranslation: true)
-                }
-                
-                if shouldUpdate {
                     
-                    if let characterTree = self.characterTree, let character = self.character {
-                        let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
-                        let jointNames = character.jointNames
-                        
-                        let joints = Array(zip(jointNames, jointModelTransforms))
-                        
-                        characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
-                        
-                        if let poseTree = self.poseTree {
-                            
-                            //print("Updating labels")
-                            
-                            let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
-                            
-                            let feedback = RKFeedbackGenerator.shared.generateFeedback(forTracked: characterTree, andPose: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys), maxDistance: 0.2)
-                            
-                            self.minLabel.text = "min: " + min.description
-                            self.maxLabel.text = "max: " + max.description
-                            self.avgLabel.text = "avg: " + avg.description
-                            self.medLabel.text = "med: " + med.description
-                        }
-
-                        shouldUpdate = false
+                    characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
+                    
+                    if let poseTree = self.poseTree {
+                        analyzeTrees(characterTree, poseTree)
                     }
+                    
+                    shouldUpdate = false
                 }
-                
+            }
+            
+        }
+    }
+    
+    func analyzeTrees(_ characterTree: RKJointTree, _ poseTree: RKImmutableJointTree) {
+        //print("Updating labels")
+        
+        let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
+        
+        if shouldGiveFeedback {
+            shouldGiveFeedback = false
+            
+            let feedback = RKFeedbackGenerator.shared.generateFeedback(forTracked: characterTree, andPose: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys), maxDistance: 0.2)
+            if let feedbackString = feedback?.toPhrase() {
+                TTSController.shared.say(text: feedbackString)
+            } else {
+                TTSController.shared.say(text: "You are doing great! Keep it up :)")
             }
         }
-
-
+        
+        
+        self.minLabel.text = "min: " + min.description
+        self.maxLabel.text = "max: " + max.description
+        self.avgLabel.text = "avg: " + avg.description
+        self.medLabel.text = "med: " + med.description
+    }
+    
+    
 }

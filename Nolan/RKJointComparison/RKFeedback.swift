@@ -20,4 +20,16 @@ class RKFeedback {
         self.direction = direction
     }
     
+    func toPhrase() -> String {
+        var phrase = ""
+        if difference > 0.5 {
+            phrase = " a lot "
+        } else if difference < 0.2 {
+            phrase = "slightly"
+        }
+        
+        return "Move \(jointName) \(phrase) \(direction.rawValue)"
+    }
+    
 }
+
