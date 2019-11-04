@@ -33,7 +33,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         collectionView.delegate = self
         collectionView.dataSource = self
-//        collectionView.contentInset.top = max((collectionView.frame.height - collectionView.contentSize.height) / 2, 0)
+        //        collectionView.contentInset.top = max((collectionView.frame.height - collectionView.contentSize.height) / 2, 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -42,7 +42,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: CollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
+        
         return favoritePoses.count
     }
     
@@ -58,12 +58,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
-
+    
     
     func dismissKeyboard() {
-            view.endEditing(true)
-        }
-
+        view.endEditing(true)
+    }
+    
     
     
     //MARK: TableView
@@ -74,7 +74,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return Singleton.shared.sessions[indice].pose.count
         
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "poses", for: indexPath) as! PosesTableViewCell
         cell.poseImage.image  = UIImage(named:"Image1")
@@ -91,23 +91,23 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let favoriteImage = UIImage(systemName: "bookmark", withConfiguration: config)
             cell.buttonFavorite.setImage(favoriteImage, for: .normal)
         }
-            
+        
         return cell
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         // Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
- 
+    
     
 }

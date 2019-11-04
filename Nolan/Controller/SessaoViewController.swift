@@ -91,7 +91,7 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let singletonIndex = indexPath.row
-        self.performSegue(withIdentifier: "showPose", sender: Singleton.shared.sessions[indice].pose[singletonIndex])
+        self.performSegue(withIdentifier: "showPose", sender: Singleton.shared.sessions[sessionIndex].pose[singletonIndex])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
