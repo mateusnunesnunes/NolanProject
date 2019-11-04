@@ -17,9 +17,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var collectionView: UICollectionView!
     
     let allPoses = Singleton.shared.sessions.flatMap( {$0.pose} )
+    let favoritePoses = Singleton.shared.sessions.flatMap( {$0.pose} ).filter({$0.favorite})
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -28,7 +34,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         collectionView.delegate = self
         collectionView.dataSource = self
 //        collectionView.contentInset.top = max((collectionView.frame.height - collectionView.contentSize.height) / 2, 0)
-
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -37,15 +42,28 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: CollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return Singleton.shared.sessions[indice].pose.count
+
+        return favoritePoses.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritePoses", for: indexPath) as! FavoritePosesCollectionViewCell
         
+        cell.topLabel.text = favoritePoses[indexPath.row].name
+        cell.levelLabel.text = favoritePoses[indexPath.row].difficulty
+        
         return cell
     }
+
+    
+    func dismissKeyboard() {
+            view.endEditing(true)
+        }
+
     
     
     //MARK: TableView
@@ -89,4 +107,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+ 
+    
 }
