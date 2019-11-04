@@ -238,13 +238,13 @@
 		019BF57323573F2700F3E164 /* Nolan */ = {
 			isa = PBXGroup;
 			children = (
-				47BCD616236B98BA008D18B8 /* robot.usdz */,
 				47B026D1236B07D400E64011 /* RKJointComparison */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
+				47BCD616236B98BA008D18B8 /* robot.usdz */,
+				A5187612236868A1001A8ACF /* Controller */,
 				0110A190235E3BE80064672A /* Model */,
 				0110A195235E6F650064672A /* View */,
-				A5187612236868A1001A8ACF /* Controller */,
 				A5349C45236C548D00BF5647 /* Fonts */,
 				019BF58223573F2C00F3E164 /* Info.plist */,
 				01728AA4236A10E000CB2C18 /* GoogleService-Info.plist */,
