@@ -37,12 +37,19 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     var shouldUpdate = true
     var shouldGiveFeedback = true
     
+    var feedbackSession: RKFeedbackSession?
+    
+    var currentTime: Float = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
         
         print("Creating poseTree with pose file as \(pose?.jsonFilename)")
         
@@ -86,12 +93,21 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         // start timer
         timerUpdater = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
             self.shouldUpdate = true
+            self.currentTime += 0.1
         }
         
         timerFeedback = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (_) in
             self.shouldGiveFeedback = true
         }
         
+        if let pose = self.pose {
+            feedbackSession = RKFeedbackSession(pose: pose)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -173,10 +189,13 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         
         let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
         
+        feedbackSession?.scores[currentTime] = max
+        
         if shouldGiveFeedback {
             shouldGiveFeedback = false
             
             let feedback = RKFeedbackGenerator.shared.generateFeedback(forTracked: characterTree, andPose: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys), maxDistance: 0.2)
+            
             if let feedbackString = feedback?.toPhrase() {
                 TTSController.shared.say(text: feedbackString)
             } else {

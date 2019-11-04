@@ -22,7 +22,7 @@ class RKFeedback {
     
     func toPhrase() -> String {
         var phrase = ""
-        if difference > 0.5 {
+        if difference > 0.4 {
             phrase = " a lot "
         } else if difference < 0.2 {
             phrase = "slightly"
