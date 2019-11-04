@@ -8,20 +8,29 @@
 
 import UIKit
 
-class PoseDescriptionViewController: UIViewController {
+class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+        
+    @IBOutlet weak var tableView: UITableView!
+    
+    var index: Int!
+    var count = 0
     
     var pose: Pose?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
+    
+    //não sei o que é isso, comenta aí quem fez!
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let singletonIndex = indexPath.row
         self.performSegue(withIdentifier: "viewPose", sender: pose)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPose" {
@@ -32,16 +41,27 @@ class PoseDescriptionViewController: UIViewController {
             }
         }
     }
+    //não sei o que é isso, comenta aí quem fez!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pose?.steps.count ?? 0
     }
-    */
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PoseDEscription", for: indexPath) as! PoseDescriptionTableViewCell
+        
+        
+        cell.lblStep.text = "STEP \(indexPath.row+1)"
+        cell.lblStepDescription.text = self.pose?.steps[indexPath.row]
+        
+        
+        
+        
+        
+        return cell
+    }
+    
 
 }

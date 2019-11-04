@@ -1,20 +1,17 @@
 //
-//  SessionPoseTableViewCell.swift
+//  PoseDescriptionTableViewCell.swift
 //  Nolan
 //
-//  Created by Cristiano Correia on 30/10/19.
+//  Created by Cristiano Correia on 03/11/19.
 //  Copyright © 2019 Mateus Nunes. All rights reserved.
 //
 
 import UIKit
 
-class SessionPoseTableViewCell: UITableViewCell {
+class PoseDescriptionTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var poseImage: UIImageView!
-    @IBOutlet weak var poseLabel: UILabel!
-    @IBOutlet weak var levelLabel: UILabel!
-    @IBOutlet weak var bookmarkButton: UIButton!
-    
+    @IBOutlet weak var lblStep: UILabel!
+    @IBOutlet weak var lblStepDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
