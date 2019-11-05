@@ -10,8 +10,8 @@ target 'Nolan' do
   pod 'Firebase/Database'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Charts'
   
-
   target 'NolanTests' do
     inherit! :search_paths
     # Pods for testing
