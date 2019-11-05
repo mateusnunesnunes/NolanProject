@@ -14,6 +14,7 @@ class SaveFeedbackViewController: UIViewController {
     var feedbackSession: RKFeedbackSession?
 
     @IBOutlet weak var performanceChart: LineChartView!
+    @IBOutlet weak var performanceChartWrapper: UIView!
     
     @IBOutlet weak var poseInfoView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -23,19 +24,6 @@ class SaveFeedbackViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var discardButton: UIButton!
     
-    func createChart(_ feedbackSession: RKFeedbackSession) {
-        let keys: [Float] = Array(feedbackSession.scores.keys).sorted()
-        let values = keys.map( { ChartDataEntry(x: Double(feedbackSession.scores[$0]!), y: Double($0)) })
-        
-        
-        let line1 = LineChartDataSet(entries: values, label: "Performance")
-        
-        let data = LineChartData()
-        data.addDataSet(line1)
-        
-        performanceChart.data = data
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,23 +32,64 @@ class SaveFeedbackViewController: UIViewController {
             // TODO: fazer isso do jeito certo
 //            poseImage.image =
             
-            poseInfoView.cornerRadius = 20
-            poseInfoView.layer.shadowOffset = CGSize(width: 0, height: 5)
-            poseInfoView.layer.shadowRadius = 3
-            poseInfoView.layer.shadowColor = UIColor.lightGray.cgColor
-            poseInfoView.layer.shadowOpacity = 0.85
-            
             nameLabel.text = feedbackSession.pose.name
             dateLabel.text = feedbackSession.date.description
             
-            performanceChart.cornerRadius = 20
-            performanceChart.layer.shadowOffset = CGSize(width: 0, height: 5)
-            performanceChart.layer.shadowRadius = 3
-            performanceChart.layer.shadowColor = UIColor.lightGray.cgColor
-            performanceChart.layer.shadowOpacity = 0.85
+            poseInfoView.cornerRadius = 20
+            addLightShadow(view: poseInfoView)
+            
+            performanceChartWrapper.cornerRadius = 20
+            addLightShadow(view: performanceChartWrapper)
+            
+            saveButton.cornerRadius = 10
+            addLightShadow(view: saveButton)
+            
+            discardButton.cornerRadius = 10
+            addLightShadow(view: discardButton)
             
             createChart(feedbackSession)
+            
         }
+    }
+    
+    func addLightShadow(view: UIView) {
+        view.layer.shadowOffset = CGSize(width: 0, height: 5)
+        view.layer.shadowRadius = 3
+        view.layer.shadowColor = UIColor.lightGray.cgColor
+        view.layer.shadowOpacity = 0.85
+    }
+    
+    func createChart(_ feedbackSession: RKFeedbackSession) {
+        
+        performanceChart.drawGridBackgroundEnabled = false
+        performanceChart.backgroundColor = .white
+        performanceChart.drawBordersEnabled = false
+        
+        let maxDistance = 1.1
+        
+        let keys: [Float] = Array(feedbackSession.scores.keys).sorted()
+        let values = keys.map( { Double(feedbackSession.scores[$0]!) } ) // 0...infinito
+        let cappedValues = values.map( { $0 > maxDistance ? maxDistance : $0 } ) // 0...0.75
+        let normalizedValues = cappedValues.map( { $0 * 100/maxDistance}) //0...100
+        let chartValues = normalizedValues.map( { 100 - $0 }) //0...100
+        
+        var chartDataEntries: [ChartDataEntry] = []
+        for i in 0..<chartValues.count {
+            chartDataEntries.append(ChartDataEntry(x: Double(keys[i]), y: chartValues[i]))
+        }
+//        let values = keys.map( { ChartDataEntry(x: Double($0), y: chartValues } )
+        
+        
+        let performanceLine = LineChartDataSet(entries: chartDataEntries, label: "Performance")
+        performanceLine.setColor(.red)
+        
+        performanceLine.drawCirclesEnabled = false
+        performanceLine.mode = .cubicBezier
+        
+        let data = LineChartData()
+        data.addDataSet(performanceLine)
+        
+        performanceChart.data = data
         
     }
     
