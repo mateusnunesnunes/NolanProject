@@ -9,6 +9,7 @@ target 'Nolan' do
   
   pod 'Firebase/Database'
   pod 'Firebase/Core'
+  pod 'Charts'
   
 
   target 'NolanTests' do
