@@ -681,15 +681,15 @@ To finish you session, just say "Stop!"</string>
                                                 <rect key="frame" x="41.333333333333343" y="78" width="331.33333333333326" height="246"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-s7-Sxy" customClass="LineChartView" customModule="Charts">
-                                                        <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="246"/>
+                                                        <rect key="frame" x="8.3333333333333428" y="6.3333333333333144" width="314.66666666666663" height="233.66666666666666"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="Egb-s7-Sxy" firstAttribute="height" secondItem="cIR-cU-oej" secondAttribute="height" id="P8a-jr-cnK"/>
+                                                    <constraint firstItem="Egb-s7-Sxy" firstAttribute="height" secondItem="cIR-cU-oej" secondAttribute="height" multiplier="0.95" id="P8a-jr-cnK"/>
                                                     <constraint firstItem="Egb-s7-Sxy" firstAttribute="centerX" secondItem="cIR-cU-oej" secondAttribute="centerX" id="dgw-QW-MAd"/>
-                                                    <constraint firstItem="Egb-s7-Sxy" firstAttribute="width" secondItem="cIR-cU-oej" secondAttribute="width" id="i51-jr-T0Y"/>
+                                                    <constraint firstItem="Egb-s7-Sxy" firstAttribute="width" secondItem="cIR-cU-oej" secondAttribute="width" multiplier="0.95" id="i51-jr-T0Y"/>
                                                     <constraint firstItem="Egb-s7-Sxy" firstAttribute="centerY" secondItem="cIR-cU-oej" secondAttribute="centerY" id="ukg-F9-Tli"/>
                                                 </constraints>
                                             </view>
