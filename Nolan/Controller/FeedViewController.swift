@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var scanButoon: UIButton!
@@ -16,12 +16,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var collectionView: UICollectionView!
     
     let allPoses = Singleton.shared.sessions.flatMap( {$0.pose} )
+    var filteredPoses = [Pose]()
     let favoritePoses = Singleton.shared.sessions.flatMap( {$0.pose} ).filter({$0.favorite})
-
-    
-    override var shouldAutorotate: Bool {
-        false
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +33,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        searchBar.delegate = self
         
+        filteredPoses = allPoses
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,8 +51,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+     //MARK: SearchBar
     
-
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredPoses = allPoses.filter({$0.name.uppercased().contains(searchText.uppercased())})
+        tableView.reloadData()
+    }
     
     //MARK: CollectionView
     
@@ -82,7 +84,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var indice = 0
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return allPoses.count
+        return filteredPoses.count
         
     }
     
@@ -91,9 +93,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.poseImage.image  = UIImage(named:"Image1")
         
         
-        cell.poseLabel.text = allPoses[indexPath.row].name
+        cell.poseLabel.text = filteredPoses[indexPath.row].name
         
-        if(allPoses[indexPath.row].favorite){
+        if(filteredPoses[indexPath.row].favorite){
             let config = UIImage.SymbolConfiguration(textStyle: .body)
             let favoriteImage = UIImage(systemName: "bookmark.fill", withConfiguration: config)
             cell.buttonFavorite.setImage(favoriteImage, for: .normal)
@@ -109,5 +111,4 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
 }
