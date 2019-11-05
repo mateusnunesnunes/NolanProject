@@ -13,7 +13,8 @@ class SessionPoseTableViewCell: UITableViewCell {
     @IBOutlet weak var poseImage: UIImageView!
     @IBOutlet weak var poseLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
-    @IBOutlet weak var buttonFavorite: UIButton!
+    @IBOutlet weak var bookmarkButton: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

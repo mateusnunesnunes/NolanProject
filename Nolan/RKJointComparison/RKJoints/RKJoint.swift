@@ -30,7 +30,7 @@ class RKJoint: Codable {
     /// A list with every last 9 relative joint translation snapshots. Used as a moving window for the relative translation property.
     var relativeTranslations: [SIMD3<Float>] = [] {
         didSet {
-            if relativeTranslations.count > 9 {
+            if relativeTranslations.count > 15 {
                 relativeTranslations.removeFirst()
             }
         }
@@ -57,7 +57,7 @@ class RKJoint: Codable {
     /// A list with every last 9 joint rotation snapshots. Used as a moving window for the rotation property.
     var rotations: [SIMD4<Float>] = [] {
         didSet {
-            if rotations.count > 9 {
+            if rotations.count > 12 {
                 rotations.removeFirst()
             }
         }

@@ -43,7 +43,7 @@ class Singleton {
                 "Imagine-se acariciando a crina de um cavalo"
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "BracoBaixo"
             ),
             Pose(
                 name: "BAI HE LIANG CHI",
@@ -54,7 +54,7 @@ class Singleton {
                 "Abrir e fechar seus braços, encostando uma mão na outra",
                 "Repetir esse movimento delicadamente, imitando uma garça abrindo e fechando suas asas"],
                 favorite: false,
-                jsonFilename: ""
+                jsonFilename: "PeProLado"
             ),
             Pose(
                 name: "SHOU HUI PIPA",
@@ -65,7 +65,7 @@ class Singleton {
                     "Respirar levemente e se imaginar em contato com a natureza",
                     "Se imaginar tocando harpa em um local bem silencioso"],
                 favorite: false,
-                jsonFilename: ""
+                jsonFilename: "T"
             ),
             Pose(
                 name: "DAO-NIAN-HOU",
@@ -77,7 +77,7 @@ class Singleton {
                 "Imagine-se empurrando e puxando um macaco"
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "TBugadoDeLado"
             ),
             Pose(
                 name: "LAN QUE WEI",
@@ -89,7 +89,7 @@ class Singleton {
                 "Flexione os joelhos e os braços e repita"
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "T"
             ),
             Pose(
                 name: "YUN SHOU",
@@ -101,7 +101,7 @@ class Singleton {
                 "Realize movimentos laterais com calma e se imagine no meio das nuvens"
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "BracoBaixo"
             )
             ],
                 category: "Focus",

@@ -88,7 +88,7 @@ DEPENDENCIES:
   - Firebase/Database
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -126,4 +126,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9166db54471fc0059bf987a9c1e2fadbf5b5a393
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5

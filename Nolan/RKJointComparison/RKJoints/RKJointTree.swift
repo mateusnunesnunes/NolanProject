@@ -93,6 +93,7 @@ class RKJointTree: Codable {
     ///TODO: Optimize since we already know where each joint is in the tree
     func updateJoints(from list: [(String, Transform)], usingAbsoluteTranslation: Bool) {
         
+//        print("Updating joints!")
         if canUpdate {
             // Separates our joint name in a list with it`s original hierarchy
             var hierachicalJoints = list.map( { ($0.0.components(separatedBy: "/"), $0.1)} )
@@ -165,26 +166,27 @@ class RKJointTree: Codable {
     
     func score(to otherTree: RKImmutableJointTree, consideringJoints jointList: [String]) -> (Float, Float, Float, Float) { //Min, Max, Average, Median
         
-        var squaredDistances: [Float] = []
+        var distances: [Float] = []
         
         for jointName in jointList {
             if let firstPosition = rootJoint?.findDescendantBy(name: jointName)?.absoluteTranslation,
                 let secondPosition = otherTree.rootJoint?.findDescendantBy(name: jointName)?.absoluteTranslation {
                 
-                let deltaX = (secondPosition.x - firstPosition.x) * 100 // Since our values are really small
-                let deltaY = (secondPosition.y - firstPosition.y) * 100 // Since our values are really small
-                let deltaZ = (secondPosition.z - firstPosition.z) * 100 // Since our values are really small
+                let deltaX = (secondPosition.x - firstPosition.x)
+                let deltaY = (secondPosition.y - firstPosition.y)
+                let deltaZ = (secondPosition.z - firstPosition.z)
                 
-                let squaredDistance = deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ
+                let distance = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ)
                 
-                squaredDistances.append(squaredDistance)
+                distances.append(distance)
             }
         }
         
-        let min = squaredDistances.min() ?? -1
-        let max = squaredDistances.max() ?? -1
-        let avg = (squaredDistances.reduce(0, { $0 + $1}) / Float(squaredDistances.count)>0 ? Float(squaredDistances.count) : 1)
-        let med = squaredDistances.sorted()[Int(squaredDistances.count/2)]
+        let min = distances.min() ?? -1
+        let max = distances.max() ?? -1
+        let totalSum = distances.reduce(0, { $0 + $1})
+        let avg = totalSum / Float(distances.count > 0 ? distances.count : 1)
+        let med = distances.sorted()[Int(distances.count/2)]
         return (min, max, avg, med)
         
     }

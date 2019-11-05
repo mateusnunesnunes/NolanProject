@@ -43,11 +43,23 @@
 		47B026CD236B07BB00E64011 /* BracoBaixo in Resources */ = {isa = PBXBuildFile; fileRef = 47B026C9236B07BB00E64011 /* BracoBaixo */; };
 		47B026CE236B07BB00E64011 /* PeProLado in Resources */ = {isa = PBXBuildFile; fileRef = 47B026CA236B07BB00E64011 /* PeProLado */; };
 		47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */; };
+		47BCD617236B98BA008D18B8 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 47BCD616236B98BA008D18B8 /* robot.usdz */; };
+		47BCD619236C66BB008D18B8 /* RKFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD618236C66BB008D18B8 /* RKFeedback.swift */; };
+		47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCD61A236C6729008D18B8 /* RKFeedbackGenerator.swift */; };
+		47ED903E23704BA6005E0B60 /* RKFeedbackDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED903D23704BA6005E0B60 /* RKFeedbackDirection.swift */; };
+		47ED904123704FC0005E0B60 /* TTSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED904023704FC0005E0B60 /* TTSController.swift */; };
 		8080B9CF2B4AA5BEC3033700 /* Pods_Nolan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */; };
 		A0BB02E77686BFDE260F99BB /* Pods_Nolan_NolanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */; };
 		A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876172369BC9E001A8ACF /* RoundedImage.swift */; };
 		A518761A2369BD50001A8ACF /* SessionPoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51876192369BD50001A8ACF /* SessionPoseTableViewCell.swift */; };
 		A518761C2369C140001A8ACF /* PoseDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */; };
+		A5349C4B236C54BA00BF5647 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5349C46236C54B900BF5647 /* Quicksand-Light.ttf */; };
+		A5349C4C236C54BA00BF5647 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5349C47236C54B900BF5647 /* Quicksand-Regular.ttf */; };
+		A5349C4D236C54BA00BF5647 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5349C48236C54B900BF5647 /* Quicksand-SemiBold.ttf */; };
+		A5349C4E236C54BA00BF5647 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5349C49236C54BA00BF5647 /* Quicksand-Bold.ttf */; };
+		A5349C4F236C54BA00BF5647 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5349C4A236C54BA00BF5647 /* Quicksand-Medium.ttf */; };
+		A5349C51236C676900BF5647 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5349C50236C676900BF5647 /* RoundedUIView.swift */; };
+		A5349C53236F772C00BF5647 /* PoseDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5349C52236F772B00BF5647 /* PoseDescriptionTableViewCell.swift */; };
 		E158E018EE92A2910A000061 /* Pods_NolanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9806DF4BE5A483F606AFDC18 /* Pods_NolanTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +126,11 @@
 		47B026C9236B07BB00E64011 /* BracoBaixo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BracoBaixo; sourceTree = "<group>"; };
 		47B026CA236B07BB00E64011 /* PeProLado */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PeProLado; sourceTree = "<group>"; };
 		47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewARPoseViewController.swift; sourceTree = "<group>"; };
+		47BCD616236B98BA008D18B8 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		47BCD618236C66BB008D18B8 /* RKFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKFeedback.swift; sourceTree = "<group>"; };
+		47BCD61A236C6729008D18B8 /* RKFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKFeedbackGenerator.swift; sourceTree = "<group>"; };
+		47ED903D23704BA6005E0B60 /* RKFeedbackDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKFeedbackDirection.swift; sourceTree = "<group>"; };
+		47ED904023704FC0005E0B60 /* TTSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSController.swift; sourceTree = "<group>"; };
 		58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.release.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.release.xcconfig"; sourceTree = "<group>"; };
 		6A653460CD644B1726424463 /* Pods-NolanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NolanTests.release.xcconfig"; path = "Target Support Files/Pods-NolanTests/Pods-NolanTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F81813D0A595FD623D8A871 /* Pods-Nolan-NolanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.release.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +139,13 @@
 		A51876172369BC9E001A8ACF /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		A51876192369BD50001A8ACF /* SessionPoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPoseTableViewCell.swift; sourceTree = "<group>"; };
 		A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDescriptionViewController.swift; sourceTree = "<group>"; };
+		A5349C46236C54B900BF5647 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		A5349C47236C54B900BF5647 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		A5349C48236C54B900BF5647 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		A5349C49236C54BA00BF5647 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		A5349C4A236C54BA00BF5647 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		A5349C50236C676900BF5647 /* RoundedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
+		A5349C52236F772B00BF5647 /* PoseDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		C04C4AFAD9D32BDEA1A8830F /* Pods-NolanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NolanTests.debug.xcconfig"; path = "Target Support Files/Pods-NolanTests/Pods-NolanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nolan_NolanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -219,11 +243,14 @@
 				47B026D1236B07D400E64011 /* RKJointComparison */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
+				47BCD616236B98BA008D18B8 /* robot.usdz */,
+				A5187612236868A1001A8ACF /* Controller */,
 				0110A190235E3BE80064672A /* Model */,
 				0110A195235E6F650064672A /* View */,
-				A5187612236868A1001A8ACF /* Controller */,
+				A5349C45236C548D00BF5647 /* Fonts */,
 				019BF58223573F2C00F3E164 /* Info.plist */,
 				01728AA4236A10E000CB2C18 /* GoogleService-Info.plist */,
+				47ED904023704FC0005E0B60 /* TTSController.swift */,
 			);
 			path = Nolan;
 			sourceTree = "<group>";
@@ -287,6 +314,9 @@
 			children = (
 				47B026CF236B07BF00E64011 /* Poses */,
 				47B026D0236B07C800E64011 /* RKJoints */,
+				47BCD618236C66BB008D18B8 /* RKFeedback.swift */,
+				47BCD61A236C6729008D18B8 /* RKFeedbackGenerator.swift */,
+				47ED903D23704BA6005E0B60 /* RKFeedbackDirection.swift */,
 			);
 			path = RKJointComparison;
 			sourceTree = "<group>";
@@ -321,6 +351,7 @@
 			children = (
 				A51876192369BD50001A8ACF /* SessionPoseTableViewCell.swift */,
 				0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */,
+				A5349C52236F772B00BF5647 /* PoseDescriptionTableViewCell.swift */,
 				0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */,
 				0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */,
 			);
@@ -331,8 +362,21 @@
 			isa = PBXGroup;
 			children = (
 				A51876172369BC9E001A8ACF /* RoundedImage.swift */,
+				A5349C50236C676900BF5647 /* RoundedUIView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A5349C45236C548D00BF5647 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A5349C49236C54BA00BF5647 /* Quicksand-Bold.ttf */,
+				A5349C46236C54B900BF5647 /* Quicksand-Light.ttf */,
+				A5349C4A236C54BA00BF5647 /* Quicksand-Medium.ttf */,
+				A5349C47236C54B900BF5647 /* Quicksand-Regular.ttf */,
+				A5349C48236C54B900BF5647 /* Quicksand-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,13 +489,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				47B026CC236B07BB00E64011 /* TBugadoDeLado in Resources */,
+				47BCD617236B98BA008D18B8 /* robot.usdz in Resources */,
 				019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */,
 				47B026CD236B07BB00E64011 /* BracoBaixo in Resources */,
+				A5349C4B236C54BA00BF5647 /* Quicksand-Light.ttf in Resources */,
 				0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */,
 				0121E0FE2363411C00FB3C06 /* Main.storyboard in Resources */,
 				47B026CB236B07BB00E64011 /* T in Resources */,
+				A5349C4E236C54BA00BF5647 /* Quicksand-Bold.ttf in Resources */,
+				A5349C4D236C54BA00BF5647 /* Quicksand-SemiBold.ttf in Resources */,
 				01728AA5236A10E000CB2C18 /* GoogleService-Info.plist in Resources */,
 				47B026CE236B07BB00E64011 /* PeProLado in Resources */,
+				A5349C4F236C54BA00BF5647 /* Quicksand-Medium.ttf in Resources */,
+				A5349C4C236C54BA00BF5647 /* Quicksand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,12 +643,16 @@
 				A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */,
 				019BF57923573F2700F3E164 /* ViewController.swift in Sources */,
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
+				47ED904123704FC0005E0B60 /* TTSController.swift in Sources */,
+				47BCD619236C66BB008D18B8 /* RKFeedback.swift in Sources */,
 				0D44835D236B19BB00C9914D /* RKJointWeights.swift in Sources */,
+				47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
 				0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */,
 				0D1AF00A236322A0000A8F56 /* Video.swift in Sources */,
 				0193A3CD235FB3CA003C3F75 /* Singleton.swift in Sources */,
 				019BF57523573F2700F3E164 /* AppDelegate.swift in Sources */,
+				47ED903E23704BA6005E0B60 /* RKFeedbackDirection.swift in Sources */,
 				0D1AF00823632208000A8F56 /* Session.swift in Sources */,
 				0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */,
 				0193A3D523607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift in Sources */,
@@ -606,8 +660,10 @@
 				A518761C2369C140001A8ACF /* PoseDescriptionViewController.swift in Sources */,
 				0110A194235E40220064672A /* TrainColViewController.swift in Sources */,
 				47B026C5236B07AF00E64011 /* RKJoint.swift in Sources */,
+				A5349C51236C676900BF5647 /* RoundedUIView.swift in Sources */,
 				0D1AF00223631E5C000A8F56 /* User.swift in Sources */,
 				01662AB4235E767F00041C35 /* CustomSegmentedControl.swift in Sources */,
+				A5349C53236F772C00BF5647 /* PoseDescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,7 +830,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -793,7 +850,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = A7Z8B7ZWX2;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
