@@ -26,7 +26,7 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.rowHeight = 85.0
-       
+       updateInterface()
     }
 
     // chamar os itens do singleton para popular a tela
