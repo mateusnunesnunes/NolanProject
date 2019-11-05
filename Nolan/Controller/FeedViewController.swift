@@ -19,6 +19,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     let favoritePoses = Singleton.shared.sessions.flatMap( {$0.pose} ).filter({$0.favorite})
 
     
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

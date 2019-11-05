@@ -21,6 +21,9 @@ class FilterViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var labelPose: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    override var shouldAutorotate: Bool {
+        false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
