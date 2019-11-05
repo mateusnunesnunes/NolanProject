@@ -12,8 +12,25 @@ import UIKit
 class Singleton {
     
     static let shared = Singleton()
-    var segmentedControlOption: Int!
-    
+    var segmentedControlOption = -1
+    var data: [Session]!
+    var firstLoad = true
+    func loadDataTrainView(id:Int){
+        switch id {
+        case 0:
+            print("Focus")
+            data = sessions.filter({$0.category == "Focus"})
+            
+        case 1:
+            print("Concentration")
+             data = sessions.filter({$0.category == "Concentration"})
+        case 2:
+            print("Balance")
+            data = sessions.filter({$0.category == "Balance"})
+        default:
+            return
+        }
+    }
     let sessions: [Session] = [
         Session(name: "Yang TaiChiChuan", difficulty: "Begginer", photo: UIImage(named: "image1")!, pose: [
             Pose(
@@ -168,7 +185,7 @@ class Singleton {
             Pose(
                name: "左右摟膝拗步",
                 difficulty: "Easy",
-                types: "Concentration",
+                types: "Balance",
                 steps: [
                 "Mude seu peso para trás, leve sua mão direita junto",
                 "Recue o corpo levemente e continue",
@@ -197,7 +214,7 @@ class Singleton {
             Pose(
                 name: "Zhuan Shen Ban Lan Chui",
                 difficulty: "Medium",
-                types: "movement",
+                types: "Focus",
                 steps: [
                 "Seu corpo deve seguir uma curva",
                 "Com os pés juntos, seu tronco de move levemente de um lado para outro",
@@ -210,7 +227,7 @@ class Singleton {
             Pose(
                 name: "Ru Feng Si Bi",
                 difficulty: "Hard",
-                types: "movement",
+                types: "Focus",
                 steps: [
                 "O punho direito deve estar a frente do corpo",
                 "A mão esquerda passa por baixo do punho direito ",
@@ -221,7 +238,7 @@ class Singleton {
             Pose(
                 name: "Hai Di Zhen",
                 difficulty: "Medium",
-                types: "movement",
+                types: "Focus",
                 steps: [
                     "Mantenha as duas mãos a frente do joelho",
                     "Curve as duas pernas, sendo que a esquerda estará na frente da outra",
@@ -232,7 +249,7 @@ class Singleton {
            Pose(
                name: "Parting the Horse's Mane",
                difficulty: "Medium",
-               types: "Concentration",
+               types: "Focus",
                steps: [
                "Concentre seu peso na perna direita",
                "Transpondo o peso da perna esquerda levemente",
@@ -242,7 +259,7 @@ class Singleton {
                jsonFilename: ""
            )
             ],
-                category: "movement",
+                category: "Focus",
                 length: "5'"
         )
     ]

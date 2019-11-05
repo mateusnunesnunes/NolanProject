@@ -8,42 +8,43 @@ import AVFoundation
  collection,sendo que essa é uma subclasse de CollectionView
  e aplica praticamente os mesmos métodos que seu pai.
  */
-class TrainColViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout  {
+class TrainColViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout,CustomSegmentedControlDelegate {
+    func segmentedChange() {
+        if !Singleton.shared.firstLoad{
+            self.data =  Singleton.shared.data
+            collectionView.reloadData()
+        }
+    }
+    
     //variaveis de ligados a elementos que estão na ViewController
     @IBOutlet weak var viewMainTrain: UIView!
     @IBOutlet weak var viewSegmented: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     //constante chamada model do tipo Model() e singleton tipo Singleton()
-    var sessions = Singleton.shared.sessions
+    var data = Singleton.shared.sessions.filter({$0.category == "Focus"})
     let model = Model()
-    
-    
-    override var shouldAutorotate: Bool {
-        false
-    }
-    
+    var codeSegmented: CustomSegmentedControl!
     //Funcao chamada toda vez que a tela é carregada
     override func viewDidLoad() {
         super.viewDidLoad()
                 //Configurações SegmentedControl
-        let codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Train","Feed","Tonning"])
+        self.codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Focus","Concentration","Balance"])
         codeSegmented.backgroundColor = .clear
         viewSegmented.addSubview(codeSegmented)
-        
-//        viewMainTrain.layer.borderWidth = 2
-//        viewMainTrain.layer.borderColor = UIColor.black.cgColor
-        print("teste")
+        codeSegmented.delegate = self
         //Configurando a collection view
         model.buildDataSource()
         //Config datasource e delegate
         collectionView.dataSource  = self
         collectionView.delegate = self
+        
         //Chama a funcao setupCollectionView presente abaixo
         setupCollectionView()
         //Chama a funcao registerNibs presente abaixo
         registerNibs()
-    }
+        Singleton.shared.firstLoad = false
+   }
     
     //O aplicativo nunca chama esse metodo diretamente, só é chamado quando o sistema avalia a memória disponivel como baixa
     override func didReceiveMemoryWarning() {
@@ -76,15 +77,13 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //Cria a celula e retorna a celula
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageUICollectionViewCell
-        // Adiciona as imagem presentes no array
-        cell.image.image = model.images[indexPath.row]
-        //cell.backgroundColor = .lightGray
+        if indexPath.item < self.data.count{
+            cell.image.image = self.data[indexPath.item].photo
+        }
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.cornerRadius = 10
-        
         return cell
     }
     
@@ -92,9 +91,12 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // cria o tamanho da celula de acordo com o tamanho da imagem e a retorna
         
-        let imageSize = model.images[indexPath.row].size
-//        imageSize.width -= 30
-//        imageSize.height -= 30
+        var imageSize = CGSize(width: 0, height: 0)
+        if indexPath.item < self.data.count{
+             imageSize = data[indexPath.row].photo.size
+        }
+       
+       
         return imageSize
     }
     

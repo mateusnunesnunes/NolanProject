@@ -12,6 +12,7 @@ class CustomSegmentedControl: UIView {
     var textColor:UIColor = .gray
     var selectorViewColor:UIColor = .black
     var selectorTextColor:UIColor = .black
+    var delegate:CustomSegmentedControlDelegate?
     //funcao que vai ser chamada quando a view for atualizada
     private func updateView(){
         //toda vez que a tela for carregada as tres funcoes principais serao chamadas em ordem
@@ -68,8 +69,8 @@ class CustomSegmentedControl: UIView {
             //condicao -- se botao que foi clickado é igual ao botao que o for está lendo
             if btn == sender{
                 //posicionando a linha no botao que foi clickado, utilizando animação
-                print("Botão clickado = \(CGFloat(buttonIndex))")
-                Singleton.shared.segmentedControlOption = buttonIndex
+                
+                Singleton.shared.loadDataTrainView(id: Int(CGFloat(buttonIndex)))
                 let selectorPosition = frame.width/CGFloat(buttonTitles.count) * CGFloat(buttonIndex)
 //                UIView.animate(withDuration: 0.1){
 //                    self.selectorView.frame.origin.x = selectorPosition
@@ -83,6 +84,7 @@ class CustomSegmentedControl: UIView {
                 btn.setTitleColor(selectorTextColor, for: .normal)
             }
         }
+        delegate?.segmentedChange()
     }
     //funcoes que sao chamadas para criar o layout da segmented
     convenience init (frame:CGRect,buttonTitle:[String]){
