@@ -16,6 +16,10 @@ class SaveFeedbackViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(feedbackSession)
+        if let feedbackSession = self.feedbackSession {
+            print(Array(feedbackSession.scores.keys).sorted())
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

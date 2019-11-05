@@ -47,7 +47,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     var feedbackSession: RKFeedbackSession?
     
     // Speech recognizing
-    let audioEngine = AVAudioEngine()
+    var audioEngine = AVAudioEngine()
     let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     let request = SFSpeechAudioBufferRecognitionRequest()
     var recognitionTask: SFSpeechRecognitionTask?
@@ -59,6 +59,11 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         startView.cornerRadius = 20
+        
+        startView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        startView.layer.shadowRadius = 3
+        startView.layer.shadowColor = UIColor.lightGray.cgColor
+        startView.layer.shadowOpacity = 0.85
         // Do any additional setup after loading the view.
     }
     
@@ -69,6 +74,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         
         startView.alpha = 1
         
+        audioEngine = AVAudioEngine()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -150,6 +156,9 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         
         timerFeedback?.invalidate()
         timerFeedback = nil
+        
+        timerSpeech?.invalidate()
+        timerSpeech = nil
         
         shouldUpdate = true
         shouldGiveFeedback = true
@@ -245,7 +254,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     }
     
     @IBAction func startPressed(_ sender: Any) {
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 0.75) {
             self.startView.alpha = 0
             self.allTranscribedText = ""
             self.recordAndRecognizeSpeech()
@@ -272,7 +281,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
             if let result = result {
                 let justRecognized = result.bestTranscription.formattedString
-                self.allTranscribedText += justRecognized.lowercased() + " "
+                self.allTranscribedText = justRecognized.lowercased()
             } else if let error = error {
                 print(error)
             }
@@ -284,6 +293,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         if self.allTranscribedText.contains("start")  && !sessionRunning {
             self.sessionRunning = true
         } else if self.allTranscribedText.contains("stop") && sessionRunning {
+            self.allTranscribedText = ""
             self.endSession()
             self.performSegue(withIdentifier: "viewSaveFeedback", sender: self.feedbackSession)
         }
@@ -292,7 +302,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     func endSession() {
         print("Session ended!")
         self.sessionRunning = false
-        
+        self.audioEngine.stop()
     }
     
     // O prepare é chamado  sempre que uma segue é executada
