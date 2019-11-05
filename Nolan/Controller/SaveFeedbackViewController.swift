@@ -77,8 +77,6 @@ class SaveFeedbackViewController: UIViewController {
         for i in 0..<chartValues.count {
             chartDataEntries.append(ChartDataEntry(x: Double(keys[i]), y: chartValues[i]))
         }
-//        let values = keys.map( { ChartDataEntry(x: Double($0), y: chartValues } )
-        
         
         let performanceLine = LineChartDataSet(entries: chartDataEntries, label: "Performance")
         performanceLine.setColor(.red)
