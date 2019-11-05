@@ -28,11 +28,11 @@
 		0D1AF00623632113000A8F56 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00523632113000A8F56 /* Pose.swift */; };
 		0D1AF00823632208000A8F56 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00723632208000A8F56 /* Session.swift */; };
 		0D1AF00A236322A0000A8F56 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF009236322A0000A8F56 /* Video.swift */; };
-		0D44835D236B19BB00C9914D /* RKJointWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D44835C236B19BB00C9914D /* RKJointWeights.swift */; };
 		0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */; };
 		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
+		478071BF2371B65B00EE2478 /* SaveFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */; };
 		47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */; };
 		47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C0236B07AF00E64011 /* RKImmutableTree.swift */; };
 		47B026C5236B07AF00E64011 /* RKJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C1236B07AF00E64011 /* RKJoint.swift */; };
@@ -109,13 +109,13 @@
 		0D1AF00523632113000A8F56 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		0D1AF00723632208000A8F56 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0D1AF009236322A0000A8F56 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		0D44835C236B19BB00C9914D /* RKJointWeights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RKJointWeights.swift; path = Nolan/RKJointComparison/RKJoints/RKJointWeights.swift; sourceTree = SOURCE_ROOT; };
 		0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesTableViewCell.swift; sourceTree = "<group>"; };
 		0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePosesCollectionViewCell.swift; sourceTree = "<group>"; };
 		22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.debug.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.debug.xcconfig"; sourceTree = "<group>"; };
 		2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFeedbackViewController.swift; sourceTree = "<group>"; };
 		47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableJoint.swift; sourceTree = "<group>"; };
 		47B026C0236B07AF00E64011 /* RKImmutableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableTree.swift; sourceTree = "<group>"; };
 		47B026C1236B07AF00E64011 /* RKJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKJoint.swift; sourceTree = "<group>"; };
@@ -300,7 +300,6 @@
 		47B026D0236B07C800E64011 /* RKJoints */ = {
 			isa = PBXGroup;
 			children = (
-				0D44835C236B19BB00C9914D /* RKJointWeights.swift */,
 				47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */,
 				47B026C0236B07AF00E64011 /* RKImmutableTree.swift */,
 				47B026C1236B07AF00E64011 /* RKJoint.swift */,
@@ -342,6 +341,7 @@
 				0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */,
 				0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */,
 				A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */,
+				478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -645,7 +645,6 @@
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
 				47ED904123704FC0005E0B60 /* TTSController.swift in Sources */,
 				47BCD619236C66BB008D18B8 /* RKFeedback.swift in Sources */,
-				0D44835D236B19BB00C9914D /* RKJointWeights.swift in Sources */,
 				47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
 				0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */,
@@ -653,6 +652,7 @@
 				0193A3CD235FB3CA003C3F75 /* Singleton.swift in Sources */,
 				019BF57523573F2700F3E164 /* AppDelegate.swift in Sources */,
 				47ED903E23704BA6005E0B60 /* RKFeedbackDirection.swift in Sources */,
+				478071BF2371B65B00EE2478 /* SaveFeedbackViewController.swift in Sources */,
 				0D1AF00823632208000A8F56 /* Session.swift in Sources */,
 				0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */,
 				0193A3D523607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift in Sources */,

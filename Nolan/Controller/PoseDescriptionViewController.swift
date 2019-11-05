@@ -49,6 +49,7 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
         // Executamos a segue - criada no Storyboard - com o  nome de viewPose enviando junto, como dado, a pose atual
         self.performSegue(withIdentifier: "viewPose", sender: pose)
     }
+    
     // O prepare é chamado  sempre que uma segue é executada
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Vejo se a segue sendo executada é a "viewPose"

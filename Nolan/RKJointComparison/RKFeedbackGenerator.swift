@@ -14,7 +14,7 @@ class RKFeedbackGenerator {
     
     private init() {}
     
-    let feedbackableJoints = ["hips_joint", "left_upLeg_joint", "left_leg_joint", "left_foot_joint", "right_upLeg_joint", "right_leg_joint", "right_foot_joint", "spine_1_joint", "spine_4_joint", "spine_7_joint", "neck_4_joint", "head_joint", "right_shoulder_1_joint", "right_arm_joint", "right_forearm_joint", "right_hand_joint", "left_shoulder_1_joint", "left_arm_joint", "left_forearm_joint", "left_hand_joint"]
+    let feedbackableJoints = ["hips_joint", "left_upLeg_joint", "left_leg_joint", "left_foot_joint", "right_upLeg_joint", "right_leg_joint", "right_foot_joint", "spine_1_joint", "spine_4_joint", "spine_7_joint", "right_shoulder_1_joint", "right_arm_joint", "right_forearm_joint", "right_hand_joint", "left_shoulder_1_joint", "left_arm_joint", "left_forearm_joint", "left_hand_joint", "neck_4_joint", "head_joint"]
     
     func generateFeedback(forTracked trackedTree: RKJointTree, andPose poseTree: RKImmutableJointTree, consideringJoints jointList: [String], maxDistance threshold: Float) -> RKFeedback? {
         
@@ -27,6 +27,8 @@ class RKFeedbackGenerator {
                 let deltaZ = (secondPosition.z - firstPosition.z)
                 
                 let distance = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ)
+                print("Scanning \(jointName)...")
+                print("Distance is \(distance) while threshold is \(threshold)")
                 
                 if distance > threshold {
                     
@@ -37,7 +39,7 @@ class RKFeedbackGenerator {
                     print("Second position: \(secondPosition)")
                     print(direction, totalDifference)
                     
-                    return RKFeedback(jointName: jointName, difference: totalDifference, direction: direction)
+                    return RKFeedback(jointName: jointName.replacingOccurrences(of: "_joint", with: ""), difference: totalDifference, direction: direction)
                 }
             }
         }
@@ -59,10 +61,10 @@ class RKFeedbackGenerator {
                 let direction: RKFeedbackDirection = xDifference > 0 ? .outward : .inward
                 return (direction, xDifference)
             } else if abs(yDifference) >= abs(xDifference) && abs(yDifference) >= abs(zDifference) {
-                let direction: RKFeedbackDirection = xDifference > 0 ? .upward : .downward
+                let direction: RKFeedbackDirection = yDifference > 0 ? .upward : .downward
                 return (direction, yDifference)
             } else {
-                let direction: RKFeedbackDirection = xDifference > 0 ? .forward : .backward
+                let direction: RKFeedbackDirection = zDifference > 0 ? .forward : .backward
                 return (direction, zDifference)
             }
             

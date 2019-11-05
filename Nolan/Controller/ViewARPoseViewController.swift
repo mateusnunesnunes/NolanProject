@@ -9,6 +9,7 @@ import UIKit
 import ARKit
 import RealityKit
 import Combine
+import Speech
 
 class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
@@ -19,6 +20,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var avgLabel: UILabel!
     @IBOutlet weak var medLabel: UILabel!
     
+    @IBOutlet weak var startView: UIView!
     
     // AR STUFF
     @IBOutlet weak var arView: ARView!
@@ -31,25 +33,46 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
     var timerUpdater: Timer?
     var timerFeedback: Timer?
+    var timerSpeech: Timer?
     
     var poseTree: RKImmutableJointTree?
     
+    // Control variables
     var shouldUpdate = true
     var shouldGiveFeedback = true
+    var sessionRunning = false
     
+    // Feedback Sessions
+    var currentTime: Float = 0
     var feedbackSession: RKFeedbackSession?
     
-    var currentTime: Float = 0
+    // Speech recognizing
+    let audioEngine = AVAudioEngine()
+    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
+    let request = SFSpeechAudioBufferRecognitionRequest()
+    var recognitionTask: SFSpeechRecognitionTask?
+    
+    var allTranscribedText: String = ""
+    
+    // Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startView.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
+        super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.tabBarController?.tabBar.isHidden = true
+        
+        startView.alpha = 1
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         print("Creating poseTree with pose file as \(pose?.jsonFilename)")
         
@@ -93,11 +116,18 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         // start timer
         timerUpdater = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
             self.shouldUpdate = true
-            self.currentTime += 0.1
+            if self.sessionRunning {
+                self.currentTime += 0.1
+            }
         }
         
-        timerFeedback = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (_) in
+        timerFeedback = Timer.scheduledTimer(withTimeInterval: 5.5, repeats: true) { (_) in
             self.shouldGiveFeedback = true
+        }
+        
+        timerSpeech = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { (_) in
+            print("Handling speech")
+            self.handleSpeech()
         }
         
         if let pose = self.pose {
@@ -106,16 +136,24 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
         timerUpdater?.invalidate()
         timerUpdater = nil
         
         timerFeedback?.invalidate()
         timerFeedback = nil
+        
+        shouldUpdate = true
+        shouldGiveFeedback = true
+        sessionRunning = false
     }
     
     func createPoseTree() {
@@ -139,62 +177,58 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
     
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-        for anchor in anchors {
-            guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
-            
-            // Update the position of the character anchor's position.
-            let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
-            characterAnchor.position = bodyPosition + characterOffset
-            
-            // Also copy over the rotation of the body anchor, because the skeleton's pose
-            // in the world is relative to the body anchor's rotation.
-            characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
-            
-            if let character = character, character.parent == nil {
-                // Attach the character to its anchor as soon as
-                // 1. the body anchor was detected and
-                // 2. the character was loaded.
-                characterAnchor.addChild(character)
+        if sessionRunning {
+            for anchor in anchors {
+                guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
                 
-                let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
-                let jointNames = character.jointNames
+                let bodyPosition = simd_make_float3(bodyAnchor.transform.columns.3)
+                characterAnchor.position = bodyPosition + characterOffset
                 
-                let joints = Array(zip(jointNames, jointModelTransforms))
-                characterTree = RKJointTree(from: joints, usingAbsoluteTranslation: true)
-            }
-            
-            if shouldUpdate {
+                characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
                 
-                if let characterTree = self.characterTree, let character = self.character {
+                if let character = character, character.parent == nil {
+                    
+                    characterAnchor.addChild(character)
+                    
                     let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
                     let jointNames = character.jointNames
                     
                     let joints = Array(zip(jointNames, jointModelTransforms))
+                    characterTree = RKJointTree(from: joints, usingAbsoluteTranslation: true)
+                }
+                
+                if shouldUpdate {
                     
-                    characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
-                    
-                    if let poseTree = self.poseTree {
-                        analyzeTrees(characterTree, poseTree)
+                    if let characterTree = self.characterTree, let character = self.character {
+                        let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
+                        let jointNames = character.jointNames
+                        
+                        let joints = Array(zip(jointNames, jointModelTransforms))
+                        
+                        characterTree.updateJoints(from: joints, usingAbsoluteTranslation: true)
+                        
+                        if let poseTree = self.poseTree {
+                            analyzeTrees(characterTree, poseTree)
+                        }
+                        
+                        shouldUpdate = false
                     }
-                    
-                    shouldUpdate = false
                 }
             }
-            
         }
     }
     
     func analyzeTrees(_ characterTree: RKJointTree, _ poseTree: RKImmutableJointTree) {
         //print("Updating labels")
         
-        let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys))
+        let (min, max, avg, med) = characterTree.score(to: poseTree, consideringJoints: RKFeedbackGenerator.shared.feedbackableJoints)
         
         feedbackSession?.scores[currentTime] = max
         
         if shouldGiveFeedback {
             shouldGiveFeedback = false
             
-            let feedback = RKFeedbackGenerator.shared.generateFeedback(forTracked: characterTree, andPose: poseTree, consideringJoints: Array(RKJointWeights.jointWeights.keys), maxDistance: 0.2)
+            let feedback = RKFeedbackGenerator.shared.generateFeedback(forTracked: characterTree, andPose: poseTree, consideringJoints: RKFeedbackGenerator.shared.feedbackableJoints, maxDistance: 0.2)
             
             if let feedbackString = feedback?.toPhrase() {
                 TTSController.shared.say(text: feedbackString)
@@ -209,6 +243,72 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         self.avgLabel.text = "avg: " + avg.description
         self.medLabel.text = "med: " + med.description
     }
+    
+    @IBAction func startPressed(_ sender: Any) {
+        UIView.animate(withDuration: 1) {
+            self.startView.alpha = 0
+            self.allTranscribedText = ""
+            self.recordAndRecognizeSpeech()
+        }
+    }
+    
+    func recordAndRecognizeSpeech() {
+        let node = audioEngine.inputNode
+        let recordingFormat = node.outputFormat(forBus: 0)
+        node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
+            self.request.append(buffer)
+        }
+        
+        audioEngine.prepare()
+        do {
+            try audioEngine.start()
+        } catch {
+            return print(error)
+        }
+        
+        guard let myRecognizer = SFSpeechRecognizer() else { return }
+        if !myRecognizer.isAvailable { return }
+        
+        recognitionTask = speechRecognizer?.recognitionTask(with: request, resultHandler: { (result, error) in
+            if let result = result {
+                let justRecognized = result.bestTranscription.formattedString
+                self.allTranscribedText += justRecognized.lowercased() + " "
+            } else if let error = error {
+                print(error)
+            }
+        })
+    }
+    
+    func handleSpeech() {
+        print(allTranscribedText)
+        if self.allTranscribedText.contains("start")  && !sessionRunning {
+            self.sessionRunning = true
+        } else if self.allTranscribedText.contains("stop") && sessionRunning {
+            self.endSession()
+            self.performSegue(withIdentifier: "viewSaveFeedback", sender: self.feedbackSession)
+        }
+    }
+    
+    func endSession() {
+        print("Session ended!")
+        self.sessionRunning = false
+        
+    }
+    
+    // O prepare é chamado  sempre que uma segue é executada
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewSaveFeedback" {
+            
+            // Se for, checo se o destino da Segue é de fato uma ViewARPoseViewController e se consigo converter o dado recebido em uma Pose
+            if let destination = segue.destination as? SaveFeedbackViewController {
+                destination.feedbackSession = sender as? RKFeedbackSession
+            } else{
+                // Se deu errado, avisa
+                print("Failed creating view controller")
+            }
+        }
+    }
+    
     
     
 }
