@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mateus Nunes. All rights reserved.
 //
 
-import Foundation
+import RealityKit
 
 class RKJointWeights {
     
