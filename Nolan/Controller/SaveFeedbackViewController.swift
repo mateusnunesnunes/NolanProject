@@ -7,19 +7,61 @@
 //
 
 import UIKit
+import Charts
 
 class SaveFeedbackViewController: UIViewController {
     
     var feedbackSession: RKFeedbackSession?
 
+    @IBOutlet weak var performanceChart: LineChartView!
+    
+    @IBOutlet weak var poseInfoView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var poseImage: UIImageView!
+    
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var discardButton: UIButton!
+    
+    func createChart(_ feedbackSession: RKFeedbackSession) {
+        let keys: [Float] = Array(feedbackSession.scores.keys).sorted()
+        let values = keys.map( { ChartDataEntry(x: Double(feedbackSession.scores[$0]!), y: Double($0)) })
+        
+        
+        let line1 = LineChartDataSet(entries: values, label: "Performance")
+        
+        let data = LineChartData()
+        data.addDataSet(line1)
+        
+        performanceChart.data = data
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        print(feedbackSession)
+        
         if let feedbackSession = self.feedbackSession {
-            print(Array(feedbackSession.scores.keys).sorted())
+            
+            // TODO: fazer isso do jeito certo
+//            poseImage.image =
+            
+            poseInfoView.cornerRadius = 20
+            poseInfoView.layer.shadowOffset = CGSize(width: 0, height: 5)
+            poseInfoView.layer.shadowRadius = 3
+            poseInfoView.layer.shadowColor = UIColor.lightGray.cgColor
+            poseInfoView.layer.shadowOpacity = 0.85
+            
+            nameLabel.text = feedbackSession.pose.name
+            dateLabel.text = feedbackSession.date.description
+            
+            performanceChart.cornerRadius = 20
+            performanceChart.layer.shadowOffset = CGSize(width: 0, height: 5)
+            performanceChart.layer.shadowRadius = 3
+            performanceChart.layer.shadowColor = UIColor.lightGray.cgColor
+            performanceChart.layer.shadowOpacity = 0.85
+            
+            createChart(feedbackSession)
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +76,21 @@ class SaveFeedbackViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
 
+    @IBAction func savePressed(_ sender: Any) {
+        // TODO: Ask for health kit permission. If accepted, save mindful seconds there.
+        
+        // TODO: Add into user favorites
+        
+        popToPose()
+    }
+    
+    @IBAction func discardPressed(_ sender: Any) {
+        popToPose()
+    }
+    
+    func popToPose() {
+        // TODO: Dar pop da navigation até a pose
+    }
     /*
     // MARK: - Navigation
 
