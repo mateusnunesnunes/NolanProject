@@ -17,6 +17,8 @@ class User {
     var correctPose: Int
     var favoritePoses: [Pose]
     
+    var feedbacks: [RKFeedbackSession] = []
+    
     init(name: String, photo: UIImage, timePracticed: Time, sessionList: [Session], correctPose: Int, favoritePoses: [Pose]) {
         self.name = name
         self.photo = photo
