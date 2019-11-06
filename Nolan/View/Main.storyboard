@@ -827,7 +827,7 @@ accuracy</string>
                                         <rect key="frame" x="41.333333333333343" y="114" width="331.33333333333326" height="497"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUN-CR-Piz">
-                                                <rect key="frame" x="117.33333333333331" y="390" width="97" height="97"/>
+                                                <rect key="frame" x="117.33333333333331" y="360" width="97" height="97"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="iUN-CR-Piz" secondAttribute="height" multiplier="1:1" id="MB9-r6-tHZ"/>
                                                 </constraints>
@@ -844,7 +844,7 @@ accuracy</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sph-dB-gvX">
-                                                <rect key="frame" x="33.333333333333343" y="67.666666666666686" width="264.66666666666663" height="302.33333333333331"/>
+                                                <rect key="frame" x="33.333333333333343" y="67.666666666666686" width="264.66666666666663" height="272.33333333333331"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <string key="text">Read it all before doing anything!
 
@@ -871,7 +871,7 @@ To finish you session, just say "Stop!"</string>
                                             <constraint firstItem="iUN-CR-Piz" firstAttribute="centerX" secondItem="QM2-3V-dVQ" secondAttribute="centerX" id="lVe-vb-yGT"/>
                                             <constraint firstItem="Sph-dB-gvX" firstAttribute="centerX" secondItem="QM2-3V-dVQ" secondAttribute="centerX" id="n4r-iA-K00"/>
                                             <constraint firstAttribute="width" secondItem="QM2-3V-dVQ" secondAttribute="height" multiplier="4:6" id="sai-ZC-UW4"/>
-                                            <constraint firstAttribute="bottom" secondItem="iUN-CR-Piz" secondAttribute="bottom" constant="10" id="tuY-Bd-07m"/>
+                                            <constraint firstAttribute="bottom" secondItem="iUN-CR-Piz" secondAttribute="bottom" constant="40" id="tuY-Bd-07m"/>
                                         </constraints>
                                     </view>
                                 </subviews>

@@ -148,6 +148,11 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        arView?.session.pause()
+        arView?.removeFromSuperview()
+        
+        arView = nil
+        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.tabBar.isHidden = false
     }
