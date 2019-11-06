@@ -10,11 +10,18 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
+    @IBOutlet weak var whiteView: UIView!
+    
+    @IBOutlet weak var collectionHeight: NSLayoutConstraint!
+    @IBOutlet var feedView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var scanButoon: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var labelAllPoses: UILabel!
     
+    
+    var collectionHeightConstant = CGFloat()
     let allPoses = Singleton.shared.sessions.flatMap( {$0.pose} )
     var filteredPoses = [Pose]()
     let favoritePoses = Singleton.shared.sessions.flatMap( {$0.pose} ).filter({$0.favorite})
@@ -36,26 +43,52 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         searchBar.delegate = self
         
         filteredPoses = allPoses
+        
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Hide the Navigation Bar
+        collectionHeightConstant = collectionHeight.constant
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    //MARK: Move Up
+
+    @objc func keyboardWillChange(notification: NSNotification) {
+        if let _: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            
+            collectionHeight.constant = 0
+        }
+    }
+    
+    @objc func keyboardWillHide() {
+        
+        collectionHeight.constant = collectionHeightConstant
+    }
+    
      //MARK: SearchBar
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredPoses = allPoses.filter({$0.name.uppercased().contains(searchText.uppercased())})
         tableView.reloadData()
+        
+        if searchText  == "" {
+            filteredPoses = allPoses
+            tableView.reloadData()
+        }
     }
     
     //MARK: CollectionView
@@ -111,4 +144,23 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+}
+
+// MARK: Hide Keyboard
+
+extension FeedViewController {
+
+   func hideKeyboardWhenTappedAround() {
+       let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FeedViewController.dismissKeyboard(_:)))
+       tap.cancelsTouchesInView = false
+       view.addGestureRecognizer(tap)
+   }
+
+   @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+       view.endEditing(true)
+
+       if let nav = self.navigationController {
+           nav.view.endEditing(true)
+       }
+   }
 }
