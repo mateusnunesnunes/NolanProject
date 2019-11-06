@@ -44,6 +44,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     var shouldUpdate = true
     var shouldGiveFeedback = true
     var sessionRunning = false
+    var bodyPlaced = false
     
     // Feedback Sessions
     var currentTime: Float = 0
@@ -65,7 +66,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         
         startView.layer.shadowOffset = CGSize(width: 0, height: 5)
         startView.layer.shadowRadius = 3
-        startView.layer.shadowColor = UIColor.lightGray.cgColor
+        startView.layer.shadowColor = UIColor.darkGray.cgColor
         startView.layer.shadowOpacity = 0.85
         // Do any additional setup after loading the view.
     }
@@ -126,7 +127,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         // start timer
         timerUpdater = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
             self.shouldUpdate = true
-            if self.sessionRunning {
+            if self.bodyPlaced {
                 self.currentTime += 0.1
             }
         }
@@ -150,6 +151,10 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.tabBar.isHidden = false
+        
+        arView.session.pause()
+        arView.removeFromSuperview()
+        arView = nil
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -202,6 +207,8 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
                 if let character = character, character.parent == nil {
                     
                     characterAnchor.addChild(character)
+                    
+                    bodyPlaced = true
                     
                     let jointModelTransforms = bodyAnchor.skeleton.jointModelTransforms.map( { Transform(matrix: $0) })
                     let jointNames = character.jointNames

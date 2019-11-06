@@ -75,13 +75,11 @@ class SaveFeedbackViewController: UIViewController {
         performanceChart.leftYAxisRenderer.axis?.drawGridLinesEnabled = false
         performanceChart.leftYAxisRenderer.axis?.drawLabelsEnabled = true
         
-        performanceChart.rightYAxisRenderer.axis?.axisMaximum = 100
-        performanceChart.rightYAxisRenderer.axis?.axisMinimum = 0
-        performanceChart.rightYAxisRenderer.axis?.drawGridLinesEnabled = false
-        performanceChart.rightYAxisRenderer.axis?.drawLabelsEnabled = false
+        performanceChart.rightYAxisRenderer.axis?.enabled = false
         
         performanceChart.xAxisRenderer.axis?.drawLabelsEnabled = true
         performanceChart.xAxisRenderer.axis?.drawGridLinesEnabled = false
+        performanceChart.xAxis.labelPosition = .bottom
         
         performanceChart.legend.enabled = false
         
