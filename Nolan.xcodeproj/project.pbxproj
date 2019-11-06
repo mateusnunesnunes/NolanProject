@@ -33,6 +33,7 @@
 		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
+		47589E762372454500D1D577 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47589E752372454500D1D577 /* HealthKit.framework */; };
 		478071BF2371B65B00EE2478 /* SaveFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */; };
 		47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */; };
 		47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C0236B07AF00E64011 /* RKImmutableTree.swift */; };
@@ -117,6 +118,8 @@
 		0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePosesCollectionViewCell.swift; sourceTree = "<group>"; };
 		22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.debug.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.debug.xcconfig"; sourceTree = "<group>"; };
 		2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47589E742372454500D1D577 /* Nolan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nolan.entitlements; sourceTree = "<group>"; };
+		47589E752372454500D1D577 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFeedbackViewController.swift; sourceTree = "<group>"; };
 		47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableJoint.swift; sourceTree = "<group>"; };
 		47B026C0236B07AF00E64011 /* RKImmutableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableTree.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8080B9CF2B4AA5BEC3033700 /* Pods_Nolan.framework in Frameworks */,
+				47589E762372454500D1D577 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +246,7 @@
 		019BF57323573F2700F3E164 /* Nolan */ = {
 			isa = PBXGroup;
 			children = (
+				47589E742372454500D1D577 /* Nolan.entitlements */,
 				47B026D1236B07D400E64011 /* RKJointComparison */,
 				019BF57423573F2700F3E164 /* AppDelegate.swift */,
 				019BF57623573F2700F3E164 /* SceneDelegate.swift */,
@@ -325,6 +330,7 @@
 		7F40586E038D9F0978464935 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47589E752372454500D1D577 /* HealthKit.framework */,
 				9C49C08D72C9135601BC3543 /* Pods_Nolan.framework */,
 				CD29AF8C1FAB4503C3EBFF7D /* Pods_Nolan_NolanUITests.framework */,
 				9806DF4BE5A483F606AFDC18 /* Pods_NolanTests.framework */,
@@ -833,6 +839,7 @@
 			baseConfigurationReference = 22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nolan/Nolan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = D9FBK2WPJX;
@@ -853,8 +860,9 @@
 			baseConfigurationReference = 58832DE3CE6D3158DE23E6E6 /* Pods-Nolan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nolan/Nolan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A7Z8B7ZWX2;
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

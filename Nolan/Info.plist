@@ -2,12 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We would like to access your mindful minutes to provide a better experience for you</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We would like to share your mindful moments practicing Tai Chi with the Health App</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>light</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>We need to recognize your speech to allow you to control your session </string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>We nee your microphone to hear your words</string>
+	<string>We need your microphone to hear your words</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We need to use the camera to detect your body and provide proper feedback</string>
 	<key>CFBundleDevelopmentRegion</key>

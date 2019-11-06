@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import HealthKit
 
 class SaveFeedbackViewController: UIViewController {
     
@@ -33,7 +34,11 @@ class SaveFeedbackViewController: UIViewController {
 //            poseImage.image =
             
             nameLabel.text = feedbackSession.pose.name
-            dateLabel.text = feedbackSession.date.description
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+            
+            dateLabel.text = dateFormatter.string(from: feedbackSession.date)
             
             poseInfoView.cornerRadius = 20
             addLightShadow(view: poseInfoView)
@@ -65,6 +70,21 @@ class SaveFeedbackViewController: UIViewController {
         performanceChart.backgroundColor = .white
         performanceChart.drawBordersEnabled = false
         
+        performanceChart.leftYAxisRenderer.axis?.axisMaximum = 100
+        performanceChart.leftYAxisRenderer.axis?.axisMinimum = 0
+        performanceChart.leftYAxisRenderer.axis?.drawGridLinesEnabled = false
+        performanceChart.leftYAxisRenderer.axis?.drawLabelsEnabled = true
+        
+        performanceChart.rightYAxisRenderer.axis?.axisMaximum = 100
+        performanceChart.rightYAxisRenderer.axis?.axisMinimum = 0
+        performanceChart.rightYAxisRenderer.axis?.drawGridLinesEnabled = false
+        performanceChart.rightYAxisRenderer.axis?.drawLabelsEnabled = false
+        
+        performanceChart.xAxisRenderer.axis?.drawLabelsEnabled = true
+        performanceChart.xAxisRenderer.axis?.drawGridLinesEnabled = false
+        
+        performanceChart.legend.enabled = false
+        
         let maxDistance = 1.1
         
         let keys: [Float] = Array(feedbackSession.scores.keys).sorted()
@@ -83,6 +103,7 @@ class SaveFeedbackViewController: UIViewController {
         
         performanceLine.drawCirclesEnabled = false
         performanceLine.mode = .cubicBezier
+        performanceLine.drawValuesEnabled = false
         
         let data = LineChartData()
         data.addDataSet(performanceLine)
@@ -103,20 +124,68 @@ class SaveFeedbackViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
 
+    func requestAuthorization(_ healthStore: HKHealthStore) {
+        let mindfulnessType = Set([
+            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!
+        ])
+        
+        healthStore.requestAuthorization(toShare: mindfulnessType, read: []) { (success, error) -> Void in
+            if !success  {
+                print("Error: \(error)")
+            }
+        }
+    }
+    
+    func saveSession(_ healthStore: HKHealthStore) {
+        // alarmTime and endTime are NSDate objects
+        if let mindfulType = HKObjectType.categoryType(forIdentifier: .mindfulSession), let feedbackSession = self.feedbackSession {
+            
+            // we create our new object we want to push in Health app
+            
+            let totalSessionTime = TimeInterval(Array(feedbackSession.scores.keys).max() ?? 0)
+            let startDate = feedbackSession.date
+            let mindfullSample = HKCategorySample(type:mindfulType, value: 0, start: startDate, end: startDate + totalSessionTime)
+            
+            // at the end, we save it
+            healthStore.save(mindfullSample, withCompletion: { (success, error) -> Void in
+                
+                if error != nil {
+                    print("Health error")
+                }
+                
+                if success {
+                    print("Data saved")
+                }
+                
+            })
+        }
+    }
+    
     @IBAction func savePressed(_ sender: Any) {
         // TODO: Ask for health kit permission. If accepted, save mindful seconds there.
         
-        // TODO: Add into user favorites
+        if HKHealthStore.isHealthDataAvailable() {
+            // Add code to use HealthKit here.
+            let healthStore = HKHealthStore()
+            
+            requestAuthorization(healthStore)
+            
+            saveSession(healthStore)
+        }
+        
+        // TODO: Add into user sessions
         
         popToPose()
     }
+    
     
     @IBAction func discardPressed(_ sender: Any) {
         popToPose()
     }
     
     func popToPose() {
-        // TODO: Dar pop da navigation até a pose
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
     }
     /*
     // MARK: - Navigation

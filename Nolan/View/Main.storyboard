@@ -512,6 +512,44 @@
                                     <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Lx-Udh">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                     </arView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WG7-Y2-k8m">
+                                        <rect key="frame" x="0.0" y="616.33333333333337" width="414" height="108.66666666666663"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojo-sr-ECT">
+                                                <rect key="frame" x="248.33333333333334" y="37.333333333333258" width="124.33333333333334" height="34"/>
+                                                <color key="backgroundColor" red="0.31372549020000001" green="0.69803921570000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                                <state key="normal" title="Start">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="manualStartPressed:" destination="za1-Of-ETf" eventType="touchUpInside" id="c18-3p-dWB"/>
+                                                    <action selector="savePressed:" destination="MD6-Ko-6sV" eventType="touchUpInside" id="zPe-FU-TLK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x7-Gp-MOt">
+                                                <rect key="frame" x="41.333333333333336" y="37.333333333333258" width="124.33333333333331" height="34"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.42745098040000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="discardPressed:" destination="MD6-Ko-6sV" eventType="touchUpInside" id="w64-hu-E0s"/>
+                                                    <action selector="manualCancelPressed:" destination="za1-Of-ETf" eventType="touchUpInside" id="83c-X7-7vj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ojo-sr-ECT" firstAttribute="width" secondItem="WG7-Y2-k8m" secondAttribute="width" multiplier="0.3" id="LzT-XE-g0c"/>
+                                            <constraint firstItem="ojo-sr-ECT" firstAttribute="centerX" secondItem="WG7-Y2-k8m" secondAttribute="centerX" multiplier="1.5" id="OoJ-Ko-6rT"/>
+                                            <constraint firstItem="6x7-Gp-MOt" firstAttribute="width" secondItem="WG7-Y2-k8m" secondAttribute="width" multiplier="0.3" id="TxY-SI-fCr"/>
+                                            <constraint firstItem="6x7-Gp-MOt" firstAttribute="centerX" secondItem="WG7-Y2-k8m" secondAttribute="centerX" multiplier="0.5" id="bwO-sW-8ia"/>
+                                            <constraint firstItem="6x7-Gp-MOt" firstAttribute="centerY" secondItem="WG7-Y2-k8m" secondAttribute="centerY" id="cic-QK-6zu"/>
+                                            <constraint firstItem="ojo-sr-ECT" firstAttribute="centerY" secondItem="6x7-Gp-MOt" secondAttribute="centerY" id="yN4-8K-B0O"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sxo-qR-3yV">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="90.333333333333329"/>
                                         <subviews>
@@ -556,7 +594,7 @@
                                                 </constraints>
                                                 <state key="normal" image="startSessionButton"/>
                                                 <connections>
-                                                    <action selector="startPressed:" destination="za1-Of-ETf" eventType="touchUpInside" id="M6v-7S-E8L"/>
+                                                    <action selector="firstStartPressed:" destination="za1-Of-ETf" eventType="touchUpInside" id="M6v-7S-E8L"/>
                                                     <action selector="viewARPressed:" destination="Njb-oD-Bf9" eventType="touchUpInside" id="b7S-Fh-FcK"/>
                                                 </connections>
                                             </button>
@@ -602,13 +640,17 @@ To finish you session, just say "Stop!"</string>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Emi-Lx-Udh" secondAttribute="trailing" id="8kX-P6-ndG"/>
                                     <constraint firstItem="sxo-qR-3yV" firstAttribute="top" secondItem="Emi-Lx-Udh" secondAttribute="top" id="8kg-g4-9xd"/>
+                                    <constraint firstItem="Emi-Lx-Udh" firstAttribute="trailing" secondItem="WG7-Y2-k8m" secondAttribute="trailing" id="DHV-8x-cgd"/>
                                     <constraint firstItem="Emi-Lx-Udh" firstAttribute="top" secondItem="upJ-lK-u6i" secondAttribute="top" id="FEJ-qp-tN1"/>
+                                    <constraint firstItem="WG7-Y2-k8m" firstAttribute="leading" secondItem="Emi-Lx-Udh" secondAttribute="leading" id="Gyp-IQ-C5q"/>
                                     <constraint firstAttribute="bottom" secondItem="Emi-Lx-Udh" secondAttribute="bottom" id="Ojp-tZ-gna"/>
                                     <constraint firstItem="QM2-3V-dVQ" firstAttribute="width" secondItem="upJ-lK-u6i" secondAttribute="width" multiplier="0.8" id="POB-mV-fab"/>
                                     <constraint firstItem="sxo-qR-3yV" firstAttribute="centerX" secondItem="Emi-Lx-Udh" secondAttribute="centerX" id="Vqz-33-s3m"/>
                                     <constraint firstItem="Emi-Lx-Udh" firstAttribute="width" secondItem="upJ-lK-u6i" secondAttribute="width" id="d2A-jL-r6f"/>
                                     <constraint firstItem="QM2-3V-dVQ" firstAttribute="centerY" secondItem="upJ-lK-u6i" secondAttribute="centerY" id="fqm-xR-yNW"/>
                                     <constraint firstItem="QM2-3V-dVQ" firstAttribute="centerX" secondItem="upJ-lK-u6i" secondAttribute="centerX" id="hdY-Nt-GDf"/>
+                                    <constraint firstItem="WG7-Y2-k8m" firstAttribute="bottom" secondItem="Emi-Lx-Udh" secondAttribute="bottom" id="kOo-PS-WQe"/>
+                                    <constraint firstItem="WG7-Y2-k8m" firstAttribute="height" secondItem="Emi-Lx-Udh" secondAttribute="height" multiplier="0.15" id="vmq-p2-bz4"/>
                                     <constraint firstItem="Emi-Lx-Udh" firstAttribute="leading" secondItem="upJ-lK-u6i" secondAttribute="leading" id="yXO-Mi-bgh"/>
                                     <constraint firstItem="sxo-qR-3yV" firstAttribute="width" secondItem="Emi-Lx-Udh" secondAttribute="width" id="yiR-jw-e72"/>
                                 </constraints>
@@ -627,6 +669,9 @@ To finish you session, just say "Stop!"</string>
                     <connections>
                         <outlet property="arView" destination="Emi-Lx-Udh" id="Pj9-yV-sEY"/>
                         <outlet property="avgLabel" destination="pYa-zA-lQ4" id="aL9-7q-n9C"/>
+                        <outlet property="manualCancelButton" destination="6x7-Gp-MOt" id="4VL-1x-hmX"/>
+                        <outlet property="manualControlsView" destination="WG7-Y2-k8m" id="zIN-P8-6Yc"/>
+                        <outlet property="manualStartButton" destination="ojo-sr-ECT" id="gvF-Dt-ghj"/>
                         <outlet property="maxLabel" destination="Nq5-4g-z1M" id="Ogy-yx-Yw9"/>
                         <outlet property="medLabel" destination="75b-9Z-3Dd" id="AqS-Mh-sk5"/>
                         <outlet property="minLabel" destination="CVb-Lj-jLZ" id="TPC-fv-Ulf"/>

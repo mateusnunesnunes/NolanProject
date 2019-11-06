@@ -21,6 +21,9 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var medLabel: UILabel!
     
     @IBOutlet weak var startView: UIView!
+    @IBOutlet weak var manualControlsView: UIView!
+    @IBOutlet weak var manualStartButton: UIButton!
+    @IBOutlet weak var manualCancelButton: UIButton!
     
     // AR STUFF
     @IBOutlet weak var arView: ARView!
@@ -73,6 +76,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         self.tabBarController?.tabBar.isHidden = true
         
         startView.alpha = 1
+        manualControlsView.alpha = 0
         
         audioEngine = AVAudioEngine()
     }
@@ -253,12 +257,28 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         self.medLabel.text = "med: " + med.description
     }
     
-    @IBAction func startPressed(_ sender: Any) {
+    @IBAction func firstStartPressed(_ sender: Any) {
         UIView.animate(withDuration: 0.75) {
             self.startView.alpha = 0
-            self.allTranscribedText = ""
-            self.recordAndRecognizeSpeech()
+            self.manualControlsView.alpha = 1
         }
+        
+        self.allTranscribedText = ""
+        self.recordAndRecognizeSpeech()
+    }
+    
+    @IBAction func manualStartPressed(_ sender: Any) {
+        if !sessionRunning {
+            startSession()
+            manualStartButton.setTitle("Stop", for: .normal)
+            manualStartButton.backgroundColor = manualCancelButton.backgroundColor
+        } else {
+            stopSession()
+        }
+    }
+    
+    @IBAction func manualCancelPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func recordAndRecognizeSpeech() {
@@ -288,21 +308,24 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         })
     }
     
+    func startSession() {
+        self.sessionRunning = true
+    }
+    
+    func stopSession() {
+        self.allTranscribedText = ""
+        self.sessionRunning = false
+        self.audioEngine.stop()
+        self.performSegue(withIdentifier: "viewSaveFeedback", sender: self.feedbackSession)
+    }
+    
     func handleSpeech() {
         print(allTranscribedText)
         if self.allTranscribedText.contains("start")  && !sessionRunning {
-            self.sessionRunning = true
+            startSession()
         } else if self.allTranscribedText.contains("stop") && sessionRunning {
-            self.allTranscribedText = ""
-            self.endSession()
-            self.performSegue(withIdentifier: "viewSaveFeedback", sender: self.feedbackSession)
+            stopSession()
         }
-    }
-    
-    func endSession() {
-        print("Session ended!")
-        self.sessionRunning = false
-        self.audioEngine.stop()
     }
     
     // O prepare é chamado  sempre que uma segue é executada
