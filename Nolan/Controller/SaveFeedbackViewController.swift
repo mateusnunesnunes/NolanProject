@@ -118,7 +118,7 @@ class SaveFeedbackViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.tabBar.isHidden = false
