@@ -25,6 +25,8 @@ class SaveFeedbackViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var discardButton: UIButton!
     
+    let feedbackGenerator = UINotificationFeedbackGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -162,7 +164,7 @@ class SaveFeedbackViewController: UIViewController {
     }
     
     @IBAction func savePressed(_ sender: Any) {
-        // TODO: Ask for health kit permission. If accepted, save mindful seconds there.
+        feedbackGenerator.notificationOccurred(.success)
         
         if HKHealthStore.isHealthDataAvailable() {
             // Add code to use HealthKit here.
@@ -180,6 +182,8 @@ class SaveFeedbackViewController: UIViewController {
     
     
     @IBAction func discardPressed(_ sender: Any) {
+        feedbackGenerator.notificationOccurred(.error)
+        
         popToPose()
     }
     

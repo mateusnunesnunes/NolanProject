@@ -13,6 +13,8 @@ import Speech
 
 class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
+    let selectionGenerator = UISelectionFeedbackGenerator()
+    
     var pose: Pose?
     
     @IBOutlet weak var minLabel: UILabel!
@@ -263,6 +265,9 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     }
     
     @IBAction func firstStartPressed(_ sender: Any) {
+
+        selectionGenerator.selectionChanged()
+        
         UIView.animate(withDuration: 0.75) {
             self.startView.alpha = 0
             self.manualControlsView.alpha = 1
@@ -274,10 +279,12 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
     @IBAction func manualStartPressed(_ sender: Any) {
         if !sessionRunning {
+            selectionGenerator.selectionChanged()
             startSession()
             manualStartButton.setTitle("Stop", for: .normal)
             manualStartButton.backgroundColor = manualCancelButton.backgroundColor
         } else {
+            selectionGenerator.selectionChanged()
             stopSession()
         }
     }
