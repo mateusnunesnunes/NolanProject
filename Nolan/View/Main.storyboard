@@ -1846,6 +1846,7 @@ To finish you session, just say "Stop!"</string>
                     <connections>
                         <outlet property="dateLabel" destination="Eqd-6R-StI" id="wOY-PX-gjW"/>
                         <outlet property="historyTableView" destination="oPT-XM-8VS" id="3qO-I3-wEZ"/>
+                        <outlet property="poseInfoView" destination="P7K-gI-ZPZ" id="dTS-T4-GBi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEl-dV-YCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var poseInfoView: UIView!
     
     var date: Date?
     
@@ -27,9 +28,18 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         historyTableView.delegate = self
         historyTableView.dataSource = self
-        
+
+        poseInfoView.cornerRadius = 20
+        addLightShadow(view: poseInfoView)
         // Do any additional setup after loading the view.
     }
+    
+    func addLightShadow(view: UIView) {
+         view.layer.shadowOffset = CGSize(width: 0, height: 2)
+         view.layer.shadowRadius = 4
+         view.layer.shadowColor = UIColor.lightGray.cgColor
+         view.layer.shadowOpacity = 0.25
+     }
     
     override func viewWillAppear(_ animated: Bool) {
         // TODO: Puxar do model

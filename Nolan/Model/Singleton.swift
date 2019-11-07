@@ -271,7 +271,6 @@ class Singleton {
     func requestForLocation(){
         
     }
-    
 }
 
 

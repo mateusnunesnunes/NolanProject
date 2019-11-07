@@ -83,17 +83,12 @@ class SaveFeedbackViewController: UIViewController {
         
         performanceChart.legend.enabled = false
         
-        let maxDistance = 1.1
-        
         let keys: [Float] = Array(feedbackSession.scores.keys).sorted()
-        let values = keys.map( { Double(feedbackSession.scores[$0]!) } ) // 0...infinito
-        let cappedValues = values.map( { $0 > maxDistance ? maxDistance : $0 } ) // 0...0.75
-        let normalizedValues = cappedValues.map( { $0 * 100/maxDistance}) //0...100
-        let chartValues = normalizedValues.map( { 100 - $0 }) //0...100
+        let chartValues = feedbackSession.valuesAsPercentage(usingMaxDistance: 1.1)
         
         var chartDataEntries: [ChartDataEntry] = []
         for i in 0..<chartValues.count {
-            chartDataEntries.append(ChartDataEntry(x: Double(keys[i]), y: chartValues[i]))
+            chartDataEntries.append(ChartDataEntry(x: Double(keys[i]), y: Double(chartValues[i])))
         }
         
         let performanceLine = LineChartDataSet(entries: chartDataEntries, label: "Performance")
