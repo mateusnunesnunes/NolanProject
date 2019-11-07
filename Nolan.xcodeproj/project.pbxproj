@@ -35,6 +35,8 @@
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
 		47589E762372454500D1D577 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47589E752372454500D1D577 /* HealthKit.framework */; };
 		47589E782373016D00D1D577 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E772373016D00D1D577 /* ProfileViewController.swift */; };
+		47589E8023745A4A00D1D577 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E7F23745A4A00D1D577 /* HistoryViewController.swift */; };
+		47589E8223745AD100D1D577 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E8123745AD100D1D577 /* HistoryTableViewCell.swift */; };
 		478071BF2371B65B00EE2478 /* SaveFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */; };
 		47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */; };
 		47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C0236B07AF00E64011 /* RKImmutableTree.swift */; };
@@ -122,6 +124,8 @@
 		47589E742372454500D1D577 /* Nolan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nolan.entitlements; sourceTree = "<group>"; };
 		47589E752372454500D1D577 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		47589E772373016D00D1D577 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		47589E7F23745A4A00D1D577 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		47589E8123745AD100D1D577 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFeedbackViewController.swift; sourceTree = "<group>"; };
 		47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableJoint.swift; sourceTree = "<group>"; };
 		47B026C0236B07AF00E64011 /* RKImmutableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableTree.swift; sourceTree = "<group>"; };
@@ -354,6 +358,7 @@
 				478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */,
 				47ED904023704FC0005E0B60 /* TTSController.swift */,
 				47589E772373016D00D1D577 /* ProfileViewController.swift */,
+				47589E7F23745A4A00D1D577 /* HistoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				A5349C52236F772B00BF5647 /* PoseDescriptionTableViewCell.swift */,
 				0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */,
 				0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */,
+				47589E8123745AD100D1D577 /* HistoryTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -656,6 +662,7 @@
 				A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */,
 				019BF57923573F2700F3E164 /* ViewController.swift in Sources */,
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
+				47589E8223745AD100D1D577 /* HistoryTableViewCell.swift in Sources */,
 				47ED904123704FC0005E0B60 /* TTSController.swift in Sources */,
 				47BCD619236C66BB008D18B8 /* RKFeedback.swift in Sources */,
 				47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */,
@@ -676,6 +683,7 @@
 				A5349C51236C676900BF5647 /* RoundedUIView.swift in Sources */,
 				0D1AF00223631E5C000A8F56 /* User.swift in Sources */,
 				47589E782373016D00D1D577 /* ProfileViewController.swift in Sources */,
+				47589E8023745A4A00D1D577 /* HistoryViewController.swift in Sources */,
 				01662AB4235E767F00041C35 /* CustomSegmentedControl.swift in Sources */,
 				A5349C53236F772C00BF5647 /* PoseDescriptionTableViewCell.swift in Sources */,
 			);
