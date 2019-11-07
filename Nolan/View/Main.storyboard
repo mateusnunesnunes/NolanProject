@@ -81,7 +81,7 @@
                                             <constraint firstItem="4wf-C2-PuT" firstAttribute="leading" secondItem="ehX-1u-NWS" secondAttribute="trailing" constant="10" id="sDg-Qx-9B7"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STB-Yv-U4c">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STB-Yv-U4c" userLabel="Info container">
                                         <rect key="frame" x="0.0" y="145" width="414" height="145"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCA-On-LIf">
@@ -221,9 +221,50 @@ accuracy</string>
                                             <constraint firstItem="ccC-6d-Bel" firstAttribute="height" secondItem="STB-Yv-U4c" secondAttribute="height" multiplier="0.8" id="zOU-iW-OWi"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGE-VF-0gK">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGE-VF-0gK" userLabel="Bottom container">
                                         <rect key="frame" x="0.0" y="290" width="414" height="435"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfw-du-eGh">
+                                                <rect key="frame" x="41.333333333333343" y="54.333333333333314" width="331.33333333333326" height="261"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaK-ib-WxG" userLabel="Calendar View" customClass="FSCalendar">
+                                                        <rect key="frame" x="16.666666666666657" y="13" width="298" height="235"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="eventDefaultColor">
+                                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                                                <color key="value" red="0.88445663450000001" green="0.45940917730000003" blue="0.44312348959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="aaK-ib-WxG" firstAttribute="centerY" secondItem="Bfw-du-eGh" secondAttribute="centerY" id="ehO-Y5-bi9"/>
+                                                    <constraint firstItem="aaK-ib-WxG" firstAttribute="centerX" secondItem="Bfw-du-eGh" secondAttribute="centerX" id="hhq-la-uff"/>
+                                                    <constraint firstItem="aaK-ib-WxG" firstAttribute="height" secondItem="Bfw-du-eGh" secondAttribute="height" multiplier="0.9" id="nmd-zu-Sxn"/>
+                                                    <constraint firstItem="aaK-ib-WxG" firstAttribute="width" secondItem="Bfw-du-eGh" secondAttribute="width" multiplier="0.9" id="sbO-cg-KBt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Bfw-du-eGh" firstAttribute="centerX" secondItem="FGE-VF-0gK" secondAttribute="centerX" id="VLR-HT-kNC"/>
+                                            <constraint firstItem="Bfw-du-eGh" firstAttribute="width" secondItem="FGE-VF-0gK" secondAttribute="width" multiplier="0.8" id="dLg-Jc-HEX"/>
+                                            <constraint firstItem="Bfw-du-eGh" firstAttribute="centerY" secondItem="FGE-VF-0gK" secondAttribute="centerY" multiplier="0.85" id="ef9-W5-zH8"/>
+                                            <constraint firstItem="Bfw-du-eGh" firstAttribute="height" secondItem="FGE-VF-0gK" secondAttribute="height" multiplier="0.6" id="sYj-8e-GSt"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -255,14 +296,16 @@ accuracy</string>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="pc7-Ug-9Eg"/>
                     <connections>
-                        <outlet property="calendarContainer" destination="gpX-jR-xOJ" id="Xjh-2u-Vcr"/>
+                        <outlet property="calendar" destination="aaK-ib-WxG" id="ODB-NH-qF7"/>
+                        <outlet property="calendarContainer" destination="gpX-jR-xOJ" id="CSx-75-MV5"/>
                         <outlet property="calendarImageView" destination="RUl-Fs-Ifo" id="J7C-V8-j1f"/>
                         <outlet property="calendarLabel" destination="aO7-2o-9jz" id="cy6-Sk-5bI"/>
+                        <outlet property="calendarViewContaner" destination="Bfw-du-eGh" id="ZpL-Du-rKD"/>
                         <outlet property="chartContainer" destination="AOI-Ro-KcG" id="hIK-5Y-zAc"/>
                         <outlet property="chartImageView" destination="Jcw-VP-Q3s" id="tWj-t2-6w2"/>
                         <outlet property="chartLabel" destination="PEL-qI-ZET" id="vLw-1v-idz"/>
-                        <outlet property="clockContainer" destination="8X5-DW-Si2" id="QiW-qc-hxb"/>
-                        <outlet property="clockImageView" destination="RqE-CQ-REt" id="726-6m-yui"/>
+                        <outlet property="clockContainer" destination="8X5-DW-Si2" id="aUE-sh-TG0"/>
+                        <outlet property="clockImageView" destination="RqE-CQ-REt" id="51P-Jr-bqE"/>
                         <outlet property="clockLabel" destination="7s8-Qk-mne" id="Kw0-8W-eDd"/>
                         <outlet property="settingsButton" destination="8ww-KG-Gw3" id="WzO-Zl-bYN"/>
                         <outlet property="settingsContainer" destination="Lq2-56-JVJ" id="Qqg-b6-llm"/>

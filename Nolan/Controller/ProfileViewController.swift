@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FSCalendar
 
-class ProfileViewController: UIViewController {
-
+class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     
@@ -28,6 +29,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var chartImageView: UIImageView!
     @IBOutlet weak var chartLabel: UILabel!
     
+    @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var calendarViewContaner: UIView!
+    
+    fileprivate lazy var dateFormatter: DateFormatter = {
+       let formatter = DateFormatter()
+       formatter.dateFormat = "yyyy-MM-dd"
+       return formatter
+    }()
+    
+    let allPracticedDates = ["2019-11-03",
+    "2019-11-06",
+    "2019-11-12",
+    "2019-11-25"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,8 +51,31 @@ class ProfileViewController: UIViewController {
         formatButton(view: clockContainer)
         formatButton(view: calendarContainer)
         formatButton(view: chartContainer)
-
+        
+        calendar.dataSource = self
+        calendar.delegate = self
+        
+        calendar.today = nil
+        
+        calendar.placeholderType = .none
+        
+        calendar.appearance.titleFont = UIFont(name: "Futura", size: 12)
+        calendar.appearance.weekdayFont = UIFont(name: "Futura", size: 15)
+        calendar.appearance.headerTitleFont = UIFont(name: "Futura", size: 15)
+        
+        shadowView(v: calendarViewContaner, blur: 4, y: 2, opacity: 25)
+        calendarViewContaner.cornerRadius = 10
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    // Coloca sombra na view
+    func shadowView (v : UIView!, blur : CGFloat, y: CGFloat, opacity : Float) {
+        v.layer.shadowOffset = CGSize(width: 0, height: y)
+        v.layer.shadowRadius = blur
+        v.layer.shadowColor = UIColor.lightGray.cgColor
+        v.layer.shadowOpacity = opacity
     }
     
     func formatButton(view: UIView) {
@@ -52,15 +90,62 @@ class ProfileViewController: UIViewController {
         view.layer.shadowOpacity = 0.5
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        return 0
     }
-    */
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance,  titleDefaultColorFor date: Date) -> UIColor? {
+        let formattedDate : String = dateFormatter.string(from:date)
+        
+        if allPracticedDates.contains(formattedDate)
+        {
+            return .white
+        }
+        else {
+            return nil
+        }
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        
+        let formattedDate : String = dateFormatter.string(from:date)
+        
+        if allPracticedDates.contains(formattedDate)
+        {
+            return UIColor(displayP3Red: 0, green: 174/255, blue: 166/255, alpha: 1)
+        }
+        else {
+            return nil
+        }
+    }
 
+    
+    
+    // TODO: Precisa do model pronto
+//    // FSCalendarDelegate
+//    func calendar(calendar: FSCalendar!, didSelectDate date: NSDate!) {
+//
+//    }
+//
+    
+    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
+        
+        let formattedDate : String = dateFormatter.string(from: date)
+        
+        if allPracticedDates.contains(formattedDate) {
+            return true
+        }
+        return false
+    }
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
