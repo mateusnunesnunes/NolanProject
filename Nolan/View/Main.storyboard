@@ -311,6 +311,7 @@ accuracy</string>
                         <outlet property="settingsContainer" destination="Lq2-56-JVJ" id="Qqg-b6-llm"/>
                         <outlet property="userImageView" destination="ehX-1u-NWS" id="RUs-sl-jtV"/>
                         <outlet property="userName" destination="4wf-C2-PuT" id="WSk-pC-qvY"/>
+                        <segue destination="os1-kQ-AxU" kind="show" identifier="viewHistory" id="PAt-uv-zM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEr-aM-z5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1634,63 +1635,36 @@ To finish you session, just say "Stop!"</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-6o-00i" userLabel="ViewImagem">
-                                <rect key="frame" x="0.0" y="44" width="414" height="327.33333333333331"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="290"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="QHO-5c-arT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="327.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNz-VS-6Pg">
-                                        <rect key="frame" x="20.666666666666657" y="245.66666666666669" width="372.66666666666674" height="120"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnK-if-vXs" userLabel="lblNome">
-                                        <rect key="frame" x="30.666666666666671" y="264.66666666666669" width="80" height="37.666666666666686"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
-                                        <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhZ-A6-gDb" userLabel="lblDificuldade">
-                                        <rect key="frame" x="30.666666666666668" y="302.33333333333331" width="51.666666666666657" height="25"/>
-                                        <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
-                                        <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="QHO-5c-arT" firstAttribute="centerY" secondItem="Abu-6o-00i" secondAttribute="centerY" id="3Ke-gd-uOz"/>
-                                    <constraint firstItem="fNz-VS-6Pg" firstAttribute="leading" secondItem="rhZ-A6-gDb" secondAttribute="leading" constant="-10" id="EWs-To-32z"/>
-                                    <constraint firstItem="fNz-VS-6Pg" firstAttribute="centerX" secondItem="QHO-5c-arT" secondAttribute="centerX" id="Edr-DH-1gD"/>
-                                    <constraint firstAttribute="bottom" secondItem="rhZ-A6-gDb" secondAttribute="bottom" id="LHV-yu-njq"/>
-                                    <constraint firstItem="rhZ-A6-gDb" firstAttribute="top" secondItem="wnK-if-vXs" secondAttribute="bottom" id="Pc8-O4-d14"/>
-                                    <constraint firstItem="wnK-if-vXs" firstAttribute="leading" secondItem="rhZ-A6-gDb" secondAttribute="leading" id="T8f-FS-6ie"/>
                                     <constraint firstItem="QHO-5c-arT" firstAttribute="height" secondItem="Abu-6o-00i" secondAttribute="height" id="cdc-uL-JMp"/>
-                                    <constraint firstItem="fNz-VS-6Pg" firstAttribute="width" secondItem="QHO-5c-arT" secondAttribute="width" multiplier="0.9" id="mxr-xa-QUl"/>
                                     <constraint firstItem="QHO-5c-arT" firstAttribute="width" secondItem="Abu-6o-00i" secondAttribute="width" id="rf6-Rz-cvh"/>
                                     <constraint firstItem="QHO-5c-arT" firstAttribute="centerX" secondItem="Abu-6o-00i" secondAttribute="centerX" id="xx6-CB-wUH"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmz-Oj-bdY" userLabel="ViewTableView">
-                                <rect key="frame" x="20.666666666666657" y="429.66666666666674" width="372.66666666666674" height="432.33333333333326"/>
+                                <rect key="frame" x="20.666666666666657" y="423.33333333333326" width="372.66666666666674" height="389.66666666666674"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-XM-8VS">
-                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="432.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="389.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SessionPose" rowHeight="122" id="zUk-6U-b1b" customClass="HistoryTableViewCell" customModule="Nolan" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="372.66666666666669" height="122"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" rowHeight="92" id="zUk-6U-b1b" customClass="HistoryTableViewCell" customModule="Nolan" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="372.66666666666669" height="92"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zUk-6U-b1b" id="agS-aX-qqw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="122"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="92"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-pG-xNQ">
-                                                            <rect key="frame" x="0.0" y="12.333333333333336" width="97.666666666666671" height="97.333333333333314"/>
+                                                            <rect key="frame" x="0.0" y="13.666666666666664" width="64.333333333333329" height="64.666666666666686"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="SoT-pG-xNQ" secondAttribute="height" multiplier="1:1" id="VZG-zh-89U"/>
                                                             </constraints>
@@ -1699,22 +1673,22 @@ To finish you session, just say "Stop!"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYv-6Z-fW0">
-                                                            <rect key="frame" x="107.66666666666669" y="45" width="162" height="21.333333333333329"/>
+                                                            <rect key="frame" x="74.333333333333329" y="41" width="195.33333333333337" height="21.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.50980392159999999" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hec-jz-Stv">
-                                                            <rect key="frame" x="269.66666666666669" y="30.666666666666671" width="93" height="61"/>
+                                                            <rect key="frame" x="269.66666666666669" y="23" width="93" height="46"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-HK-Yhq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="30.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="23"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbY-aD-GgD">
-                                                                            <rect key="frame" x="37" y="0.0" width="30.333333333333329" height="30.333333333333332"/>
+                                                                            <rect key="frame" x="44.333333333333314" y="0.0" width="23" height="23"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wQO-kD-tSS">
-                                                                                    <rect key="frame" x="4.3333333333333144" y="6.6666666666666643" width="21.333333333333332" height="16.666666666666664"/>
+                                                                                    <rect key="frame" x="3.3333333333333144" y="5.6666666666666634" width="16.333333333333332" height="11.666666666666668"/>
                                                                                     <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                                                 </imageView>
@@ -1729,7 +1703,7 @@ To finish you session, just say "Stop!"</string>
                                                                             </constraints>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xg-jq-JoH">
-                                                                            <rect key="frame" x="67.333333333333314" y="6.9999999999999964" width="25.666666666666671" height="16.333333333333332"/>
+                                                                            <rect key="frame" x="67.333333333333314" y="3.3333333333333321" width="25.666666666666671" height="16.333333333333332"/>
                                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="13"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -1745,13 +1719,13 @@ To finish you session, just say "Stop!"</string>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ev-qF-jYW">
-                                                                    <rect key="frame" x="0.0" y="30.333333333333329" width="93" height="30.666666666666671"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="93" height="23"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANr-VM-gsv">
-                                                                            <rect key="frame" x="38" y="0.0" width="30.333333333333329" height="30.666666666666668"/>
+                                                                            <rect key="frame" x="45.333333333333314" y="0.0" width="23" height="23"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.bar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-YY-jfY">
-                                                                                    <rect key="frame" x="4.3333333333333144" y="8.0000000000000036" width="21.333333333333332" height="15.333333333333332"/>
+                                                                                    <rect key="frame" x="3.3333333333333144" y="6.6666666666666679" width="16.333333333333332" height="10.333333333333332"/>
                                                                                     <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                                                 </imageView>
@@ -1766,7 +1740,7 @@ To finish you session, just say "Stop!"</string>
                                                                             </constraints>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-BU-sPw">
-                                                                            <rect key="frame" x="68.333333333333314" y="7" width="24.666666666666671" height="16.333333333333332"/>
+                                                                            <rect key="frame" x="68.333333333333314" y="3.3333333333333357" width="24.666666666666671" height="16.333333333333332"/>
                                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="13"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -1784,7 +1758,7 @@ To finish you session, just say "Stop!"</string>
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-sm-2eG">
-                                                            <rect key="frame" x="107.66666666666669" y="22.333333333333336" width="162" height="21.333333333333336"/>
+                                                            <rect key="frame" x="74.333333333333329" y="18.666666666666671" width="195.33333333333337" height="21.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1797,20 +1771,18 @@ To finish you session, just say "Stop!"</string>
                                                         <constraint firstItem="NYv-6Z-fW0" firstAttribute="trailing" secondItem="ygr-sm-2eG" secondAttribute="trailing" id="CJ6-GW-leN"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="centerY" secondItem="agS-aX-qqw" secondAttribute="centerY" id="HDe-8s-G94"/>
                                                         <constraint firstItem="SoT-pG-xNQ" firstAttribute="leading" secondItem="agS-aX-qqw" secondAttribute="leading" id="Htl-xx-Y4S"/>
-                                                        <constraint firstItem="SoT-pG-xNQ" firstAttribute="height" secondItem="agS-aX-qqw" secondAttribute="height" multiplier="0.8" id="K0I-Hc-EFH"/>
+                                                        <constraint firstItem="SoT-pG-xNQ" firstAttribute="height" secondItem="agS-aX-qqw" secondAttribute="height" multiplier="0.7" id="K0I-Hc-EFH"/>
                                                         <constraint firstItem="SoT-pG-xNQ" firstAttribute="centerY" secondItem="agS-aX-qqw" secondAttribute="centerY" id="Vyz-Xb-Y1l"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="leading" secondItem="ygr-sm-2eG" secondAttribute="trailing" id="ZM1-bZ-pcT"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="height" secondItem="agS-aX-qqw" secondAttribute="height" multiplier="0.5" id="c76-Ih-jNp"/>
                                                         <constraint firstItem="NYv-6Z-fW0" firstAttribute="leading" secondItem="ygr-sm-2eG" secondAttribute="leading" id="cqO-Sa-SH7"/>
-                                                        <constraint firstItem="NYv-6Z-fW0" firstAttribute="top" secondItem="ygr-sm-2eG" secondAttribute="bottom" constant="1.3333333333333286" id="dzL-hD-CnQ"/>
-                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="top" secondItem="SoT-pG-xNQ" secondAttribute="top" constant="10" id="eKu-9x-YrF"/>
+                                                        <constraint firstItem="NYv-6Z-fW0" firstAttribute="top" secondItem="ygr-sm-2eG" secondAttribute="bottom" constant="1" id="dzL-hD-CnQ"/>
+                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="top" secondItem="SoT-pG-xNQ" secondAttribute="top" constant="5" id="eKu-9x-YrF"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="levelLabel" destination="NYv-6Z-fW0" id="V0b-Ve-gsk"/>
                                                     <outlet property="poseDifficultyLabel" destination="NYv-6Z-fW0" id="EdN-2M-64g"/>
                                                     <outlet property="poseImage" destination="SoT-pG-xNQ" id="V8p-5b-TW4"/>
-                                                    <outlet property="poseLabel" destination="ygr-sm-2eG" id="y0o-4E-P1X"/>
                                                     <outlet property="poseNameLabel" destination="ygr-sm-2eG" id="7bM-wi-hfx"/>
                                                     <outlet property="sessionAccuracyLabel" destination="eCv-BU-sPw" id="n8L-Ch-COd"/>
                                                     <outlet property="sessionTimeLabel" destination="7xg-jq-JoH" id="RxY-wJ-ZCZ"/>
@@ -1827,53 +1799,53 @@ To finish you session, just say "Stop!"</string>
                                     <constraint firstItem="oPT-XM-8VS" firstAttribute="width" secondItem="kmz-Oj-bdY" secondAttribute="width" id="axA-DT-SuJ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VCf-jA-gLi" userLabel="ViewPlay">
-                                <rect key="frame" x="313.33333333333331" y="309.66666666666669" width="80" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7K-gI-ZPZ">
+                                <rect key="frame" x="20.666666666666657" y="294.66666666666669" width="372.66666666666674" height="108.66666666666669"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIg-g2-JRo">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="QIg-g2-JRo" secondAttribute="height" multiplier="1:1" id="QVc-EI-tKh"/>
-                                        </constraints>
-                                        <state key="normal" image="startSessionButton"/>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqd-6R-StI" userLabel="dataLabel">
+                                        <rect key="frame" x="19.999999999999996" y="55.333333333333314" width="51.666666666666657" height="25"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
+                                        <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Kl-BKn" userLabel="nomeLabel">
+                                        <rect key="frame" x="20" y="21.999999999999996" width="154.33333333333334" height="37.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
+                                        <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="4uy-Bp-9LT"/>
-                                    <constraint firstAttribute="width" constant="80" id="P06-cv-Lhu"/>
-                                    <constraint firstItem="QIg-g2-JRo" firstAttribute="width" secondItem="VCf-jA-gLi" secondAttribute="width" id="aPd-kQ-KwI"/>
-                                    <constraint firstItem="QIg-g2-JRo" firstAttribute="centerY" secondItem="VCf-jA-gLi" secondAttribute="centerY" id="f0d-T6-EH7"/>
-                                    <constraint firstItem="QIg-g2-JRo" firstAttribute="centerX" secondItem="VCf-jA-gLi" secondAttribute="centerX" id="lpb-ad-jvh"/>
+                                    <constraint firstItem="oLe-Kl-BKn" firstAttribute="leading" secondItem="P7K-gI-ZPZ" secondAttribute="leading" constant="20" id="KTa-X7-COT"/>
+                                    <constraint firstItem="oLe-Kl-BKn" firstAttribute="centerY" secondItem="P7K-gI-ZPZ" secondAttribute="centerY" multiplier="0.75" id="g1Q-4m-pPa"/>
+                                    <constraint firstItem="Eqd-6R-StI" firstAttribute="centerY" secondItem="P7K-gI-ZPZ" secondAttribute="centerY" multiplier="1.25" id="psE-Ep-KLx"/>
+                                    <constraint firstItem="oLe-Kl-BKn" firstAttribute="leading" secondItem="Eqd-6R-StI" secondAttribute="leading" id="xBB-XE-VQt"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="kmz-Oj-bdY" firstAttribute="width" secondItem="fNz-VS-6Pg" secondAttribute="width" id="Iwn-Km-Xag"/>
-                            <constraint firstItem="fNz-VS-6Pg" firstAttribute="centerY" secondItem="VCf-jA-gLi" secondAttribute="centerY" id="J1d-yr-w9z"/>
-                            <constraint firstItem="fNz-VS-6Pg" firstAttribute="centerX" secondItem="iGh-ON-H5B" secondAttribute="centerX" id="Ma3-09-sEE"/>
+                            <constraint firstItem="oPT-XM-8VS" firstAttribute="width" secondItem="P7K-gI-ZPZ" secondAttribute="width" id="BOl-nj-EhA"/>
                             <constraint firstItem="iGh-ON-H5B" firstAttribute="trailing" secondItem="Abu-6o-00i" secondAttribute="trailing" id="Mwn-Xq-22i"/>
                             <constraint firstItem="iGh-ON-H5B" firstAttribute="bottom" secondItem="kmz-Oj-bdY" secondAttribute="bottom" id="Oc2-xA-Enl"/>
                             <constraint firstItem="Abu-6o-00i" firstAttribute="top" secondItem="iGh-ON-H5B" secondAttribute="top" id="Uem-2n-uqB"/>
+                            <constraint firstItem="kmz-Oj-bdY" firstAttribute="top" secondItem="P7K-gI-ZPZ" secondAttribute="bottom" constant="20" id="Ugz-8l-l4O"/>
                             <constraint firstItem="Abu-6o-00i" firstAttribute="leading" secondItem="iGh-ON-H5B" secondAttribute="leading" id="Xe3-r6-lyB"/>
                             <constraint firstItem="Abu-6o-00i" firstAttribute="height" secondItem="iGh-ON-H5B" secondAttribute="height" multiplier="0.4" id="bWX-NI-9hm"/>
-                            <constraint firstItem="VCf-jA-gLi" firstAttribute="bottom" secondItem="Abu-6o-00i" secondAttribute="bottom" multiplier="1.05" id="keh-NO-aQM"/>
-                            <constraint firstItem="kmz-Oj-bdY" firstAttribute="top" secondItem="fNz-VS-6Pg" secondAttribute="bottom" constant="20" id="pqZ-nb-J9n"/>
-                            <constraint firstItem="kmz-Oj-bdY" firstAttribute="centerX" secondItem="fNz-VS-6Pg" secondAttribute="centerX" id="qIf-qb-RcR"/>
-                            <constraint firstItem="fNz-VS-6Pg" firstAttribute="height" secondItem="QIg-g2-JRo" secondAttribute="height" multiplier="1.5" id="v1l-Mi-bLK"/>
-                            <constraint firstItem="VCf-jA-gLi" firstAttribute="trailing" secondItem="fNz-VS-6Pg" secondAttribute="trailing" id="vRJ-aj-rmj"/>
+                            <constraint firstItem="P7K-gI-ZPZ" firstAttribute="centerX" secondItem="QHO-5c-arT" secondAttribute="centerX" id="ezI-gy-jN4"/>
+                            <constraint firstItem="P7K-gI-ZPZ" firstAttribute="height" secondItem="iGh-ON-H5B" secondAttribute="height" multiplier="0.15" id="gfl-Ca-29p"/>
+                            <constraint firstItem="kmz-Oj-bdY" firstAttribute="centerX" secondItem="iGh-ON-H5B" secondAttribute="centerX" id="iZE-F2-E2a"/>
+                            <constraint firstItem="P7K-gI-ZPZ" firstAttribute="centerY" secondItem="QHO-5c-arT" secondAttribute="bottom" multiplier="0.9" id="kVs-r0-PNK"/>
+                            <constraint firstItem="P7K-gI-ZPZ" firstAttribute="width" secondItem="QHO-5c-arT" secondAttribute="width" multiplier="0.9" id="kyb-f1-Kjf"/>
                             <constraint firstItem="Abu-6o-00i" firstAttribute="centerX" secondItem="iGh-ON-H5B" secondAttribute="centerX" id="wu5-xg-n0W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iGh-ON-H5B"/>
                     </view>
                     <navigationItem key="navigationItem" title="Poses" id="whv-nm-V6x"/>
                     <connections>
+                        <outlet property="dateLabel" destination="Eqd-6R-StI" id="wOY-PX-gjW"/>
                         <outlet property="historyTableView" destination="oPT-XM-8VS" id="3qO-I3-wEZ"/>
-                        <outlet property="imagemSessao" destination="QHO-5c-arT" id="NGd-E0-Jwk"/>
-                        <outlet property="lblDificuldade" destination="rhZ-A6-gDb" id="Li0-f1-DXg"/>
-                        <outlet property="lblTituloSessao" destination="wnK-if-vXs" id="aVh-GW-DO9"/>
-                        <outlet property="playViewLayout" destination="fNz-VS-6Pg" id="7xo-RK-TcN"/>
-                        <outlet property="tableView" destination="oPT-XM-8VS" id="ID0-2x-8wu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEl-dV-YCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

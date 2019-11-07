@@ -46,6 +46,8 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     var sessionRunning = false
     var bodyPlaced = false
     
+    var sessionStopped = false
+    
     // Feedback Sessions
     var currentTime: Float = 0
     var feedbackSession: RKFeedbackSession?
@@ -277,8 +279,6 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     @IBAction func manualStartPressed(_ sender: Any) {
         if !sessionRunning {
             startSession()
-            manualStartButton.setTitle("Stop", for: .normal)
-            manualStartButton.backgroundColor = manualCancelButton.backgroundColor
         } else {
             stopSession()
         }
@@ -317,13 +317,19 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
     func startSession() {
         self.sessionRunning = true
+        manualStartButton.setTitle("Stop", for: .normal)
+        manualStartButton.backgroundColor = manualCancelButton.backgroundColor
     }
     
     func stopSession() {
         self.allTranscribedText = ""
         self.sessionRunning = false
         self.audioEngine.stop()
-        self.performSegue(withIdentifier: "viewSaveFeedback", sender: self.feedbackSession)
+        if !sessionStopped {
+            self.performSegue(withIdentifier: "viewSaveFeedback", sender: self.feedbackSession)
+        }
+        
+        self.sessionStopped = true
     }
     
     func handleSpeech() {

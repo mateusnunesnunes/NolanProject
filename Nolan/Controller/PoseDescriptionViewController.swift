@@ -37,6 +37,11 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
         shadowView(v: poseInfoContainerView, blur: 4, y: 2, opacity: 25)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     // Coloca sombra na view
     func shadowView (v : UIView!, blur : CGFloat, y: CGFloat, opacity : Float) {
         v.layer.shadowOffset = CGSize(width: 0, height: y)

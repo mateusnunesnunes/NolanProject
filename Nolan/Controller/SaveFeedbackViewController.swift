@@ -117,7 +117,7 @@ class SaveFeedbackViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+        super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.tabBar.isHidden = false
     }
@@ -170,6 +170,9 @@ class SaveFeedbackViewController: UIViewController {
 //        }
         
         // TODO: Add into user sessions
+        if let feedbackSession = self.feedbackSession {
+            Singleton.shared.feedbacks.append(feedbackSession)
+        }
         
         popToPose()
     }

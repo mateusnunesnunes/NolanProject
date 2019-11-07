@@ -15,6 +15,9 @@ class Singleton {
     var segmentedControlOption = -1
     var data: [Session]!
     var firstLoad = true
+    
+    var feedbacks = [RKFeedbackSession]()
+    
     func loadDataTrainView(id:Int){
         switch id {
         case 0:

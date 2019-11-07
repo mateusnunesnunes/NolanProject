@@ -32,19 +32,14 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var calendarViewContaner: UIView!
     
-    fileprivate lazy var dateFormatter: DateFormatter = {
-       let formatter = DateFormatter()
-       formatter.dateFormat = "yyyy-MM-dd"
-       return formatter
-    }()
+    var allPracticedDates: [String] = []
     
-    let allPracticedDates = ["2019-11-03",
-    "2019-11-06",
-    "2019-11-12",
-    "2019-11-25"]
+    let formatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        formatter.dateFormat = "YYYY-MM-dd"
         
         formatButton(view: userImageView)
         formatButton(view: settingsContainer)
@@ -59,15 +54,22 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         
         calendar.placeholderType = .none
         
-        calendar.appearance.titleFont = UIFont(name: "Futura", size: 12)
+        calendar.appearance.titleFont = UIFont(name: "Futura", size: 13)
         calendar.appearance.weekdayFont = UIFont(name: "Futura", size: 15)
         calendar.appearance.headerTitleFont = UIFont(name: "Futura", size: 15)
         
         shadowView(v: calendarViewContaner, blur: 4, y: 2, opacity: 25)
         calendarViewContaner.cornerRadius = 10
         
-        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let feedbacks = Singleton.shared.feedbacks
+        let dates = feedbacks.map( { formatter.string(from: $0.date) } )
+        allPracticedDates = Array(Set(dates))
+        
+        calendar.reloadData()
     }
     
     // Coloca sombra na view
@@ -95,51 +97,46 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     }
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance,  titleDefaultColorFor date: Date) -> UIColor? {
-        let formattedDate : String = dateFormatter.string(from:date)
-        
-        if allPracticedDates.contains(formattedDate)
+        if allPracticedDates.contains(formatter.string(from: date))
         {
             return .white
         }
-        else {
-            return nil
-        }
+        return nil
     }
     
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
-        
-        let formattedDate : String = dateFormatter.string(from:date)
-        
-        if allPracticedDates.contains(formattedDate)
+        if allPracticedDates.contains(formatter.string(from: date))
         {
             return UIColor(displayP3Red: 0, green: 174/255, blue: 166/255, alpha: 1)
         }
-        else {
-            return nil
-        }
+        return nil
     }
 
     
-    
-    // TODO: Precisa do model pronto
-//    // FSCalendarDelegate
-//    func calendar(calendar: FSCalendar!, didSelectDate date: NSDate!) {
-//
-//    }
-//
-    
     func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
-        
-        let formattedDate : String = dateFormatter.string(from: date)
-        
-        if allPracticedDates.contains(formattedDate) {
+        if allPracticedDates.contains(formatter.string(from: date)) {
             return true
         }
         return false
     }
     
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        self.performSegue(withIdentifier: "viewHistory", sender: date)
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewHistory" {
+            if let destination = segue.destination as? HistoryViewController, let date = sender as? Date {
+                destination.date = date
+            } else {
+                print("Failed creating view OR sender")
+            }
+        }
+    }
+    
     /*
-     // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
