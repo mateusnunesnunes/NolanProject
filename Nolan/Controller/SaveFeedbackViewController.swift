@@ -8,7 +8,7 @@
 
 import UIKit
 import Charts
-import HealthKit
+//import HealthKit
 
 class SaveFeedbackViewController: UIViewController {
     
@@ -58,10 +58,10 @@ class SaveFeedbackViewController: UIViewController {
     }
     
     func addLightShadow(view: UIView) {
-        view.layer.shadowOffset = CGSize(width: 0, height: 5)
-        view.layer.shadowRadius = 3
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowRadius = 4
         view.layer.shadowColor = UIColor.lightGray.cgColor
-        view.layer.shadowOpacity = 0.85
+        view.layer.shadowOpacity = 0.25
     }
     
     func createChart(_ feedbackSession: RKFeedbackSession) {
@@ -75,13 +75,11 @@ class SaveFeedbackViewController: UIViewController {
         performanceChart.leftYAxisRenderer.axis?.drawGridLinesEnabled = false
         performanceChart.leftYAxisRenderer.axis?.drawLabelsEnabled = true
         
-        performanceChart.rightYAxisRenderer.axis?.axisMaximum = 100
-        performanceChart.rightYAxisRenderer.axis?.axisMinimum = 0
-        performanceChart.rightYAxisRenderer.axis?.drawGridLinesEnabled = false
-        performanceChart.rightYAxisRenderer.axis?.drawLabelsEnabled = false
+        performanceChart.rightYAxisRenderer.axis?.enabled = false
         
         performanceChart.xAxisRenderer.axis?.drawLabelsEnabled = true
         performanceChart.xAxisRenderer.axis?.drawGridLinesEnabled = false
+        performanceChart.xAxis.labelPosition = .bottom
         
         performanceChart.legend.enabled = false
         
@@ -124,54 +122,52 @@ class SaveFeedbackViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
 
-    func requestAuthorization(_ healthStore: HKHealthStore) {
-        let mindfulnessType = Set([
-            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!
-        ])
-        
-        healthStore.requestAuthorization(toShare: mindfulnessType, read: []) { (success, error) -> Void in
-            if !success  {
-                print("Error: \(error)")
-            }
-        }
-    }
-    
-    func saveSession(_ healthStore: HKHealthStore) {
-        // alarmTime and endTime are NSDate objects
-        if let mindfulType = HKObjectType.categoryType(forIdentifier: .mindfulSession), let feedbackSession = self.feedbackSession {
-            
-            // we create our new object we want to push in Health app
-            
-            let totalSessionTime = TimeInterval(Array(feedbackSession.scores.keys).max() ?? 0)
-            let startDate = feedbackSession.date
-            let mindfullSample = HKCategorySample(type:mindfulType, value: 0, start: startDate, end: startDate + totalSessionTime)
-            
-            // at the end, we save it
-            healthStore.save(mindfullSample, withCompletion: { (success, error) -> Void in
-                
-                if error != nil {
-                    print("Health error")
-                }
-                
-                if success {
-                    print("Data saved")
-                }
-                
-            })
-        }
-    }
+//    func requestAuthorization(_ healthStore: HKHealthStore) {
+//        let mindfulnessType = Set([
+//            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!
+//        ])
+//
+//        healthStore.requestAuthorization(toShare: mindfulnessType, read: []) { (success, error) -> Void in
+//            if !success  {
+//                print("Error: \(error)")
+//            }
+//        }
+//    }
+//
+//    func saveSession(_ healthStore: HKHealthStore) {
+//        // alarmTime and endTime are NSDate objects
+//        if let mindfulType = HKObjectType.categoryType(forIdentifier: .mindfulSession), let feedbackSession = self.feedbackSession {
+//
+//            // we create our new object we want to push in Health app
+//
+//            let totalSessionTime = TimeInterval(Array(feedbackSession.scores.keys).max() ?? 0)
+//            let startDate = feedbackSession.date
+//            let mindfullSample = HKCategorySample(type:mindfulType, value: 0, start: startDate, end: startDate + totalSessionTime)
+//
+//            // at the end, we save it
+//            healthStore.save(mindfullSample, withCompletion: { (success, error) -> Void in
+//
+//                if error != nil {
+//                    print("Health error")
+//                }
+//
+//                if success {
+//                    print("Data saved")
+//                }
+//
+//            })
+//        }
+//    }
     
     @IBAction func savePressed(_ sender: Any) {
-        // TODO: Ask for health kit permission. If accepted, save mindful seconds there.
-        
-        if HKHealthStore.isHealthDataAvailable() {
-            // Add code to use HealthKit here.
-            let healthStore = HKHealthStore()
-            
-            requestAuthorization(healthStore)
-            
-            saveSession(healthStore)
-        }
+//        if HKHealthStore.isHealthDataAvailable() {
+//            // Add code to use HealthKit here.
+//            let healthStore = HKHealthStore()
+//
+//            requestAuthorization(healthStore)
+//
+//            saveSession(healthStore)
+//        }
         
         // TODO: Add into user sessions
         
