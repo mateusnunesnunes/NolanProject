@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0J-Vx-tRj">
+            <objects>
+                <viewController id="nww-Ne-Iof" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nmz-eG-1q0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HP-jc-CB8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="658"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lUB-aI-Gxm">
+                                <rect key="frame" x="0.0" y="658" width="414" height="204"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="70N-N9-P8d">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                        <color key="backgroundColor" red="1" green="0.35960427439999998" blue="0.75389433669999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iod-u2-Xh5">
+                                        <rect key="frame" x="0.0" y="68" width="414" height="68"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Li-yo-aDi">
+                                        <rect key="frame" x="0.0" y="136" width="414" height="68"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lUB-aI-Gxm" firstAttribute="leading" secondItem="FOK-uc-yax" secondAttribute="leading" id="8Mk-51-RrN"/>
+                            <constraint firstItem="FOK-uc-yax" firstAttribute="trailing" secondItem="lUB-aI-Gxm" secondAttribute="trailing" id="8YU-6j-3e2"/>
+                            <constraint firstItem="FOK-uc-yax" firstAttribute="bottom" secondItem="1HP-jc-CB8" secondAttribute="bottom" constant="204" id="PSa-2D-rOd"/>
+                            <constraint firstItem="1HP-jc-CB8" firstAttribute="leading" secondItem="FOK-uc-yax" secondAttribute="leading" id="U9Z-Mo-3wr"/>
+                            <constraint firstItem="FOK-uc-yax" firstAttribute="top" secondItem="1HP-jc-CB8" secondAttribute="top" constant="44" id="Uuk-yb-8sx"/>
+                            <constraint firstItem="lUB-aI-Gxm" firstAttribute="bottom" secondItem="FOK-uc-yax" secondAttribute="bottom" id="VZN-MX-FTt"/>
+                            <constraint firstItem="FOK-uc-yax" firstAttribute="trailing" secondItem="1HP-jc-CB8" secondAttribute="trailing" id="Zei-th-1Hw"/>
+                            <constraint firstItem="lUB-aI-Gxm" firstAttribute="top" secondItem="1HP-jc-CB8" secondAttribute="bottom" id="uoF-fW-9Qq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FOK-uc-yax"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKK-q5-3Vs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1781.1594202898552" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+</document>
