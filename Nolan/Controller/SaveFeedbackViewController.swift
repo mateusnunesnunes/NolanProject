@@ -58,10 +58,10 @@ class SaveFeedbackViewController: UIViewController {
     }
     
     func addLightShadow(view: UIView) {
-        view.layer.shadowOffset = CGSize(width: 0, height: 5)
-        view.layer.shadowRadius = 3
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowRadius = 4
         view.layer.shadowColor = UIColor.lightGray.cgColor
-        view.layer.shadowOpacity = 0.85
+        view.layer.shadowOpacity = 0.25
     }
     
     func createChart(_ feedbackSession: RKFeedbackSession) {

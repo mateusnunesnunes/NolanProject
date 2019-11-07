@@ -11,6 +11,12 @@ import UIKit
 class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    
+    @IBOutlet weak var nomeLabel: UILabel!
+    
+    @IBOutlet weak var poseInfoContainerView: UIView!
     
     var pose: Pose?
     
@@ -23,6 +29,20 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        nomeLabel.text = pose?.name ?? "No pose defined"
+        difficultyLabel.text = pose?.difficulty ?? "Undefined"
+        typeLabel.text = pose?.types ?? "Undefined"
+        
+        shadowView(v: poseInfoContainerView, blur: 4, y: 2, opacity: 25)
+    }
+    
+    // Coloca sombra na view
+    func shadowView (v : UIView!, blur : CGFloat, y: CGFloat, opacity : Float) {
+        v.layer.shadowOffset = CGSize(width: 0, height: y)
+        v.layer.shadowRadius = blur
+        v.layer.shadowColor = UIColor.lightGray.cgColor
+        v.layer.shadowOpacity = opacity
     }
     
     @IBAction func viewPosePressed(_ sender: Any) {
