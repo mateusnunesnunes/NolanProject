@@ -66,10 +66,24 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     
     override func viewWillAppear(_ animated: Bool) {
         let feedbacks = Singleton.shared.feedbacks
+        
         let dates = feedbacks.map( { formatter.string(from: $0.date) } )
         allPracticedDates = Array(Set(dates))
-        
         calendar.reloadData()
+        
+        
+        let totalTimeSeconds = feedbacks.reduce(0, { $0 + (Array($1.scores.values).max() ?? 0) } )
+        let totalMinutes = round(totalTimeSeconds / 60)
+        
+        clockLabel.text = totalMinutes.description + "\nminutes"
+        
+        calendarLabel.text = allPracticedDates.count.description
+
+        let totalFeedbackMark = feedbacks.reduce(0, { $0 + $1.valuesAsPercentage(usingMaxDistance: 1.5).reduce(0, {$0 + $1 } ) } )
+        let totalFeedbackCount = feedbacks.reduce(0, { $0 + Array($1.scores.keys).count } )
+        
+        chartLabel.text = round((totalFeedbackMark / Float(totalFeedbackCount)) * 100).description + "\naccuracy"
+        
     }
     
     // Coloca sombra na view

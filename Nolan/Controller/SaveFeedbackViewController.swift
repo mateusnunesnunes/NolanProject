@@ -84,7 +84,7 @@ class SaveFeedbackViewController: UIViewController {
         performanceChart.legend.enabled = false
         
         let keys: [Float] = Array(feedbackSession.scores.keys).sorted()
-        let chartValues = feedbackSession.valuesAsPercentage(usingMaxDistance: 1.1)
+        let chartValues = feedbackSession.valuesAsPercentage(usingMaxDistance: 1.25)
         
         var chartDataEntries: [ChartDataEntry] = []
         for i in 0..<chartValues.count {

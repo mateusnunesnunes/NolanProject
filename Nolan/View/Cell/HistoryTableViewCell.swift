@@ -40,7 +40,7 @@ class HistoryTableViewCell: UITableViewCell {
         sessionTimeLabel.text = String(format: "%.2f", sessionKeys.max() ?? 0) + "s"
         
         let sessionValues = Array(feedbackSession.scores.values)
-        sessionAccuracyLabel.text = (feedbackSession.valuesAsPercentage(usingMaxDistance: 1.1).reduce(0, {$0 + $1}) / Float(sessionValues.count)).description + "%"
+        sessionAccuracyLabel.text = String(format: "%.0f", (feedbackSession.valuesAsPercentage(usingMaxDistance: 1.25).reduce(0, {$0 + $1}) / Float(sessionValues.count))) + "%"
     }
 
 }
