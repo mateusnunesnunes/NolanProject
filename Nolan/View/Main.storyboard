@@ -327,7 +327,7 @@ accuracy</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJx-Xa-zYa" userLabel="viewSegmented">
-                                <rect key="frame" x="0.0" y="88" width="414" height="58"/>
+                                <rect key="frame" x="0.0" y="40" width="414" height="106"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxn-29-e7C" userLabel="viewMainTrain">
@@ -367,7 +367,7 @@ accuracy</string>
                         <constraints>
                             <constraint firstItem="QJx-Xa-zYa" firstAttribute="centerX" secondItem="mxn-29-e7C" secondAttribute="centerX" id="9id-mg-Avk"/>
                             <constraint firstItem="Cdr-oB-RlY" firstAttribute="bottom" secondItem="mxn-29-e7C" secondAttribute="bottom" id="Br0-9p-0HB"/>
-                            <constraint firstItem="QJx-Xa-zYa" firstAttribute="top" secondItem="Cdr-oB-RlY" secondAttribute="top" id="gcA-Li-7mY"/>
+                            <constraint firstItem="QJx-Xa-zYa" firstAttribute="top" secondItem="G8P-bN-V24" secondAttribute="top" constant="40" id="gcA-Li-7mY"/>
                             <constraint firstItem="mxn-29-e7C" firstAttribute="width" secondItem="Cdr-oB-RlY" secondAttribute="width" id="lKk-Kj-db9"/>
                             <constraint firstItem="mxn-29-e7C" firstAttribute="height" secondItem="Cdr-oB-RlY" secondAttribute="height" multiplier="0.92" id="uMD-bX-syD"/>
                             <constraint firstItem="mxn-29-e7C" firstAttribute="top" secondItem="QJx-Xa-zYa" secondAttribute="bottom" id="vbB-uV-rhH"/>

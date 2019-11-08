@@ -65,8 +65,8 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Cria o layout
         let layout = CHTCollectionViewWaterfallLayout()
         // Edita o layout individual como espaco entre as celulas
-        layout.minimumColumnSpacing = 25.0
-        layout.minimumInteritemSpacing = 25.0
+        layout.minimumColumnSpacing = 8
+        layout.minimumInteritemSpacing = 8
         // CollectionView atributos
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.alwaysBounceVertical = true
@@ -93,15 +93,10 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
             cell.image.image = self.data[indexPath.item].photo
         }
         
-        cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = .none
+//        cell.layer.borderWidth = 0.5
+//        cell.layer.borderColor = .none
         
         cell.layer.cornerRadius = 8
-        
-        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
-        cell.layer.shadowRadius = 3
-        cell.layer.shadowColor = UIColor.darkGray.cgColor
-        cell.layer.shadowOpacity = 0.25
         
         return cell
     }
@@ -143,7 +138,7 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationController?.hidesBarsOnSwipe = true
+        navigationController?.hidesBarsOnSwipe = false
 
         // Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
