@@ -48,12 +48,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lq2-56-JVJ">
                                                 <rect key="frame" x="321.66666666666669" y="36.333333333333336" width="72.333333333333314" height="72.333333333333314"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-KG-Gw3" userLabel="configButton">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-KG-Gw3" userLabel="configButton">
                                                         <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="72.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <color key="tintColor" red="0.94901960784313721" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button" image="gear" catalog="system">
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large" weight="bold"/>
+                                                        <state key="normal" image="configButtonIcon">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="bold"/>
                                                         </state>
                                                     </button>
                                                 </subviews>
@@ -90,8 +90,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-DW-Si2">
                                                         <rect key="frame" x="29.000000000000007" y="0.0" width="57.999999999999993" height="58"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RqE-CQ-REt">
-                                                                <rect key="frame" x="11.333333333333329" y="13.666666666666675" width="35" height="30.333333333333339"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="RqE-CQ-REt">
+                                                                <rect key="frame" x="11.333333333333329" y="15.666666666666655" width="35" height="26.333333333333329"/>
                                                                 <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                             </imageView>
@@ -100,7 +100,7 @@
                                                         <constraints>
                                                             <constraint firstItem="RqE-CQ-REt" firstAttribute="centerY" secondItem="8X5-DW-Si2" secondAttribute="centerY" id="AGy-xv-gqK"/>
                                                             <constraint firstAttribute="width" secondItem="8X5-DW-Si2" secondAttribute="height" multiplier="1:1" id="BiZ-xA-cuX"/>
-                                                            <constraint firstItem="RqE-CQ-REt" firstAttribute="height" secondItem="8X5-DW-Si2" secondAttribute="height" multiplier="0.6" id="bSG-1m-05P"/>
+                                                            <constraint firstItem="RqE-CQ-REt" firstAttribute="height" secondItem="8X5-DW-Si2" secondAttribute="height" multiplier="0.45" id="bSG-1m-05P"/>
                                                             <constraint firstItem="RqE-CQ-REt" firstAttribute="centerX" secondItem="8X5-DW-Si2" secondAttribute="centerX" id="ddt-vA-B7X"/>
                                                             <constraint firstItem="RqE-CQ-REt" firstAttribute="width" secondItem="8X5-DW-Si2" secondAttribute="width" multiplier="0.6" id="l6c-MK-CzL"/>
                                                         </constraints>
@@ -129,19 +129,19 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpX-jR-xOJ">
                                                         <rect key="frame" x="29" y="0.0" width="58" height="58"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RUl-Fs-Ifo">
-                                                                <rect key="frame" x="11.666666666666657" y="14.333333333333343" width="34.666666666666664" height="29"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendarIcon" translatesAutoresizingMaskIntoConstraints="NO" id="RUl-Fs-Ifo">
+                                                                <rect key="frame" x="16" y="15.666666666666655" width="26" height="26.333333333333329"/>
                                                                 <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="RUl-Fs-Ifo" firstAttribute="height" secondItem="gpX-jR-xOJ" secondAttribute="height" multiplier="0.6" id="6S5-EU-luh"/>
+                                                            <constraint firstItem="RUl-Fs-Ifo" firstAttribute="height" secondItem="gpX-jR-xOJ" secondAttribute="height" multiplier="0.45" id="6S5-EU-luh"/>
                                                             <constraint firstItem="RUl-Fs-Ifo" firstAttribute="centerY" secondItem="gpX-jR-xOJ" secondAttribute="centerY" id="DEk-hs-FrA"/>
                                                             <constraint firstAttribute="width" secondItem="gpX-jR-xOJ" secondAttribute="height" multiplier="1:1" id="LhE-OL-3Cz"/>
                                                             <constraint firstItem="RUl-Fs-Ifo" firstAttribute="centerX" secondItem="gpX-jR-xOJ" secondAttribute="centerX" id="Sug-8j-ceG"/>
-                                                            <constraint firstItem="RUl-Fs-Ifo" firstAttribute="width" secondItem="gpX-jR-xOJ" secondAttribute="width" multiplier="0.6" id="n58-6f-goY"/>
+                                                            <constraint firstItem="RUl-Fs-Ifo" firstAttribute="width" secondItem="gpX-jR-xOJ" secondAttribute="width" multiplier="0.45" id="n58-6f-goY"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-2o-9jz">
@@ -170,18 +170,18 @@ days</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOI-Ro-KcG">
                                                         <rect key="frame" x="29.000000000000028" y="0.0" width="58" height="58"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.bar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-VP-Q3s">
-                                                                <rect key="frame" x="11.333333333333314" y="14.666666666666675" width="35" height="28.999999999999996"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-VP-Q3s">
+                                                                <rect key="frame" x="15.666666666666627" y="15.666666666666655" width="26.333333333333329" height="26.333333333333329"/>
                                                                 <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="Jcw-VP-Q3s" firstAttribute="height" secondItem="AOI-Ro-KcG" secondAttribute="height" multiplier="0.6" id="9Qz-Di-ewR"/>
+                                                            <constraint firstItem="Jcw-VP-Q3s" firstAttribute="height" secondItem="AOI-Ro-KcG" secondAttribute="height" multiplier="0.45" id="9Qz-Di-ewR"/>
                                                             <constraint firstItem="Jcw-VP-Q3s" firstAttribute="centerY" secondItem="AOI-Ro-KcG" secondAttribute="centerY" id="VhL-oh-pFm"/>
                                                             <constraint firstAttribute="width" secondItem="AOI-Ro-KcG" secondAttribute="height" multiplier="1:1" id="abW-va-edy"/>
-                                                            <constraint firstItem="Jcw-VP-Q3s" firstAttribute="width" secondItem="AOI-Ro-KcG" secondAttribute="width" multiplier="0.6" id="rRj-Yp-WxR"/>
+                                                            <constraint firstItem="Jcw-VP-Q3s" firstAttribute="width" secondItem="AOI-Ro-KcG" secondAttribute="width" multiplier="0.45" id="rRj-Yp-WxR"/>
                                                             <constraint firstItem="Jcw-VP-Q3s" firstAttribute="centerX" secondItem="AOI-Ro-KcG" secondAttribute="centerX" id="zDV-rY-hF0"/>
                                                         </constraints>
                                                     </view>
@@ -895,7 +895,7 @@ accuracy</string>
                                         <rect key="frame" x="41.333333333333343" y="114" width="331.33333333333326" height="497"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUN-CR-Piz">
-                                                <rect key="frame" x="117.33333333333331" y="370" width="97" height="97"/>
+                                                <rect key="frame" x="116" y="367.66666666666663" width="99.333333333333314" height="99.333333333333314"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="iUN-CR-Piz" secondAttribute="height" multiplier="1:1" id="MB9-r6-tHZ"/>
                                                 </constraints>
@@ -912,7 +912,7 @@ accuracy</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sph-dB-gvX">
-                                                <rect key="frame" x="33.333333333333343" y="77.666666666666686" width="264.66666666666663" height="272.33333333333331"/>
+                                                <rect key="frame" x="33.333333333333343" y="77.666666666666686" width="264.66666666666663" height="270"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <string key="text">Read it all before doing anything!
 
@@ -932,6 +932,7 @@ To finish you session, just say "Stop!"</string>
                                         <constraints>
                                             <constraint firstItem="iUN-CR-Piz" firstAttribute="top" secondItem="Sph-dB-gvX" secondAttribute="bottom" constant="20" id="6KP-6Q-56D"/>
                                             <constraint firstItem="Sph-dB-gvX" firstAttribute="width" secondItem="QM2-3V-dVQ" secondAttribute="width" multiplier="0.8" id="CI3-PX-EHN"/>
+                                            <constraint firstItem="iUN-CR-Piz" firstAttribute="height" secondItem="QM2-3V-dVQ" secondAttribute="height" multiplier="0.2" id="CiV-OW-Ids"/>
                                             <constraint firstItem="iAh-nK-7Uc" firstAttribute="width" secondItem="QM2-3V-dVQ" secondAttribute="width" multiplier="0.8" id="Jkg-z6-9QW"/>
                                             <constraint firstItem="iAh-nK-7Uc" firstAttribute="top" secondItem="QM2-3V-dVQ" secondAttribute="top" constant="20" id="O9H-PG-Bd9"/>
                                             <constraint firstItem="iAh-nK-7Uc" firstAttribute="centerX" secondItem="QM2-3V-dVQ" secondAttribute="centerX" id="Q54-NS-wtX"/>
@@ -1557,6 +1558,8 @@ To finish you session, just say "Stop!"</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.30949652189999999" green="0.68260848519999995" blue="0.65490299460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.81788134570000004" green="0.408425808" blue="0.39214310050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="pNb-s2-cNV" kind="relationship" relationship="viewControllers" id="u2T-6x-Tas"/>
@@ -1689,8 +1692,8 @@ To finish you session, just say "Stop!"</string>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbY-aD-GgD">
                                                                             <rect key="frame" x="44.333333333333314" y="0.0" width="23" height="23"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wQO-kD-tSS">
-                                                                                    <rect key="frame" x="3.3333333333333144" y="5.6666666666666634" width="16.333333333333332" height="11.666666666666668"/>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wQO-kD-tSS">
+                                                                                    <rect key="frame" x="3.3333333333333144" y="3.3333333333333321" width="16.333333333333332" height="16.333333333333332"/>
                                                                                     <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                                                 </imageView>
@@ -1726,8 +1729,8 @@ To finish you session, just say "Stop!"</string>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANr-VM-gsv">
                                                                             <rect key="frame" x="45.333333333333314" y="0.0" width="23" height="23"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.bar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-YY-jfY">
-                                                                                    <rect key="frame" x="3.3333333333333144" y="6.6666666666666679" width="16.333333333333332" height="10.333333333333332"/>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-YY-jfY">
+                                                                                    <rect key="frame" x="3.3333333333333144" y="3.3333333333333357" width="16.333333333333332" height="16.333333333333332"/>
                                                                                     <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                                                 </imageView>
@@ -2003,17 +2006,17 @@ To finish you session, just say "Stop!"</string>
     <resources>
         <image name="bookmark" catalog="system" width="56" height="64"/>
         <image name="bookmark.fill" catalog="system" width="56" height="64"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="chart.bar" catalog="system" width="64" height="44"/>
-        <image name="clock" catalog="system" width="64" height="60"/>
+        <image name="calendarIcon" width="57" height="63"/>
+        <image name="chartIcon" width="54" height="36"/>
+        <image name="clockIcon" width="63" height="60"/>
+        <image name="configButtonIcon" width="171" height="171"/>
         <image name="filter" width="147" height="147"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="image1" width="427" height="640"/>
         <image name="image2" width="427" height="640"/>
         <image name="image3" width="640" height="427"/>
         <image name="image4" width="427" height="427"/>
         <image name="image5" width="427" height="427"/>
         <image name="scan" width="147" height="147"/>
-        <image name="startSessionButton" width="97" height="97"/>
+        <image name="startSessionButton" width="285" height="285"/>
     </resources>
 </document>

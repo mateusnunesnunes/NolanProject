@@ -46,7 +46,7 @@ class Singleton {
                 "Imagine-se acariciando a crina de um cavalo"
                 ],
                 favorite: true,
-                jsonFilename: "BracoBaixo"
+                jsonFilename: "s1p1"
             ),
             Pose(
                 name: "BAI HE LIANG CHI",
@@ -57,7 +57,7 @@ class Singleton {
                 "Abrir e fechar seus braços, encostando uma mão na outra",
                 "Repetir esse movimento delicadamente, imitando uma garça abrindo e fechando suas asas"],
                 favorite: false,
-                jsonFilename: "PeProLado"
+                jsonFilename: "s1p2"
             ),
             Pose(
                 name: "SHOU HUI PIPA",
@@ -68,7 +68,7 @@ class Singleton {
                     "Respirar levemente e se imaginar em contato com a natureza",
                     "Se imaginar tocando harpa em um local bem silencioso"],
                 favorite: false,
-                jsonFilename: "T"
+                jsonFilename: "s1p3"
             ),
             Pose(
                 name: "DAO-NIAN-HOU",
@@ -80,7 +80,7 @@ class Singleton {
                 "Imagine-se empurrando e puxando um macaco"
                 ],
                 favorite: true,
-                jsonFilename: "TBugadoDeLado"
+                jsonFilename: "s1p4"
             ),
             Pose(
                 name: "LAN QUE WEI",
@@ -92,7 +92,7 @@ class Singleton {
                 "Flexione os joelhos e os braços e repita"
                 ],
                 favorite: true,
-                jsonFilename: "T"
+                jsonFilename: "s1p5"
             ),
             Pose(
                 name: "YUN SHOU",
@@ -104,7 +104,7 @@ class Singleton {
                 "Realize movimentos laterais com calma e se imagine no meio das nuvens"
                 ],
                 favorite: true,
-                jsonFilename: "BracoBaixo"
+                jsonFilename: "s1p6"
             )
             ],
                 category: "Focus",
@@ -121,7 +121,7 @@ class Singleton {
                 "Repita o processo até que seu peso esteja equilibrado"
                 ],
                 favorite: false,
-                jsonFilename: ""
+                jsonFilename: "s2p1"
             ),
             Pose(
                 name: "Part the Wild Horse's Mane (左右野马分鬃)",
@@ -132,7 +132,7 @@ class Singleton {
                 "Posicione a mão esquerda na altura da cintura",
                 "Respire calmamente e tenha claro em sua mente o valor do contato com a natureza"],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "s2p2"
             ),
             Pose(
                 name: "Gong Bu",
@@ -143,7 +143,7 @@ class Singleton {
                     "Posicione a mão esquerda no nivel da cintura ",
                     "Imagine seu corpo se alinhando de acordo com cada posição adotada"],
                 favorite: false,
-                jsonFilename: ""
+                jsonFilename: "s2p3"
             ),
             Pose(
                 name: "左右摟膝拗步",
@@ -155,7 +155,7 @@ class Singleton {
                 "Continue a recuar à medida que a mão esquerda se move na frente do rosto, como se acenasse sobre o ombro direito."
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "s2p4"
             )
             ],
                 category: "Concentration",
@@ -172,7 +172,7 @@ class Singleton {
                 "Entre em sintonia com a mãe natureza"
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "s3p1"
             ),
             Pose(
                 name: "You Suo Yu Nu Chuan Suo",
@@ -183,7 +183,7 @@ class Singleton {
                 "Posicione a perna direita reflixonada em relação ao corpo",
                 "Posicine o braço na frente da cabeça e realize movimentos suaves e calmos"],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "s3p2"
             ),
             Pose(
                name: "左右摟膝拗步",
@@ -195,7 +195,7 @@ class Singleton {
                 "Continue a recuar à medida que a mão esquerda se move na frente do rosto, como se acenasse sobre o ombro direito."
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "s3p3"
             ),
             Pose(
                 name: "Shan Tong Bei",
@@ -207,7 +207,7 @@ class Singleton {
                 "Coloque seu peso no pé esquerdo e repita o processo com o outro pé"
                 ],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "s3p4"
             )
             ],
                 category: "Balance",
@@ -225,7 +225,7 @@ class Singleton {
                 ],
                 
                 favorite: false,
-                jsonFilename: ""
+                jsonFilename: "s4p1"
             ),
             Pose(
                 name: "Ru Feng Si Bi",
@@ -236,7 +236,7 @@ class Singleton {
                 "A mão esquerda passa por baixo do punho direito ",
                 "Cotovelos e ombros permanecem baixos e flexíveis, mantenha as pernas abertas, flexionadas, e fixas"],
                 favorite: true,
-                jsonFilename: ""
+                jsonFilename: "s4p2"
             ),
             Pose(
                 name: "Hai Di Zhen",
@@ -247,7 +247,7 @@ class Singleton {
                     "Curve as duas pernas, sendo que a esquerda estará na frente da outra",
                     "Imagine-se mergulhando em um mar profundo para procurar uma agulha"],
                 favorite: false,
-                jsonFilename: ""
+                jsonFilename: "s4p3"
             ),
            Pose(
                name: "Parting the Horse's Mane",
@@ -259,7 +259,7 @@ class Singleton {
                "Repita o processo até que seu peso esteja equilibrado"
                ],
                favorite: false,
-               jsonFilename: ""
+               jsonFilename: "s4p4"
            )
             ],
                 category: "Focus",

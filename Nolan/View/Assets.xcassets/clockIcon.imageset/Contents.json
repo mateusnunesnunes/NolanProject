@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "startSessionButton.pdf",
+      "filename" : "clockIcon.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "startSessionButton@2x.pdf",
+      "filename" : "clockIcon@2x.pdf",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "startSessionButton@3x.pdf",
+      "filename" : "clockIcon@3x.pdf",
       "scale" : "3x"
     }
   ],
