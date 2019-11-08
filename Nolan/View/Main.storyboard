@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wCi-5G-jt8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wCi-5G-jt8">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="a1M-i7-HO3">
             <objects>
                 <viewController id="Ohj-Bj-M0a" customClass="ProfileViewController" customModule="Nolan" customModuleProvider="target" sceneMemberID="viewController">
@@ -294,7 +294,7 @@ accuracy</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sXi-UT-S7v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="pc7-Ug-9Eg"/>
+                    <navigationItem key="navigationItem" id="pc7-Ug-9Eg"/>
                     <connections>
                         <outlet property="calendar" destination="aaK-ib-WxG" id="ODB-NH-qF7"/>
                         <outlet property="calendarContainer" destination="gpX-jR-xOJ" id="CSx-75-MV5"/>
@@ -318,7 +318,7 @@ accuracy</string>
             </objects>
             <point key="canvasLocation" x="1963.7681159420292" y="672.99107142857144"/>
         </scene>
-        <!--Sessions-->
+        <!--Train Col View Controller-->
         <scene sceneID="EuW-RB-Fyh">
             <objects>
                 <viewController id="fcg-9B-ZZK" customClass="TrainColViewController" customModule="Nolan" customModuleProvider="target" sceneMemberID="viewController">
@@ -376,7 +376,7 @@ accuracy</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cdr-oB-RlY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sessions" id="VmN-gn-Lgm"/>
+                    <navigationItem key="navigationItem" id="VmN-gn-Lgm"/>
                     <connections>
                         <outlet property="collectionView" destination="apk-8K-yX6" id="M9T-Nx-CNw"/>
                         <outlet property="viewMainTrain" destination="mxn-29-e7C" id="Ubc-JQ-b69"/>
@@ -598,7 +598,7 @@ accuracy</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0FF-Fc-ERw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Poses" id="Ofm-FE-DAy"/>
+                    <navigationItem key="navigationItem" id="Ofm-FE-DAy"/>
                     <connections>
                         <outlet property="imagemSessao" destination="vd9-Ol-aJW" id="c1A-Lz-l62"/>
                         <outlet property="lblCategoria" destination="4MK-AB-rCB" id="zI5-Pd-QB6"/>
@@ -616,7 +616,7 @@ accuracy</string>
             </objects>
             <point key="canvasLocation" x="2713.04347826087" y="-735.26785714285711"/>
         </scene>
-        <!--Pose-->
+        <!--Pose Description View Controller-->
         <scene sceneID="HNV-cK-RoO">
             <objects>
                 <viewController storyboardIdentifier="PoseDescriptionViewController" id="Njb-oD-Bf9" customClass="PoseDescriptionViewController" customModule="Nolan" customModuleProvider="target" sceneMemberID="viewController">
@@ -791,7 +791,7 @@ accuracy</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zKf-oJ-Ilq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pose" id="fk5-pl-nyr"/>
+                    <navigationItem key="navigationItem" id="fk5-pl-nyr"/>
                     <connections>
                         <outlet property="difficultyLabel" destination="0CL-ka-Y0e" id="UBJ-uQ-NSa"/>
                         <outlet property="nomeLabel" destination="OgM-eR-xWb" id="1ZR-hz-O2I"/>
@@ -1575,11 +1575,12 @@ To finish you session, just say "Stop!"</string>
         <scene sceneID="Rhr-zC-bph">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u7u-Tj-bD2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Poses" id="yLD-MC-gf3"/>
+                    <tabBarItem key="tabBarItem" title="Poses" selectedImage="tabPosesOn" id="yLD-MC-gf3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ccd-y4-iNT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.81788134570000004" green="0.408425808" blue="0.39214310050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hbt-Yw-nUu">
@@ -1597,11 +1598,12 @@ To finish you session, just say "Stop!"</string>
         <scene sceneID="ohb-3d-6dG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pNb-s2-cNV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Classes" id="ten-Kl-OTU"/>
+                    <tabBarItem key="tabBarItem" title="Classes" selectedImage="tabClassesOn" id="ten-Kl-OTU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ogv-9a-mgZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.81788134570000004" green="0.408425808" blue="0.39214310050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1616,11 +1618,13 @@ To finish you session, just say "Stop!"</string>
         <scene sceneID="2mb-tw-XQf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jZT-wC-XrE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="jRi-cw-txm"/>
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="tabUserOn" id="jRi-cw-txm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g52-Vp-29p">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.81788134570000004" green="0.408425808" blue="0.39214310050000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1847,7 +1851,7 @@ To finish you session, just say "Stop!"</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iGh-ON-H5B"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Poses" id="whv-nm-V6x"/>
+                    <navigationItem key="navigationItem" id="whv-nm-V6x"/>
                     <connections>
                         <outlet property="dateLabel" destination="Eqd-6R-StI" id="wOY-PX-gjW"/>
                         <outlet property="historyTableView" destination="oPT-XM-8VS" id="3qO-I3-wEZ"/>
@@ -2018,5 +2022,8 @@ To finish you session, just say "Stop!"</string>
         <image name="image5" width="427" height="427"/>
         <image name="scan" width="147" height="147"/>
         <image name="startSessionButton" width="285" height="285"/>
+        <image name="tabClassesOn" width="40" height="38"/>
+        <image name="tabPosesOn" width="60" height="65"/>
+        <image name="tabUserOn" width="45" height="58"/>
     </resources>
 </document>

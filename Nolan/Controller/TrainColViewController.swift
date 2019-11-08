@@ -31,6 +31,11 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     //Funcao chamada toda vez que a tela é carregada
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        
                 //Configurações SegmentedControl
         self.codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Focus","Concentration","Balance"])
         codeSegmented.backgroundColor = .clear

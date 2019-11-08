@@ -65,13 +65,13 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let feedbacks = Singleton.shared.feedbacks
         
         let dates = feedbacks.map( { formatter.string(from: $0.date) } )
         allPracticedDates = Array(Set(dates))
         calendar.reloadData()
-        
-    
         
         let totalTimeSeconds = feedbacks.reduce(0, { $0 + (Array($1.scores.values).max() ?? 0) } )
         let totalMinutes = Int(ceil(totalTimeSeconds / 60))
@@ -85,6 +85,15 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         
         chartLabel.text = Int((totalFeedbackMark / Float(totalFeedbackCount == 0 ? 1 : totalFeedbackCount))).description + "%\naccuracy"
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // Coloca sombra na view
