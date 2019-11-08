@@ -40,16 +40,16 @@ class SaveFeedbackViewController: UIViewController {
             
             dateLabel.text = dateFormatter.string(from: feedbackSession.date)
             
-            poseInfoView.cornerRadius = 20
+            poseInfoView.cornerRadius = 8
             addLightShadow(view: poseInfoView)
             
-            performanceChartWrapper.cornerRadius = 20
+            performanceChartWrapper.cornerRadius = 8
             addLightShadow(view: performanceChartWrapper)
             
-            saveButton.cornerRadius = 10
+            saveButton.cornerRadius = 8
             addLightShadow(view: saveButton)
             
-            discardButton.cornerRadius = 10
+            discardButton.cornerRadius = 8
             addLightShadow(view: discardButton)
             
             createChart(feedbackSession)

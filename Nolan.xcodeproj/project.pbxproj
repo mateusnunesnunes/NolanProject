@@ -33,6 +33,7 @@
 		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
+		47427856237584A100BAA15A /* HistoryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47427855237584A100BAA15A /* HistoryEntryViewController.swift */; };
 		47589E762372454500D1D577 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47589E752372454500D1D577 /* HealthKit.framework */; };
 		47589E782373016D00D1D577 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E772373016D00D1D577 /* ProfileViewController.swift */; };
 		47589E8023745A4A00D1D577 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E7F23745A4A00D1D577 /* HistoryViewController.swift */; };
@@ -121,6 +122,7 @@
 		0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePosesCollectionViewCell.swift; sourceTree = "<group>"; };
 		22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.debug.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.debug.xcconfig"; sourceTree = "<group>"; };
 		2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47427855237584A100BAA15A /* HistoryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntryViewController.swift; sourceTree = "<group>"; };
 		47589E742372454500D1D577 /* Nolan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nolan.entitlements; sourceTree = "<group>"; };
 		47589E752372454500D1D577 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		47589E772373016D00D1D577 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				47ED904023704FC0005E0B60 /* TTSController.swift */,
 				47589E772373016D00D1D577 /* ProfileViewController.swift */,
 				47589E7F23745A4A00D1D577 /* HistoryViewController.swift */,
+				47427855237584A100BAA15A /* HistoryEntryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				478071BF2371B65B00EE2478 /* SaveFeedbackViewController.swift in Sources */,
 				0D1AF00823632208000A8F56 /* Session.swift in Sources */,
 				0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */,
+				47427856237584A100BAA15A /* HistoryEntryViewController.swift in Sources */,
 				0193A3D523607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift in Sources */,
 				019BF57723573F2700F3E164 /* SceneDelegate.swift in Sources */,
 				A518761C2369C140001A8ACF /* PoseDescriptionViewController.swift in Sources */,
