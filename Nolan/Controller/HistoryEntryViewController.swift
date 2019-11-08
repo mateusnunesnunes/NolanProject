@@ -101,21 +101,6 @@ class HistoryEntryViewController: UIViewController {
            
        }
     
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "viewHistoryEntry", sender: Singleton.shared.feedbacks[indexPath.row])
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "viewHistoryEntry" {
-            if let destination = segue.destination as? HistoryEntryViewController, let feedbackSession = sender as? RKFeedbackSession {
-                
-                destination.feedbackSession = feedbackSession
-                
-            }
-        }
-    }
-    
 
     /*
     // MARK: - Navigation
