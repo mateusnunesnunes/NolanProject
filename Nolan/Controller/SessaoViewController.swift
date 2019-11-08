@@ -48,7 +48,7 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         lblTempoDuracao.text = Singleton.shared.sessions[sessionIndex].length
         lblLength.text = "LENGTH"
         
-        shadowView(v: playViewLayout, blur: 4, y: 2, opacity: 25.0)
+        shadowView(v: playViewLayout, blur: 4, y: 2, opacity: 0.25)
         
     }
     

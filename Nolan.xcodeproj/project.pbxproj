@@ -37,8 +37,29 @@
 		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
+		47427856237584A100BAA15A /* HistoryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47427855237584A100BAA15A /* HistoryEntryViewController.swift */; };
+		4742786923759B4D00BAA15A /* s3p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785723759B4B00BAA15A /* s3p4 */; };
+		4742786A23759B4D00BAA15A /* s2p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785823759B4B00BAA15A /* s2p4 */; };
+		4742786B23759B4D00BAA15A /* s2p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785923759B4C00BAA15A /* s2p3 */; };
+		4742786C23759B4D00BAA15A /* s3p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785A23759B4C00BAA15A /* s3p1 */; };
+		4742786D23759B4D00BAA15A /* s2p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785B23759B4C00BAA15A /* s2p2 */; };
+		4742786E23759B4D00BAA15A /* s1p6 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785C23759B4C00BAA15A /* s1p6 */; };
+		4742786F23759B4D00BAA15A /* s4p2  in Resources */ = {isa = PBXBuildFile; fileRef = 4742785D23759B4C00BAA15A /* s4p2  */; };
+		4742787023759B4D00BAA15A /* s1p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785E23759B4C00BAA15A /* s1p4 */; };
+		4742787123759B4D00BAA15A /* s4p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785F23759B4C00BAA15A /* s4p4 */; };
+		4742787223759B4D00BAA15A /* s4p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786023759B4C00BAA15A /* s4p1 */; };
+		4742787323759B4D00BAA15A /* s4p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786123759B4C00BAA15A /* s4p3 */; };
+		4742787423759B4D00BAA15A /* s2p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786223759B4C00BAA15A /* s2p1 */; };
+		4742787523759B4D00BAA15A /* s1p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786323759B4D00BAA15A /* s1p3 */; };
+		4742787623759B4D00BAA15A /* s1p5 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786423759B4D00BAA15A /* s1p5 */; };
+		4742787723759B4D00BAA15A /* s1p1  in Resources */ = {isa = PBXBuildFile; fileRef = 4742786523759B4D00BAA15A /* s1p1  */; };
+		4742787823759B4D00BAA15A /* s3p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786623759B4D00BAA15A /* s3p3 */; };
+		4742787923759B4D00BAA15A /* s3p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786723759B4D00BAA15A /* s3p2 */; };
+		4742787A23759B4D00BAA15A /* s1p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786823759B4D00BAA15A /* s1p2 */; };
 		47589E762372454500D1D577 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47589E752372454500D1D577 /* HealthKit.framework */; };
 		47589E782373016D00D1D577 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E772373016D00D1D577 /* ProfileViewController.swift */; };
+		47589E8023745A4A00D1D577 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E7F23745A4A00D1D577 /* HistoryViewController.swift */; };
+		47589E8223745AD100D1D577 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E8123745AD100D1D577 /* HistoryTableViewCell.swift */; };
 		478071BF2371B65B00EE2478 /* SaveFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */; };
 		47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */; };
 		47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B026C0236B07AF00E64011 /* RKImmutableTree.swift */; };
@@ -127,9 +148,30 @@
 		0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePosesCollectionViewCell.swift; sourceTree = "<group>"; };
 		22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.debug.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.debug.xcconfig"; sourceTree = "<group>"; };
 		2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47427855237584A100BAA15A /* HistoryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntryViewController.swift; sourceTree = "<group>"; };
+		4742785723759B4B00BAA15A /* s3p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p4; sourceTree = "<group>"; };
+		4742785823759B4B00BAA15A /* s2p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p4; sourceTree = "<group>"; };
+		4742785923759B4C00BAA15A /* s2p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p3; sourceTree = "<group>"; };
+		4742785A23759B4C00BAA15A /* s3p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p1; sourceTree = "<group>"; };
+		4742785B23759B4C00BAA15A /* s2p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p2; sourceTree = "<group>"; };
+		4742785C23759B4C00BAA15A /* s1p6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p6; sourceTree = "<group>"; };
+		4742785D23759B4C00BAA15A /* s4p2  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s4p2 "; sourceTree = "<group>"; };
+		4742785E23759B4C00BAA15A /* s1p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p4; sourceTree = "<group>"; };
+		4742785F23759B4C00BAA15A /* s4p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p4; sourceTree = "<group>"; };
+		4742786023759B4C00BAA15A /* s4p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p1; sourceTree = "<group>"; };
+		4742786123759B4C00BAA15A /* s4p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p3; sourceTree = "<group>"; };
+		4742786223759B4C00BAA15A /* s2p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p1; sourceTree = "<group>"; };
+		4742786323759B4D00BAA15A /* s1p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p3; sourceTree = "<group>"; };
+		4742786423759B4D00BAA15A /* s1p5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p5; sourceTree = "<group>"; };
+		4742786523759B4D00BAA15A /* s1p1  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s1p1 "; sourceTree = "<group>"; };
+		4742786623759B4D00BAA15A /* s3p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p3; sourceTree = "<group>"; };
+		4742786723759B4D00BAA15A /* s3p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p2; sourceTree = "<group>"; };
+		4742786823759B4D00BAA15A /* s1p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p2; sourceTree = "<group>"; };
 		47589E742372454500D1D577 /* Nolan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nolan.entitlements; sourceTree = "<group>"; };
 		47589E752372454500D1D577 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		47589E772373016D00D1D577 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		47589E7F23745A4A00D1D577 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		47589E8123745AD100D1D577 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFeedbackViewController.swift; sourceTree = "<group>"; };
 		47B026BF236B07AF00E64011 /* RKImmutableJoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableJoint.swift; sourceTree = "<group>"; };
 		47B026C0236B07AF00E64011 /* RKImmutableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKImmutableTree.swift; sourceTree = "<group>"; };
@@ -306,6 +348,24 @@
 		47B026CF236B07BF00E64011 /* Poses */ = {
 			isa = PBXGroup;
 			children = (
+				4742786523759B4D00BAA15A /* s1p1  */,
+				4742786823759B4D00BAA15A /* s1p2 */,
+				4742786323759B4D00BAA15A /* s1p3 */,
+				4742785E23759B4C00BAA15A /* s1p4 */,
+				4742786423759B4D00BAA15A /* s1p5 */,
+				4742785C23759B4C00BAA15A /* s1p6 */,
+				4742786223759B4C00BAA15A /* s2p1 */,
+				4742785B23759B4C00BAA15A /* s2p2 */,
+				4742785923759B4C00BAA15A /* s2p3 */,
+				4742785823759B4B00BAA15A /* s2p4 */,
+				4742785A23759B4C00BAA15A /* s3p1 */,
+				4742786723759B4D00BAA15A /* s3p2 */,
+				4742786623759B4D00BAA15A /* s3p3 */,
+				4742785723759B4B00BAA15A /* s3p4 */,
+				4742786023759B4C00BAA15A /* s4p1 */,
+				4742785D23759B4C00BAA15A /* s4p2  */,
+				4742786123759B4C00BAA15A /* s4p3 */,
+				4742785F23759B4C00BAA15A /* s4p4 */,
 				47B026C9236B07BB00E64011 /* BracoBaixo */,
 				47B026CA236B07BB00E64011 /* PeProLado */,
 				47B026C7236B07BB00E64011 /* T */,
@@ -366,6 +426,8 @@
 				0D1DA1D52374438600AC89C1 /* WalkthroughContentViewController.swift */,
 				0D1DA1D32374437300AC89C1 /* WalkthroughPageViewController.swift */,
 				0D1DA1D12374435900AC89C1 /* WalkthroughViewController.swift */,
+				47589E7F23745A4A00D1D577 /* HistoryViewController.swift */,
+				47427855237584A100BAA15A /* HistoryEntryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -378,6 +440,7 @@
 				A5349C52236F772B00BF5647 /* PoseDescriptionTableViewCell.swift */,
 				0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */,
 				0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */,
+				47589E8123745AD100D1D577 /* HistoryTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -512,20 +575,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4742786B23759B4D00BAA15A /* s2p3 in Resources */,
 				47B026CC236B07BB00E64011 /* TBugadoDeLado in Resources */,
 				47BCD617236B98BA008D18B8 /* robot.usdz in Resources */,
 				019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */,
 				47B026CD236B07BB00E64011 /* BracoBaixo in Resources */,
+				4742786D23759B4D00BAA15A /* s2p2 in Resources */,
+				4742786F23759B4D00BAA15A /* s4p2  in Resources */,
+				4742787523759B4D00BAA15A /* s1p3 in Resources */,
 				A5349C4B236C54BA00BF5647 /* Quicksand-Light.ttf in Resources */,
+				4742787023759B4D00BAA15A /* s1p4 in Resources */,
+				4742787A23759B4D00BAA15A /* s1p2 in Resources */,
 				0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */,
 				0D1DA1CE237442BA00AC89C1 /* Onboarding.storyboard in Resources */,
 				0121E0FE2363411C00FB3C06 /* Main.storyboard in Resources */,
 				47B026CB236B07BB00E64011 /* T in Resources */,
+				4742787223759B4D00BAA15A /* s4p1 in Resources */,
 				A5349C4E236C54BA00BF5647 /* Quicksand-Bold.ttf in Resources */,
 				A5349C4D236C54BA00BF5647 /* Quicksand-SemiBold.ttf in Resources */,
+				4742786923759B4D00BAA15A /* s3p4 in Resources */,
+				4742787323759B4D00BAA15A /* s4p3 in Resources */,
+				4742787723759B4D00BAA15A /* s1p1  in Resources */,
 				01728AA5236A10E000CB2C18 /* GoogleService-Info.plist in Resources */,
+				4742787423759B4D00BAA15A /* s2p1 in Resources */,
+				4742786C23759B4D00BAA15A /* s3p1 in Resources */,
+				4742787923759B4D00BAA15A /* s3p2 in Resources */,
+				4742787623759B4D00BAA15A /* s1p5 in Resources */,
+				4742787823759B4D00BAA15A /* s3p3 in Resources */,
 				47B026CE236B07BB00E64011 /* PeProLado in Resources */,
+				4742786A23759B4D00BAA15A /* s2p4 in Resources */,
 				A5349C4F236C54BA00BF5647 /* Quicksand-Medium.ttf in Resources */,
+				4742786E23759B4D00BAA15A /* s1p6 in Resources */,
+				4742787123759B4D00BAA15A /* s4p4 in Resources */,
 				A5349C4C236C54BA00BF5647 /* Quicksand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +752,7 @@
 				A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */,
 				019BF57923573F2700F3E164 /* ViewController.swift in Sources */,
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
+				47589E8223745AD100D1D577 /* HistoryTableViewCell.swift in Sources */,
 				47ED904123704FC0005E0B60 /* TTSController.swift in Sources */,
 				47BCD619236C66BB008D18B8 /* RKFeedback.swift in Sources */,
 				47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */,
@@ -684,6 +766,7 @@
 				478071BF2371B65B00EE2478 /* SaveFeedbackViewController.swift in Sources */,
 				0D1AF00823632208000A8F56 /* Session.swift in Sources */,
 				0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */,
+				47427856237584A100BAA15A /* HistoryEntryViewController.swift in Sources */,
 				0193A3D523607AD3003C3F75 /* CHTCollectionViewDelegateWaterfallLayout.swift in Sources */,
 				019BF57723573F2700F3E164 /* SceneDelegate.swift in Sources */,
 				A518761C2369C140001A8ACF /* PoseDescriptionViewController.swift in Sources */,
@@ -692,6 +775,7 @@
 				A5349C51236C676900BF5647 /* RoundedUIView.swift in Sources */,
 				0D1AF00223631E5C000A8F56 /* User.swift in Sources */,
 				47589E782373016D00D1D577 /* ProfileViewController.swift in Sources */,
+				47589E8023745A4A00D1D577 /* HistoryViewController.swift in Sources */,
 				01662AB4235E767F00041C35 /* CustomSegmentedControl.swift in Sources */,
 				A5349C53236F772C00BF5647 /* PoseDescriptionTableViewCell.swift in Sources */,
 			);
@@ -863,7 +947,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = A7Z8B7ZWX2;
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -885,7 +969,7 @@
 				CODE_SIGN_ENTITLEMENTS = Nolan/Nolan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A7Z8B7ZWX2;
+				DEVELOPMENT_TEAM = D9FBK2WPJX;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

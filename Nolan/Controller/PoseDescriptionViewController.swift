@@ -34,7 +34,12 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
         difficultyLabel.text = pose?.difficulty ?? "Undefined"
         typeLabel.text = pose?.types ?? "Undefined"
         
-        shadowView(v: poseInfoContainerView, blur: 4, y: 2, opacity: 25)
+        shadowView(v: poseInfoContainerView, blur: 4, y: 2, opacity: 0.25)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        tabBarController?.tabBar.isHidden = false
     }
     
     // Coloca sombra na view
