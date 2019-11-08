@@ -25,6 +25,9 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     var data = Singleton.shared.sessions.filter({$0.category == "Focus"})
     let model = Model()
     var codeSegmented: CustomSegmentedControl!
+    
+    var onboardingPresented = false
+    
     //Funcao chamada toda vez que a tela é carregada
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,6 +136,8 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
 
         // Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -144,6 +149,21 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if !onboardingPresented {
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough"){
+        }
+               
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+                present(walkthroughViewController, animated: true, completion: nil)
+            }
+            onboardingPresented = true
+        }
+    }
+    
 
     
     

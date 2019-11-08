@@ -49,6 +49,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         collectionHeightConstant = collectionHeight.constant
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         

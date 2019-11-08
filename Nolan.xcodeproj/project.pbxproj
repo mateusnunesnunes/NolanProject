@@ -29,7 +29,12 @@
 		0D1AF00623632113000A8F56 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00523632113000A8F56 /* Pose.swift */; };
 		0D1AF00823632208000A8F56 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF00723632208000A8F56 /* Session.swift */; };
 		0D1AF00A236322A0000A8F56 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1AF009236322A0000A8F56 /* Video.swift */; };
-		0D33651D23743C5D00159FB4 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D33651C23743C5D00159FB4 /* Onboarding.storyboard */; };
+		0D1DA1CE237442BA00AC89C1 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DA1CD237442BA00AC89C1 /* Onboarding.storyboard */; };
+		0D1DA1D22374435900AC89C1 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DA1D12374435900AC89C1 /* WalkthroughViewController.swift */; };
+		0D1DA1D42374437300AC89C1 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DA1D32374437300AC89C1 /* WalkthroughPageViewController.swift */; };
+		0D1DA1D62374438600AC89C1 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DA1D52374438600AC89C1 /* WalkthroughContentViewController.swift */; };
+		0D1DA1DB2375A40200AC89C1 /* s1p1 in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DA1D92375A40100AC89C1 /* s1p1 */; };
+		0D1DA1DC2375A40200AC89C1 /* s4p2 in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DA1DA2375A40100AC89C1 /* s4p2 */; };
 		0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */; };
 		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
@@ -41,7 +46,6 @@
 		4742786C23759B4D00BAA15A /* s3p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785A23759B4C00BAA15A /* s3p1 */; };
 		4742786D23759B4D00BAA15A /* s2p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785B23759B4C00BAA15A /* s2p2 */; };
 		4742786E23759B4D00BAA15A /* s1p6 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785C23759B4C00BAA15A /* s1p6 */; };
-		4742786F23759B4D00BAA15A /* s4p2  in Resources */ = {isa = PBXBuildFile; fileRef = 4742785D23759B4C00BAA15A /* s4p2  */; };
 		4742787023759B4D00BAA15A /* s1p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785E23759B4C00BAA15A /* s1p4 */; };
 		4742787123759B4D00BAA15A /* s4p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785F23759B4C00BAA15A /* s4p4 */; };
 		4742787223759B4D00BAA15A /* s4p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786023759B4C00BAA15A /* s4p1 */; };
@@ -49,7 +53,6 @@
 		4742787423759B4D00BAA15A /* s2p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786223759B4C00BAA15A /* s2p1 */; };
 		4742787523759B4D00BAA15A /* s1p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786323759B4D00BAA15A /* s1p3 */; };
 		4742787623759B4D00BAA15A /* s1p5 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786423759B4D00BAA15A /* s1p5 */; };
-		4742787723759B4D00BAA15A /* s1p1  in Resources */ = {isa = PBXBuildFile; fileRef = 4742786523759B4D00BAA15A /* s1p1  */; };
 		4742787823759B4D00BAA15A /* s3p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786623759B4D00BAA15A /* s3p3 */; };
 		4742787923759B4D00BAA15A /* s3p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786723759B4D00BAA15A /* s3p2 */; };
 		4742787A23759B4D00BAA15A /* s1p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786823759B4D00BAA15A /* s1p2 */; };
@@ -135,7 +138,12 @@
 		0D1AF00523632113000A8F56 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		0D1AF00723632208000A8F56 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0D1AF009236322A0000A8F56 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		0D33651C23743C5D00159FB4 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		0D1DA1CD237442BA00AC89C1 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = Cell/Onboarding.storyboard; sourceTree = "<group>"; };
+		0D1DA1D12374435900AC89C1 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		0D1DA1D32374437300AC89C1 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		0D1DA1D52374438600AC89C1 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		0D1DA1D92375A40100AC89C1 /* s1p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p1; sourceTree = "<group>"; };
+		0D1DA1DA2375A40100AC89C1 /* s4p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p2; sourceTree = "<group>"; };
 		0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesTableViewCell.swift; sourceTree = "<group>"; };
@@ -149,7 +157,6 @@
 		4742785A23759B4C00BAA15A /* s3p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p1; sourceTree = "<group>"; };
 		4742785B23759B4C00BAA15A /* s2p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p2; sourceTree = "<group>"; };
 		4742785C23759B4C00BAA15A /* s1p6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p6; sourceTree = "<group>"; };
-		4742785D23759B4C00BAA15A /* s4p2  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s4p2 "; sourceTree = "<group>"; };
 		4742785E23759B4C00BAA15A /* s1p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p4; sourceTree = "<group>"; };
 		4742785F23759B4C00BAA15A /* s4p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p4; sourceTree = "<group>"; };
 		4742786023759B4C00BAA15A /* s4p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p1; sourceTree = "<group>"; };
@@ -157,7 +164,6 @@
 		4742786223759B4C00BAA15A /* s2p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p1; sourceTree = "<group>"; };
 		4742786323759B4D00BAA15A /* s1p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p3; sourceTree = "<group>"; };
 		4742786423759B4D00BAA15A /* s1p5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p5; sourceTree = "<group>"; };
-		4742786523759B4D00BAA15A /* s1p1  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s1p1 "; sourceTree = "<group>"; };
 		4742786623759B4D00BAA15A /* s3p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p3; sourceTree = "<group>"; };
 		4742786723759B4D00BAA15A /* s3p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p2; sourceTree = "<group>"; };
 		4742786823759B4D00BAA15A /* s1p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p2; sourceTree = "<group>"; };
@@ -251,7 +257,7 @@
 				01662AB2235E75A400041C35 /* Layouts */,
 				A51876132369BAB1001A8ACF /* Cell */,
 				0179791E23634050003B9AA2 /* Main.storyboard */,
-				0D33651C23743C5D00159FB4 /* Onboarding.storyboard */,
+				0D1DA1CD237442BA00AC89C1 /* Onboarding.storyboard */,
 				0121E0F8236340A100FB3C06 /* LaunchScreen.storyboard */,
 				019BF57D23573F2C00F3E164 /* Assets.xcassets */,
 				0193A3D023607A32003C3F75 /* ImageUICollectionViewCell.xib */,
@@ -342,7 +348,8 @@
 		47B026CF236B07BF00E64011 /* Poses */ = {
 			isa = PBXGroup;
 			children = (
-				4742786523759B4D00BAA15A /* s1p1  */,
+				0D1DA1D92375A40100AC89C1 /* s1p1 */,
+				0D1DA1DA2375A40100AC89C1 /* s4p2 */,
 				4742786823759B4D00BAA15A /* s1p2 */,
 				4742786323759B4D00BAA15A /* s1p3 */,
 				4742785E23759B4C00BAA15A /* s1p4 */,
@@ -357,7 +364,6 @@
 				4742786623759B4D00BAA15A /* s3p3 */,
 				4742785723759B4B00BAA15A /* s3p4 */,
 				4742786023759B4C00BAA15A /* s4p1 */,
-				4742785D23759B4C00BAA15A /* s4p2  */,
 				4742786123759B4C00BAA15A /* s4p3 */,
 				4742785F23759B4C00BAA15A /* s4p4 */,
 				47B026C9236B07BB00E64011 /* BracoBaixo */,
@@ -417,6 +423,9 @@
 				478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */,
 				47ED904023704FC0005E0B60 /* TTSController.swift */,
 				47589E772373016D00D1D577 /* ProfileViewController.swift */,
+				0D1DA1D52374438600AC89C1 /* WalkthroughContentViewController.swift */,
+				0D1DA1D32374437300AC89C1 /* WalkthroughPageViewController.swift */,
+				0D1DA1D12374435900AC89C1 /* WalkthroughViewController.swift */,
 				47589E7F23745A4A00D1D577 /* HistoryViewController.swift */,
 				47427855237584A100BAA15A /* HistoryEntryViewController.swift */,
 			);
@@ -572,13 +581,12 @@
 				019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */,
 				47B026CD236B07BB00E64011 /* BracoBaixo in Resources */,
 				4742786D23759B4D00BAA15A /* s2p2 in Resources */,
-				4742786F23759B4D00BAA15A /* s4p2  in Resources */,
 				4742787523759B4D00BAA15A /* s1p3 in Resources */,
 				A5349C4B236C54BA00BF5647 /* Quicksand-Light.ttf in Resources */,
 				4742787023759B4D00BAA15A /* s1p4 in Resources */,
 				4742787A23759B4D00BAA15A /* s1p2 in Resources */,
 				0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */,
-				0D33651D23743C5D00159FB4 /* Onboarding.storyboard in Resources */,
+				0D1DA1CE237442BA00AC89C1 /* Onboarding.storyboard in Resources */,
 				0121E0FE2363411C00FB3C06 /* Main.storyboard in Resources */,
 				47B026CB236B07BB00E64011 /* T in Resources */,
 				4742787223759B4D00BAA15A /* s4p1 in Resources */,
@@ -586,13 +594,14 @@
 				A5349C4D236C54BA00BF5647 /* Quicksand-SemiBold.ttf in Resources */,
 				4742786923759B4D00BAA15A /* s3p4 in Resources */,
 				4742787323759B4D00BAA15A /* s4p3 in Resources */,
-				4742787723759B4D00BAA15A /* s1p1  in Resources */,
 				01728AA5236A10E000CB2C18 /* GoogleService-Info.plist in Resources */,
+				0D1DA1DC2375A40200AC89C1 /* s4p2 in Resources */,
 				4742787423759B4D00BAA15A /* s2p1 in Resources */,
 				4742786C23759B4D00BAA15A /* s3p1 in Resources */,
 				4742787923759B4D00BAA15A /* s3p2 in Resources */,
 				4742787623759B4D00BAA15A /* s1p5 in Resources */,
 				4742787823759B4D00BAA15A /* s3p3 in Resources */,
+				0D1DA1DB2375A40200AC89C1 /* s1p1 in Resources */,
 				47B026CE236B07BB00E64011 /* PeProLado in Resources */,
 				4742786A23759B4D00BAA15A /* s2p4 in Resources */,
 				A5349C4F236C54BA00BF5647 /* Quicksand-Medium.ttf in Resources */,
@@ -729,10 +738,12 @@
 				0D1AF00623632113000A8F56 /* Pose.swift in Sources */,
 				0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */,
 				47ED90432370C44A005E0B60 /* RKFeedbackSession.swift in Sources */,
+				0D1DA1D62374438600AC89C1 /* WalkthroughContentViewController.swift in Sources */,
 				47B026C4236B07AF00E64011 /* RKImmutableTree.swift in Sources */,
 				47B026C3236B07AF00E64011 /* RKImmutableJoint.swift in Sources */,
 				01C88B462363216900B27AFA /* SessaoViewController.swift in Sources */,
 				47BCD615236B2161008D18B8 /* ViewARPoseViewController.swift in Sources */,
+				0D1DA1D22374435900AC89C1 /* WalkthroughViewController.swift in Sources */,
 				0193A3D923607C00003C3F75 /* Model.swift in Sources */,
 				012A7A9D2371957300FA4ECE /* CustomSegmentedControlDelegate.swift in Sources */,
 				0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */,
@@ -747,6 +758,7 @@
 				47BCD61B236C6729008D18B8 /* RKFeedbackGenerator.swift in Sources */,
 				0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */,
 				0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */,
+				0D1DA1D42374437300AC89C1 /* WalkthroughPageViewController.swift in Sources */,
 				0D1AF00A236322A0000A8F56 /* Video.swift in Sources */,
 				0193A3CD235FB3CA003C3F75 /* Singleton.swift in Sources */,
 				019BF57523573F2700F3E164 /* AppDelegate.swift in Sources */,
@@ -935,7 +947,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = D9FBK2WPJX;
+				DEVELOPMENT_TEAM = A7Z8B7ZWX2;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -957,7 +969,7 @@
 				CODE_SIGN_ENTITLEMENTS = Nolan/Nolan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9FBK2WPJX;
+				DEVELOPMENT_TEAM = A7Z8B7ZWX2;
 				INFOPLIST_FILE = Nolan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

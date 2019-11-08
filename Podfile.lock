@@ -94,7 +94,7 @@ DEPENDENCIES:
   - FSCalendar
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Charts
     - Firebase
     - FirebaseAnalytics
@@ -136,4 +136,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 89880d80ec69253321d9dbb882a8dff3bdcd6b18
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
