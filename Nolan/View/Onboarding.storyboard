@@ -19,34 +19,42 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="658"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lUB-aI-Gxm">
-                                <rect key="frame" x="0.0" y="658" width="414" height="204"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="70N-N9-P8d">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
-                                        <color key="backgroundColor" red="1" green="0.35960427439999998" blue="0.75389433669999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </pageControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iod-u2-Xh5">
-                                        <rect key="frame" x="0.0" y="68" width="414" height="68"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Li-yo-aDi">
-                                        <rect key="frame" x="0.0" y="136" width="414" height="68"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jvx-NE-bqM">
+                                <rect key="frame" x="188" y="676" width="39" height="37"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCs-zD-tgZ">
+                                <rect key="frame" x="112" y="752" width="190" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.35960427439999998" blue="0.75389433669999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="CKR-lB-gYg"/>
+                                    <constraint firstAttribute="height" constant="50" id="U4J-ga-aRi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="NEXT"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-gI-xa8">
+                                <rect key="frame" x="190" y="839" width="34" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lUB-aI-Gxm" firstAttribute="leading" secondItem="FOK-uc-yax" secondAttribute="leading" id="8Mk-51-RrN"/>
-                            <constraint firstItem="FOK-uc-yax" firstAttribute="trailing" secondItem="lUB-aI-Gxm" secondAttribute="trailing" id="8YU-6j-3e2"/>
+                            <constraint firstItem="lCs-zD-tgZ" firstAttribute="centerX" secondItem="FOK-uc-yax" secondAttribute="centerX" id="1Bq-Qj-ZYJ"/>
+                            <constraint firstItem="Fjb-gI-xa8" firstAttribute="top" secondItem="lCs-zD-tgZ" secondAttribute="bottom" constant="37" id="ObQ-1K-kSL"/>
                             <constraint firstItem="FOK-uc-yax" firstAttribute="bottom" secondItem="1HP-jc-CB8" secondAttribute="bottom" constant="204" id="PSa-2D-rOd"/>
                             <constraint firstItem="1HP-jc-CB8" firstAttribute="leading" secondItem="FOK-uc-yax" secondAttribute="leading" id="U9Z-Mo-3wr"/>
+                            <constraint firstItem="Fjb-gI-xa8" firstAttribute="bottom" secondItem="FOK-uc-yax" secondAttribute="bottom" constant="10" id="UeT-9F-SVx"/>
                             <constraint firstItem="FOK-uc-yax" firstAttribute="top" secondItem="1HP-jc-CB8" secondAttribute="top" constant="44" id="Uuk-yb-8sx"/>
-                            <constraint firstItem="lUB-aI-Gxm" firstAttribute="bottom" secondItem="FOK-uc-yax" secondAttribute="bottom" id="VZN-MX-FTt"/>
+                            <constraint firstItem="Jvx-NE-bqM" firstAttribute="top" secondItem="1HP-jc-CB8" secondAttribute="bottom" constant="18" id="WsY-4c-HhL"/>
+                            <constraint firstItem="Fjb-gI-xa8" firstAttribute="centerX" secondItem="FOK-uc-yax" secondAttribute="centerX" id="X66-Px-q1u"/>
                             <constraint firstItem="FOK-uc-yax" firstAttribute="trailing" secondItem="1HP-jc-CB8" secondAttribute="trailing" id="Zei-th-1Hw"/>
-                            <constraint firstItem="lUB-aI-Gxm" firstAttribute="top" secondItem="1HP-jc-CB8" secondAttribute="bottom" id="uoF-fW-9Qq"/>
+                            <constraint firstItem="lCs-zD-tgZ" firstAttribute="top" secondItem="Jvx-NE-bqM" secondAttribute="bottom" constant="39" id="jQg-gI-EKU"/>
+                            <constraint firstItem="Jvx-NE-bqM" firstAttribute="leading" secondItem="FOK-uc-yax" secondAttribute="leading" constant="188" id="mF0-Mk-HNN"/>
+                            <constraint firstItem="FOK-uc-yax" firstAttribute="trailing" secondItem="Jvx-NE-bqM" secondAttribute="trailing" constant="187" id="o57-lA-t4J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FOK-uc-yax"/>
                     </view>
@@ -54,6 +62,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKK-q5-3Vs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1781.1594202898552" y="106.47321428571428"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="kvK-LO-MaS">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="cf7-7z-SEW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6am-RJ-kOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1000" y="108"/>
         </scene>
     </scenes>
 </document>
