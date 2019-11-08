@@ -74,15 +74,13 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         
         let totalTimeSeconds = feedbacks.reduce(0, { $0 + (Array($1.scores.values).max() ?? 0) } )
         let totalMinutes = round(totalTimeSeconds / 60)
-        
         clockLabel.text = totalMinutes.description + "\nminutes"
         
-        calendarLabel.text = allPracticedDates.count.description
+        calendarLabel.text = allPracticedDates.count.description + "\ndays"
 
         let totalFeedbackMark = feedbacks.reduce(0, { $0 + $1.valuesAsPercentage(usingMaxDistance: 1.5).reduce(0, {$0 + $1 } ) } )
         let totalFeedbackCount = feedbacks.reduce(0, { $0 + Array($1.scores.keys).count } )
-        
-        chartLabel.text = round((totalFeedbackMark / Float(totalFeedbackCount)) * 100).description + "\naccuracy"
+        chartLabel.text = Int((totalFeedbackMark / Float(totalFeedbackCount == 0 ? 1 : totalFeedbackCount)) * 100).description + "\naccuracy"
         
     }
     
