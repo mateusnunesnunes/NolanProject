@@ -2,22 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "backButton.pdf",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "backButton@2x.pdf",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "backButton@3x.pdf",
-      "scale" : "3x"
+      "filename" : "backButton.pdf"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "original",
+    "preserves-vector-representation" : true
   }
 }

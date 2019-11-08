@@ -32,9 +32,10 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
+        
         
                 //Configurações SegmentedControl
         self.codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Focus","Concentration","Balance"])

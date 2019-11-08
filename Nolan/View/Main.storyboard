@@ -397,13 +397,13 @@ accuracy</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkx-FO-IDx" userLabel="ViewImagem">
-                                <rect key="frame" x="0.0" y="88" width="414" height="290"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="vd9-Ol-aJW">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5P-Xg-oZr">
-                                        <rect key="frame" x="13.333333333333343" y="209" width="387.33333333333326" height="120"/>
+                                        <rect key="frame" x="13.333333333333343" y="280.66666666666669" width="387.33333333333326" height="120"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -412,13 +412,13 @@ accuracy</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbH-XR-8gq" userLabel="lblNome">
-                                        <rect key="frame" x="31" y="227.33333333333331" width="80" height="37.666666666666686"/>
+                                        <rect key="frame" x="31" y="300" width="80" height="37.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                         <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-8G-tEc" userLabel="lblDificuldade">
-                                        <rect key="frame" x="30.999999999999996" y="265" width="51.666666666666657" height="25"/>
+                                        <rect key="frame" x="30.999999999999996" y="337.66666666666669" width="51.666666666666657" height="25"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -436,13 +436,13 @@ accuracy</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wyq-Oq-aOZ" userLabel="ViewTable">
-                                <rect key="frame" x="0.0" y="378" width="414" height="435"/>
+                                <rect key="frame" x="0.0" y="362.66666666666674" width="414" height="450.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-gu-v6E" userLabel="ViewInfo">
-                                        <rect key="frame" x="31" y="54" width="352" height="65"/>
+                                        <rect key="frame" x="31" y="53.000000000000007" width="352" height="67.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MK-AB-rCB" userLabel="lblCategoria">
-                                                <rect key="frame" x="10" y="35.666666666666686" width="41.333333333333336" height="20"/>
+                                                <rect key="frame" x="10" y="35.666666666666629" width="41.333333333333336" height="20"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="16"/>
                                                 <color key="textColor" red="0.50980392156862742" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -460,7 +460,7 @@ accuracy</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3R-Ei-4R0" userLabel="lblTempo">
-                                                <rect key="frame" x="300.66666666666669" y="35.666666666666686" width="41.333333333333314" height="20"/>
+                                                <rect key="frame" x="300.66666666666669" y="35.666666666666629" width="41.333333333333314" height="20"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="16"/>
                                                 <color key="textColor" red="0.50980392156862742" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -485,10 +485,10 @@ accuracy</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nT6-G6-XuV" userLabel="ViewTableView">
-                                <rect key="frame" x="31" y="512" width="352" height="301"/>
+                                <rect key="frame" x="31" y="498.33333333333326" width="352" height="314.66666666666674"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e9u-m3-B6d">
-                                        <rect key="frame" x="0.0" y="0.0" width="352" height="301"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="314.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SessionPose" rowHeight="85" id="WQk-Bt-yi1" customClass="SessionPoseTableViewCell" customModule="Nolan" customModuleProvider="target">
@@ -553,7 +553,7 @@ accuracy</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b4K-BG-QUr" userLabel="ViewPlay">
-                                <rect key="frame" x="303" y="317" width="80" height="80"/>
+                                <rect key="frame" x="303" y="300.66666666666669" width="80" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiX-98-bm3">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -580,14 +580,14 @@ accuracy</string>
                             <constraint firstItem="sLa-gu-v6E" firstAttribute="top" secondItem="F5P-Xg-oZr" secondAttribute="bottom" constant="15" id="ICx-B8-G9Q"/>
                             <constraint firstItem="0FF-Fc-ERw" firstAttribute="bottom" secondItem="Wyq-Oq-aOZ" secondAttribute="bottom" id="Ii0-7T-TUH"/>
                             <constraint firstItem="Wyq-Oq-aOZ" firstAttribute="centerX" secondItem="hkx-FO-IDx" secondAttribute="centerX" id="MiW-ar-fjh"/>
-                            <constraint firstItem="hkx-FO-IDx" firstAttribute="top" secondItem="0FF-Fc-ERw" secondAttribute="top" id="Odn-lr-Jb7"/>
+                            <constraint firstItem="hkx-FO-IDx" firstAttribute="top" secondItem="fQ7-MW-5TB" secondAttribute="top" id="Odn-lr-Jb7"/>
                             <constraint firstItem="0FF-Fc-ERw" firstAttribute="trailing" secondItem="hkx-FO-IDx" secondAttribute="trailing" id="Ofp-mP-BYK"/>
                             <constraint firstItem="F5P-Xg-oZr" firstAttribute="centerY" secondItem="b4K-BG-QUr" secondAttribute="centerY" id="OhZ-KN-Sxe"/>
                             <constraint firstItem="nT6-G6-XuV" firstAttribute="width" secondItem="sLa-gu-v6E" secondAttribute="width" id="Qts-qf-JBy"/>
                             <constraint firstItem="nT6-G6-XuV" firstAttribute="centerX" secondItem="sLa-gu-v6E" secondAttribute="centerX" id="WE8-JW-BN5"/>
                             <constraint firstItem="b4K-BG-QUr" firstAttribute="bottom" secondItem="hkx-FO-IDx" secondAttribute="bottom" multiplier="1.05" id="ZzQ-VH-tcn"/>
                             <constraint firstItem="F5P-Xg-oZr" firstAttribute="height" secondItem="jiX-98-bm3" secondAttribute="height" multiplier="1.5" id="bHA-Fq-45B"/>
-                            <constraint firstItem="hkx-FO-IDx" firstAttribute="height" secondItem="0FF-Fc-ERw" secondAttribute="height" multiplier="0.4" id="eht-DQ-eWa"/>
+                            <constraint firstItem="hkx-FO-IDx" firstAttribute="height" secondItem="0FF-Fc-ERw" secondAttribute="height" multiplier="0.5" id="eht-DQ-eWa"/>
                             <constraint firstItem="F5P-Xg-oZr" firstAttribute="centerX" secondItem="0FF-Fc-ERw" secondAttribute="centerX" id="jEG-65-PST"/>
                             <constraint firstItem="Wyq-Oq-aOZ" firstAttribute="width" secondItem="hkx-FO-IDx" secondAttribute="width" id="lN0-TB-nxC"/>
                             <constraint firstItem="hkx-FO-IDx" firstAttribute="leading" secondItem="0FF-Fc-ERw" secondAttribute="leading" id="lZA-wN-RRl"/>
@@ -625,16 +625,16 @@ accuracy</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29n-Ky-NIO" userLabel="ImageView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="290"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6BH-xo-aSm">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moi-dd-8fI">
-                                        <rect key="frame" x="20.666666666666657" y="208.66666666666669" width="372.66666666666674" height="122"/>
+                                        <rect key="frame" x="20.666666666666657" y="261" width="372.66666666666674" height="152.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-ws-olL">
-                                                <rect key="frame" x="272.33333333333331" y="18.333333333333314" width="85.333333333333314" height="85.333333333333329"/>
+                                                <rect key="frame" x="251.00000000000003" y="22.999999999999993" width="106.66666666666666" height="106.33333333333331"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="B3V-ws-olL" secondAttribute="height" multiplier="1:1" id="Dxn-9O-UPg"/>
                                                 </constraints>
@@ -644,7 +644,7 @@ accuracy</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OgM-eR-xWb" userLabel="lblNome">
-                                                <rect key="frame" x="10.000000000000014" y="42.333333333333314" width="242.33333333333337" height="37.666666666666657"/>
+                                                <rect key="frame" x="10" y="57.333333333333314" width="221" height="37.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -680,7 +680,7 @@ accuracy</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghj-Te-Eud" userLabel="InfosView">
-                                <rect key="frame" x="20.666666666666657" y="428.66666666666669" width="372.66666666666674" height="72.333333333333314"/>
+                                <rect key="frame" x="20.666666666666657" y="423.33333333333331" width="372.66666666666674" height="72.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIFFICULTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7O-J0-d51">
                                         <rect key="frame" x="15" y="10" width="76" height="17"/>
@@ -720,10 +720,10 @@ accuracy</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vhd-Xp-jfz" userLabel="DescriptionView">
-                                <rect key="frame" x="20.666666666666657" y="521" width="372.66666666666674" height="292"/>
+                                <rect key="frame" x="20.666666666666657" y="515.66666666666663" width="372.66666666666674" height="297.33333333333337"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="07P-iT-EwK">
-                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="292"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="297.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PoseDEscription" rowHeight="96" id="7Z2-h0-uto" customClass="PoseDescriptionTableViewCell" customModule="Nolan" customModuleProvider="target">
@@ -775,9 +775,9 @@ accuracy</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="29n-Ky-NIO" firstAttribute="top" secondItem="zKf-oJ-Ilq" secondAttribute="top" id="0rh-fZ-TQ6"/>
+                            <constraint firstItem="29n-Ky-NIO" firstAttribute="top" secondItem="Rjz-EX-5wU" secondAttribute="top" id="0rh-fZ-TQ6"/>
                             <constraint firstItem="ghj-Te-Eud" firstAttribute="centerX" secondItem="zKf-oJ-Ilq" secondAttribute="centerX" id="1VV-l7-RzD"/>
-                            <constraint firstItem="29n-Ky-NIO" firstAttribute="height" secondItem="zKf-oJ-Ilq" secondAttribute="height" multiplier="0.4" id="4Rh-Yc-BkS"/>
+                            <constraint firstItem="29n-Ky-NIO" firstAttribute="height" secondItem="zKf-oJ-Ilq" secondAttribute="height" multiplier="0.5" id="4Rh-Yc-BkS"/>
                             <constraint firstItem="ghj-Te-Eud" firstAttribute="centerX" secondItem="Moi-dd-8fI" secondAttribute="centerX" id="FYw-hw-kN2"/>
                             <constraint firstItem="29n-Ky-NIO" firstAttribute="centerX" secondItem="zKf-oJ-Ilq" secondAttribute="centerX" id="IQs-Km-EB7"/>
                             <constraint firstItem="Vhd-Xp-jfz" firstAttribute="width" secondItem="ghj-Te-Eud" secondAttribute="width" id="USn-5z-Gir"/>
@@ -814,16 +814,16 @@ accuracy</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upJ-lK-u6i">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Lx-Udh">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </arView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WG7-Y2-k8m">
-                                        <rect key="frame" x="0.0" y="616.33333333333337" width="414" height="108.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="761.66666666666663" width="414" height="134.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojo-sr-ECT">
-                                                <rect key="frame" x="248.33333333333334" y="37.333333333333258" width="124.33333333333334" height="34"/>
+                                                <rect key="frame" x="248.33333333333334" y="50" width="124.33333333333334" height="34"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.69803921570000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Start">
@@ -835,7 +835,7 @@ accuracy</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x7-Gp-MOt">
-                                                <rect key="frame" x="41.333333333333336" y="37.333333333333258" width="124.33333333333331" height="34"/>
+                                                <rect key="frame" x="41.333333333333336" y="50" width="124.33333333333331" height="34"/>
                                                 <color key="backgroundColor" red="0.93333333330000001" green="0.42745098040000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Cancel">
@@ -868,14 +868,14 @@ accuracy</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nq5-4g-z1M">
-                                                <rect key="frame" x="0.0" y="23.333333333333329" width="414" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333336" width="414" height="20.333333333333336"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYa-zA-lQ4">
-                                                <rect key="frame" x="0.0" y="46.666666666666657" width="414" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="46.666666666666664" width="414" height="20.333333333333336"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -892,10 +892,10 @@ accuracy</string>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QM2-3V-dVQ">
-                                        <rect key="frame" x="41.333333333333343" y="114" width="331.33333333333326" height="497"/>
+                                        <rect key="frame" x="41.333333333333343" y="199.66666666666666" width="331.33333333333326" height="496.66666666666674"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUN-CR-Piz">
-                                                <rect key="frame" x="116" y="367.66666666666663" width="99.333333333333314" height="99.333333333333314"/>
+                                                <rect key="frame" x="116" y="367.33333333333337" width="99.333333333333314" height="99.333333333333314"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="iUN-CR-Piz" secondAttribute="height" multiplier="1:1" id="MB9-r6-tHZ"/>
                                                 </constraints>
@@ -912,7 +912,7 @@ accuracy</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sph-dB-gvX">
-                                                <rect key="frame" x="33.333333333333343" y="77.666666666666686" width="264.66666666666663" height="270"/>
+                                                <rect key="frame" x="33.333333333333343" y="77.666666666666657" width="264.66666666666663" height="269.66666666666674"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <string key="text">Read it all before doing anything!
 
@@ -967,8 +967,8 @@ To finish you session, just say "Stop!"</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cUx-wl-h5a" firstAttribute="trailing" secondItem="upJ-lK-u6i" secondAttribute="trailing" id="6sl-PN-I2R"/>
-                            <constraint firstItem="upJ-lK-u6i" firstAttribute="top" secondItem="cUx-wl-h5a" secondAttribute="top" id="XLd-63-0eB"/>
-                            <constraint firstItem="cUx-wl-h5a" firstAttribute="bottom" secondItem="upJ-lK-u6i" secondAttribute="bottom" id="jUh-z7-Ift"/>
+                            <constraint firstItem="upJ-lK-u6i" firstAttribute="top" secondItem="QVD-1B-vkY" secondAttribute="top" id="XLd-63-0eB"/>
+                            <constraint firstAttribute="bottom" secondItem="upJ-lK-u6i" secondAttribute="bottom" id="jUh-z7-Ift"/>
                             <constraint firstItem="upJ-lK-u6i" firstAttribute="leading" secondItem="cUx-wl-h5a" secondAttribute="leading" id="tfC-va-Fd1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cUx-wl-h5a"/>
@@ -1644,10 +1644,10 @@ To finish you session, just say "Stop!"</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-6o-00i" userLabel="ViewImagem">
-                                <rect key="frame" x="0.0" y="88" width="414" height="290"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="QHO-5c-arT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1659,10 +1659,10 @@ To finish you session, just say "Stop!"</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmz-Oj-bdY" userLabel="ViewTableView">
-                                <rect key="frame" x="20.666666666666657" y="423.33333333333326" width="372.66666666666674" height="389.66666666666674"/>
+                                <rect key="frame" x="20.666666666666657" y="400.66666666666674" width="372.66666666666674" height="412.33333333333326"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-XM-8VS">
-                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="389.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="412.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" rowHeight="92" id="zUk-6U-b1b" customClass="HistoryTableViewCell" customModule="Nolan" customModuleProvider="target">
@@ -1809,7 +1809,7 @@ To finish you session, just say "Stop!"</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7K-gI-ZPZ">
-                                <rect key="frame" x="20.666666666666657" y="294.66666666666669" width="372.66666666666674" height="108.66666666666669"/>
+                                <rect key="frame" x="20.666666666666657" y="272" width="372.66666666666674" height="108.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqd-6R-StI" userLabel="dataLabel">
                                         <rect key="frame" x="19.999999999999996" y="55.333333333333314" width="51.666666666666657" height="25"/>
@@ -1818,7 +1818,7 @@ To finish you session, just say "Stop!"</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Kl-BKn" userLabel="nomeLabel">
-                                        <rect key="frame" x="20" y="21.999999999999996" width="154.33333333333334" height="37.666666666666657"/>
+                                        <rect key="frame" x="20" y="21.666666666666682" width="154.33333333333334" height="37.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                         <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1838,10 +1838,10 @@ To finish you session, just say "Stop!"</string>
                             <constraint firstItem="oPT-XM-8VS" firstAttribute="width" secondItem="P7K-gI-ZPZ" secondAttribute="width" id="BOl-nj-EhA"/>
                             <constraint firstItem="iGh-ON-H5B" firstAttribute="trailing" secondItem="Abu-6o-00i" secondAttribute="trailing" id="Mwn-Xq-22i"/>
                             <constraint firstItem="iGh-ON-H5B" firstAttribute="bottom" secondItem="kmz-Oj-bdY" secondAttribute="bottom" id="Oc2-xA-Enl"/>
-                            <constraint firstItem="Abu-6o-00i" firstAttribute="top" secondItem="iGh-ON-H5B" secondAttribute="top" id="Uem-2n-uqB"/>
+                            <constraint firstItem="Abu-6o-00i" firstAttribute="top" secondItem="sIx-YJ-EgW" secondAttribute="top" id="Uem-2n-uqB"/>
                             <constraint firstItem="kmz-Oj-bdY" firstAttribute="top" secondItem="P7K-gI-ZPZ" secondAttribute="bottom" constant="20" id="Ugz-8l-l4O"/>
                             <constraint firstItem="Abu-6o-00i" firstAttribute="leading" secondItem="iGh-ON-H5B" secondAttribute="leading" id="Xe3-r6-lyB"/>
-                            <constraint firstItem="Abu-6o-00i" firstAttribute="height" secondItem="iGh-ON-H5B" secondAttribute="height" multiplier="0.4" id="bWX-NI-9hm"/>
+                            <constraint firstItem="Abu-6o-00i" firstAttribute="height" secondItem="iGh-ON-H5B" secondAttribute="height" multiplier="0.5" id="bWX-NI-9hm"/>
                             <constraint firstItem="P7K-gI-ZPZ" firstAttribute="centerX" secondItem="QHO-5c-arT" secondAttribute="centerX" id="ezI-gy-jN4"/>
                             <constraint firstItem="P7K-gI-ZPZ" firstAttribute="height" secondItem="iGh-ON-H5B" secondAttribute="height" multiplier="0.15" id="gfl-Ca-29p"/>
                             <constraint firstItem="kmz-Oj-bdY" firstAttribute="centerX" secondItem="iGh-ON-H5B" secondAttribute="centerX" id="iZE-F2-E2a"/>
@@ -1897,27 +1897,27 @@ To finish you session, just say "Stop!"</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIFFICULTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NU-KA-AT3">
-                                                <rect key="frame" x="30.666666666666671" y="40.666666666666686" width="71" height="17"/>
+                                                <rect key="frame" x="30.666666666666671" y="40.666666666666686" width="71" height="15.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlD-Gs-4IS">
-                                                <rect key="frame" x="30.666666666666671" y="62.666666666666686" width="44" height="22"/>
-                                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="30.666666666666668" y="61.000000000000007" width="45.333333333333329" height="21.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-pu-1BN">
-                                                <rect key="frame" x="339.33333333333331" y="62.666666666666686" width="44" height="22"/>
-                                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="338" y="61.000000000000007" width="45.333333333333314" height="21.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mo-9n-zAX">
-                                                <rect key="frame" x="351.33333333333331" y="40.666666666666686" width="32" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mo-9n-zAX">
+                                                <rect key="frame" x="351.33333333333331" y="40.666666666666686" width="32" height="15.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1992,19 +1992,16 @@ To finish you session, just say "Stop!"</string>
                     <connections>
                         <outlet property="dateLabel" destination="yQa-bZ-9i5" id="GeB-e9-wHx"/>
                         <outlet property="difficultyLabel" destination="AlD-Gs-4IS" id="2dt-F2-07H"/>
-                        <outlet property="nameLabel" destination="wGA-Zs-Dul" id="k8n-Ww-vEj"/>
                         <outlet property="performanceChart" destination="hnk-YX-uOh" id="xQ0-K6-0Jf"/>
                         <outlet property="performanceChartWrapper" destination="dXr-4z-33p" id="cH9-x0-rDa"/>
-                        <outlet property="poseImage" destination="Akl-Q8-vJb" id="NAU-kx-iY5"/>
                         <outlet property="poseInfoContainerView" destination="do3-ZA-XSr" id="TdG-A6-H0A"/>
-                        <outlet property="poseInfoView" destination="do3-ZA-XSr" id="anE-9s-CVQ"/>
                         <outlet property="poseNameLabel" destination="wGA-Zs-Dul" id="VhI-XF-kfD"/>
                         <outlet property="typeLabel" destination="NGb-pu-1BN" id="u4u-T3-RH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeg-O1-tjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3517" y="673"/>
+            <point key="canvasLocation" x="3515.9420289855075" y="672.99107142857144"/>
         </scene>
     </scenes>
     <resources>
