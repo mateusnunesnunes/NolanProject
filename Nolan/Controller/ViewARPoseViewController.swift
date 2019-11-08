@@ -154,7 +154,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         }
         
         timerSpeech = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { (_) in
-            print("Handling speech")
+//            print("Handling speech")
             self.handleSpeech()
         }
         
@@ -347,7 +347,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     }
     
     func handleSpeech() {
-        print(allTranscribedText)
+//        print(allTranscribedText)
         if self.allTranscribedText.contains("start")  && !sessionRunning {
             startSession()
         } else if self.allTranscribedText.contains("stop") && sessionRunning {
