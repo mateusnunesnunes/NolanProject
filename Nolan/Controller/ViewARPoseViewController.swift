@@ -22,6 +22,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
     @IBOutlet weak var startView: UIView!
     @IBOutlet weak var manualControlsView: UIView!
+    
     @IBOutlet weak var manualStartButton: UIButton!
     @IBOutlet weak var manualCancelButton: UIButton!
     
@@ -64,14 +65,28 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startView.cornerRadius = 20
         
+        startView.cornerRadius = 8
         startView.layer.shadowOffset = CGSize(width: 0, height: 5)
         startView.layer.shadowRadius = 3
         startView.layer.shadowColor = UIColor.darkGray.cgColor
-        startView.layer.shadowOpacity = 0.85
+        startView.layer.shadowOpacity = 0.25
+        
+        manualStartButton.cornerRadius = 8
+        manualStartButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+        manualStartButton.layer.shadowRadius = 3
+        manualStartButton.layer.shadowColor = UIColor.darkGray.cgColor
+        manualStartButton.layer.shadowOpacity = 0.25
+        
+        manualCancelButton.cornerRadius = 8
+        manualCancelButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+        manualCancelButton.layer.shadowRadius = 3
+        manualCancelButton.layer.shadowColor = UIColor.darkGray.cgColor
+        manualCancelButton.layer.shadowOpacity = 0.25
         // Do any additional setup after loading the view.
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -258,7 +273,6 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
                 TTSController.shared.say(text: "You are doing great! Keep it up :)")
             }
         }
-        
         
         self.minLabel.text = "min: " + min.description
         self.maxLabel.text = "max: " + max.description

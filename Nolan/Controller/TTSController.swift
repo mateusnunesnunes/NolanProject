@@ -15,11 +15,23 @@ class TTSController {
     
     private init() {}
     
+    var canSay = true
+    
     func say(text: String) {
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        
+        if canSay {
+            canSay = false
+            
+            let utterance = AVSpeechUtterance(string: text)
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
 
-        let synth = AVSpeechSynthesizer()
-        synth.speak(utterance)
+            let synth = AVSpeechSynthesizer()
+            synth.speak(utterance)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.canSay = true
+            }
+        }
+        
     }
 }
