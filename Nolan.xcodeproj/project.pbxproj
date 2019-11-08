@@ -34,6 +34,24 @@
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
 		47427856237584A100BAA15A /* HistoryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47427855237584A100BAA15A /* HistoryEntryViewController.swift */; };
+		4742786923759B4D00BAA15A /* s3p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785723759B4B00BAA15A /* s3p4 */; };
+		4742786A23759B4D00BAA15A /* s2p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785823759B4B00BAA15A /* s2p4 */; };
+		4742786B23759B4D00BAA15A /* s2p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785923759B4C00BAA15A /* s2p3 */; };
+		4742786C23759B4D00BAA15A /* s3p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785A23759B4C00BAA15A /* s3p1 */; };
+		4742786D23759B4D00BAA15A /* s2p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785B23759B4C00BAA15A /* s2p2 */; };
+		4742786E23759B4D00BAA15A /* s1p6 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785C23759B4C00BAA15A /* s1p6 */; };
+		4742786F23759B4D00BAA15A /* s4p2  in Resources */ = {isa = PBXBuildFile; fileRef = 4742785D23759B4C00BAA15A /* s4p2  */; };
+		4742787023759B4D00BAA15A /* s1p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785E23759B4C00BAA15A /* s1p4 */; };
+		4742787123759B4D00BAA15A /* s4p4 in Resources */ = {isa = PBXBuildFile; fileRef = 4742785F23759B4C00BAA15A /* s4p4 */; };
+		4742787223759B4D00BAA15A /* s4p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786023759B4C00BAA15A /* s4p1 */; };
+		4742787323759B4D00BAA15A /* s4p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786123759B4C00BAA15A /* s4p3 */; };
+		4742787423759B4D00BAA15A /* s2p1 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786223759B4C00BAA15A /* s2p1 */; };
+		4742787523759B4D00BAA15A /* s1p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786323759B4D00BAA15A /* s1p3 */; };
+		4742787623759B4D00BAA15A /* s1p5 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786423759B4D00BAA15A /* s1p5 */; };
+		4742787723759B4D00BAA15A /* s1p1  in Resources */ = {isa = PBXBuildFile; fileRef = 4742786523759B4D00BAA15A /* s1p1  */; };
+		4742787823759B4D00BAA15A /* s3p3 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786623759B4D00BAA15A /* s3p3 */; };
+		4742787923759B4D00BAA15A /* s3p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786723759B4D00BAA15A /* s3p2 */; };
+		4742787A23759B4D00BAA15A /* s1p2 in Resources */ = {isa = PBXBuildFile; fileRef = 4742786823759B4D00BAA15A /* s1p2 */; };
 		47589E762372454500D1D577 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47589E752372454500D1D577 /* HealthKit.framework */; };
 		47589E782373016D00D1D577 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E772373016D00D1D577 /* ProfileViewController.swift */; };
 		47589E8023745A4A00D1D577 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589E7F23745A4A00D1D577 /* HistoryViewController.swift */; };
@@ -123,6 +141,24 @@
 		22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.debug.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.debug.xcconfig"; sourceTree = "<group>"; };
 		2402D94146EF94B404E1834E /* Pods-Nolan-NolanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan-NolanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nolan-NolanUITests/Pods-Nolan-NolanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		47427855237584A100BAA15A /* HistoryEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntryViewController.swift; sourceTree = "<group>"; };
+		4742785723759B4B00BAA15A /* s3p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p4; sourceTree = "<group>"; };
+		4742785823759B4B00BAA15A /* s2p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p4; sourceTree = "<group>"; };
+		4742785923759B4C00BAA15A /* s2p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p3; sourceTree = "<group>"; };
+		4742785A23759B4C00BAA15A /* s3p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p1; sourceTree = "<group>"; };
+		4742785B23759B4C00BAA15A /* s2p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p2; sourceTree = "<group>"; };
+		4742785C23759B4C00BAA15A /* s1p6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p6; sourceTree = "<group>"; };
+		4742785D23759B4C00BAA15A /* s4p2  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s4p2 "; sourceTree = "<group>"; };
+		4742785E23759B4C00BAA15A /* s1p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p4; sourceTree = "<group>"; };
+		4742785F23759B4C00BAA15A /* s4p4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p4; sourceTree = "<group>"; };
+		4742786023759B4C00BAA15A /* s4p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p1; sourceTree = "<group>"; };
+		4742786123759B4C00BAA15A /* s4p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p3; sourceTree = "<group>"; };
+		4742786223759B4C00BAA15A /* s2p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s2p1; sourceTree = "<group>"; };
+		4742786323759B4D00BAA15A /* s1p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p3; sourceTree = "<group>"; };
+		4742786423759B4D00BAA15A /* s1p5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p5; sourceTree = "<group>"; };
+		4742786523759B4D00BAA15A /* s1p1  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "s1p1 "; sourceTree = "<group>"; };
+		4742786623759B4D00BAA15A /* s3p3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p3; sourceTree = "<group>"; };
+		4742786723759B4D00BAA15A /* s3p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s3p2; sourceTree = "<group>"; };
+		4742786823759B4D00BAA15A /* s1p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p2; sourceTree = "<group>"; };
 		47589E742372454500D1D577 /* Nolan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nolan.entitlements; sourceTree = "<group>"; };
 		47589E752372454500D1D577 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		47589E772373016D00D1D577 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +339,24 @@
 		47B026CF236B07BF00E64011 /* Poses */ = {
 			isa = PBXGroup;
 			children = (
+				4742786523759B4D00BAA15A /* s1p1  */,
+				4742786823759B4D00BAA15A /* s1p2 */,
+				4742786323759B4D00BAA15A /* s1p3 */,
+				4742785E23759B4C00BAA15A /* s1p4 */,
+				4742786423759B4D00BAA15A /* s1p5 */,
+				4742785C23759B4C00BAA15A /* s1p6 */,
+				4742786223759B4C00BAA15A /* s2p1 */,
+				4742785B23759B4C00BAA15A /* s2p2 */,
+				4742785923759B4C00BAA15A /* s2p3 */,
+				4742785823759B4B00BAA15A /* s2p4 */,
+				4742785A23759B4C00BAA15A /* s3p1 */,
+				4742786723759B4D00BAA15A /* s3p2 */,
+				4742786623759B4D00BAA15A /* s3p3 */,
+				4742785723759B4B00BAA15A /* s3p4 */,
+				4742786023759B4C00BAA15A /* s4p1 */,
+				4742785D23759B4C00BAA15A /* s4p2  */,
+				4742786123759B4C00BAA15A /* s4p3 */,
+				4742785F23759B4C00BAA15A /* s4p4 */,
 				47B026C9236B07BB00E64011 /* BracoBaixo */,
 				47B026CA236B07BB00E64011 /* PeProLado */,
 				47B026C7236B07BB00E64011 /* T */,
@@ -509,19 +563,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4742786B23759B4D00BAA15A /* s2p3 in Resources */,
 				47B026CC236B07BB00E64011 /* TBugadoDeLado in Resources */,
 				47BCD617236B98BA008D18B8 /* robot.usdz in Resources */,
 				019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */,
 				47B026CD236B07BB00E64011 /* BracoBaixo in Resources */,
+				4742786D23759B4D00BAA15A /* s2p2 in Resources */,
+				4742786F23759B4D00BAA15A /* s4p2  in Resources */,
+				4742787523759B4D00BAA15A /* s1p3 in Resources */,
 				A5349C4B236C54BA00BF5647 /* Quicksand-Light.ttf in Resources */,
+				4742787023759B4D00BAA15A /* s1p4 in Resources */,
+				4742787A23759B4D00BAA15A /* s1p2 in Resources */,
 				0193A3D123607A32003C3F75 /* ImageUICollectionViewCell.xib in Resources */,
 				0121E0FE2363411C00FB3C06 /* Main.storyboard in Resources */,
 				47B026CB236B07BB00E64011 /* T in Resources */,
+				4742787223759B4D00BAA15A /* s4p1 in Resources */,
 				A5349C4E236C54BA00BF5647 /* Quicksand-Bold.ttf in Resources */,
 				A5349C4D236C54BA00BF5647 /* Quicksand-SemiBold.ttf in Resources */,
+				4742786923759B4D00BAA15A /* s3p4 in Resources */,
+				4742787323759B4D00BAA15A /* s4p3 in Resources */,
+				4742787723759B4D00BAA15A /* s1p1  in Resources */,
 				01728AA5236A10E000CB2C18 /* GoogleService-Info.plist in Resources */,
+				4742787423759B4D00BAA15A /* s2p1 in Resources */,
+				4742786C23759B4D00BAA15A /* s3p1 in Resources */,
+				4742787923759B4D00BAA15A /* s3p2 in Resources */,
+				4742787623759B4D00BAA15A /* s1p5 in Resources */,
+				4742787823759B4D00BAA15A /* s3p3 in Resources */,
 				47B026CE236B07BB00E64011 /* PeProLado in Resources */,
+				4742786A23759B4D00BAA15A /* s2p4 in Resources */,
 				A5349C4F236C54BA00BF5647 /* Quicksand-Medium.ttf in Resources */,
+				4742786E23759B4D00BAA15A /* s1p6 in Resources */,
+				4742787123759B4D00BAA15A /* s4p4 in Resources */,
 				A5349C4C236C54BA00BF5647 /* Quicksand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
