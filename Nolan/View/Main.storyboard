@@ -855,7 +855,7 @@ accuracy</string>
                                             <constraint firstItem="ojo-sr-ECT" firstAttribute="centerY" secondItem="6x7-Gp-MOt" secondAttribute="centerY" id="yN4-8K-B0O"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sxo-qR-3yV">
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sxo-qR-3yV">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="90.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVb-Lj-jLZ">

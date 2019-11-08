@@ -35,7 +35,7 @@ class Singleton {
         }
     }
     let sessions: [Session] = [
-        Session(name: "Yang TaiChiChuan", difficulty: "Begginer", photo: UIImage(named: "image1")!, pose: [
+        Session(name: "Yang TaiChiChuan", difficulty: "Beginner", photo: UIImage(named: "image1")!, pose: [
             Pose(
                 name: "YE-MA-FEN-ZONG",
                 difficulty: "Easy",
@@ -213,7 +213,7 @@ class Singleton {
                 category: "Balance",
                 length: "5'"
         ),
-        Session(name: "魂靈", difficulty: "Begginer", photo: UIImage(named: "image4")!, pose: [
+        Session(name: "魂靈", difficulty: "Beginner", photo: UIImage(named: "image4")!, pose: [
             Pose(
                 name: "Zhuan Shen Ban Lan Chui",
                 difficulty: "Medium",
