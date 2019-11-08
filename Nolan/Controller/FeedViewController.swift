@@ -124,7 +124,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "poses", for: indexPath) as! PosesTableViewCell
-        cell.poseImage.image  = UIImage(named:"Image1")
+        cell.poseImage.image  = UIImage(named:"image1")
         
         
         cell.poseLabel.text = filteredPoses[indexPath.row].name

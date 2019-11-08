@@ -19,11 +19,22 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton! {
         didSet {
-            nextButton.layer.cornerRadius = 25.0
+            nextButton.layer.cornerRadius = 8.0
             nextButton.layer.masksToBounds = true
+            shadowView(v: nextButton, blur: 4, y: 2, opacity: 25.0)
+            
         }
     }
     @IBOutlet weak var skipButton: UIButton!
+    
+    func shadowView (v : UIButton!, blur : CGFloat, y: CGFloat, opacity : Float) {
+    
+        v.layer.shadowOffset = CGSize(width: 0, height: y)
+        v.layer.shadowRadius = blur
+        v.layer.shadowColor = UIColor.lightGray.cgColor
+        v.layer.shadowOpacity = opacity
+        
+    }
     
     //MARK: Propriedades
     
