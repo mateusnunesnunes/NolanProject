@@ -40,16 +40,16 @@ class SaveFeedbackViewController: UIViewController {
             
             dateLabel.text = dateFormatter.string(from: feedbackSession.date)
             
-            poseInfoView.cornerRadius = 20
+            poseInfoView.cornerRadius = 8
             addLightShadow(view: poseInfoView)
             
-            performanceChartWrapper.cornerRadius = 20
+            performanceChartWrapper.cornerRadius = 8
             addLightShadow(view: performanceChartWrapper)
             
-            saveButton.cornerRadius = 10
+            saveButton.cornerRadius = 8
             addLightShadow(view: saveButton)
             
-            discardButton.cornerRadius = 10
+            discardButton.cornerRadius = 8
             addLightShadow(view: discardButton)
             
             createChart(feedbackSession)
@@ -83,17 +83,12 @@ class SaveFeedbackViewController: UIViewController {
         
         performanceChart.legend.enabled = false
         
-        let maxDistance = 1.1
-        
         let keys: [Float] = Array(feedbackSession.scores.keys).sorted()
-        let values = keys.map( { Double(feedbackSession.scores[$0]!) } ) // 0...infinito
-        let cappedValues = values.map( { $0 > maxDistance ? maxDistance : $0 } ) // 0...0.75
-        let normalizedValues = cappedValues.map( { $0 * 100/maxDistance}) //0...100
-        let chartValues = normalizedValues.map( { 100 - $0 }) //0...100
+        let chartValues = feedbackSession.valuesAsPercentage(usingMaxDistance: 1.25)
         
         var chartDataEntries: [ChartDataEntry] = []
         for i in 0..<chartValues.count {
-            chartDataEntries.append(ChartDataEntry(x: Double(keys[i]), y: chartValues[i]))
+            chartDataEntries.append(ChartDataEntry(x: Double(keys[i]), y: Double(chartValues[i])))
         }
         
         let performanceLine = LineChartDataSet(entries: chartDataEntries, label: "Performance")
@@ -117,7 +112,7 @@ class SaveFeedbackViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+        super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.tabBarController?.tabBar.isHidden = false
     }
@@ -170,6 +165,9 @@ class SaveFeedbackViewController: UIViewController {
 //        }
         
         // TODO: Add into user sessions
+        if let feedbackSession = self.feedbackSession {
+            Singleton.shared.feedbacks.append(feedbackSession)
+        }
         
         popToPose()
     }

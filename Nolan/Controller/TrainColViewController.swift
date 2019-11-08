@@ -77,13 +77,23 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageUICollectionViewCell
+        
         if indexPath.item < self.data.count{
             cell.image.image = self.data[indexPath.item].photo
         }
+        
         cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.cornerRadius = 10
+        cell.layer.borderColor = .none
+        
+        cell.layer.cornerRadius = 8
+        
+        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
+        cell.layer.shadowRadius = 3
+        cell.layer.shadowColor = UIColor.darkGray.cgColor
+        cell.layer.shadowOpacity = 0.25
+        
         return cell
     }
     

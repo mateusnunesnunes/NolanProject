@@ -7,10 +7,12 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "startSessionButton@2x.pdf",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "startSessionButton@3x.pdf",
       "scale" : "3x"
     }
   ],
