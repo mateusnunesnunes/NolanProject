@@ -20,7 +20,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var labelAllPoses: UILabel!
     
-    
+    var selectedPose: Pose?
     var collectionHeightConstant = CGFloat()
     let allPoses = Singleton.shared.sessions.flatMap( {$0.pose} )
     var filteredPoses = [Pose]()
@@ -112,6 +112,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedPose = favoritePoses[indexPath.row]
+        self.performSegue(withIdentifier: "showFavoritePose", sender: selectedPose)
+    }
 
     
     //MARK: TableView
@@ -124,7 +129,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "poses", for: indexPath) as! PosesTableViewCell
-        cell.poseImage.image  = UIImage(named:"Image1")
+        cell.poseImage.image  = UIImage(named:"image1")
         
         
         cell.poseLabel.text = filteredPoses[indexPath.row].name
@@ -145,6 +150,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPose = allPoses[indexPath.row]
+        self.performSegue(withIdentifier: "showFavoritePose", sender: selectedPose)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFavoritePose" {
+            if let destination = segue.destination as? PoseDescriptionViewController {
+                destination.pose = selectedPose
+            }
+        }
+    }
+
 }
 
 // MARK: Hide Keyboard

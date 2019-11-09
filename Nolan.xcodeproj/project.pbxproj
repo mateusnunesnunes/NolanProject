@@ -19,7 +19,6 @@
 		0193A3DB23608186003C3F75 /* ImageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0193A3DA23608186003C3F75 /* ImageUICollectionViewCell.swift */; };
 		019BF57523573F2700F3E164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF57423573F2700F3E164 /* AppDelegate.swift */; };
 		019BF57723573F2700F3E164 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF57623573F2700F3E164 /* SceneDelegate.swift */; };
-		019BF57923573F2700F3E164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF57823573F2700F3E164 /* ViewController.swift */; };
 		019BF57E23573F2C00F3E164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019BF57D23573F2C00F3E164 /* Assets.xcassets */; };
 		019BF58C23573F2C00F3E164 /* NolanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF58B23573F2C00F3E164 /* NolanTests.swift */; };
 		019BF59723573F2C00F3E164 /* NolanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF59623573F2C00F3E164 /* NolanUITests.swift */; };
@@ -36,7 +35,6 @@
 		0D1DA1DB2375A40200AC89C1 /* s1p1 in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DA1D92375A40100AC89C1 /* s1p1 */; };
 		0D1DA1DC2375A40200AC89C1 /* s4p2 in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DA1DA2375A40100AC89C1 /* s4p2 */; };
 		0D8A1B3323686E6E000B9D75 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */; };
-		0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */; };
 		0D8A1B392368D999000B9D75 /* PosesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */; };
 		0D8A1B3B2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */; };
 		47427856237584A100BAA15A /* HistoryEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47427855237584A100BAA15A /* HistoryEntryViewController.swift */; };
@@ -123,7 +121,6 @@
 		019BF57123573F2700F3E164 /* Nolan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nolan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019BF57423573F2700F3E164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		019BF57623573F2700F3E164 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		019BF57823573F2700F3E164 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		019BF57D23573F2C00F3E164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		019BF58223573F2C00F3E164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		019BF58723573F2C00F3E164 /* NolanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NolanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +142,6 @@
 		0D1DA1D92375A40100AC89C1 /* s1p1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s1p1; sourceTree = "<group>"; };
 		0D1DA1DA2375A40100AC89C1 /* s4p2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = s4p2; sourceTree = "<group>"; };
 		0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		0D8A1B382368D999000B9D75 /* PosesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesTableViewCell.swift; sourceTree = "<group>"; };
 		0D8A1B3A2368D9BD000B9D75 /* FavoritePosesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePosesCollectionViewCell.swift; sourceTree = "<group>"; };
 		22C6D95A44EC0651C5323CC8 /* Pods-Nolan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolan.debug.xcconfig"; path = "Target Support Files/Pods-Nolan/Pods-Nolan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -413,11 +409,9 @@
 			isa = PBXGroup;
 			children = (
 				47BCD614236B2161008D18B8 /* ViewARPoseViewController.swift */,
-				019BF57823573F2700F3E164 /* ViewController.swift */,
 				0110A193235E40220064672A /* TrainColViewController.swift */,
 				01C88B452363216900B27AFA /* SessaoViewController.swift */,
 				0D8A1B3223686E6E000B9D75 /* FeedViewController.swift */,
-				0D8A1B3423687CD0000B9D75 /* FilterViewController.swift */,
 				A518761B2369C140001A8ACF /* PoseDescriptionViewController.swift */,
 				012A7A9C2371957300FA4ECE /* CustomSegmentedControlDelegate.swift */,
 				478071BE2371B65B00EE2478 /* SaveFeedbackViewController.swift */,
@@ -746,11 +740,9 @@
 				0D1DA1D22374435900AC89C1 /* WalkthroughViewController.swift in Sources */,
 				0193A3D923607C00003C3F75 /* Model.swift in Sources */,
 				012A7A9D2371957300FA4ECE /* CustomSegmentedControlDelegate.swift in Sources */,
-				0D8A1B3523687CD0000B9D75 /* FilterViewController.swift in Sources */,
 				47B026C6236B07AF00E64011 /* RKJointTree.swift in Sources */,
 				A518761A2369BD50001A8ACF /* SessionPoseTableViewCell.swift in Sources */,
 				A51876182369BC9E001A8ACF /* RoundedImage.swift in Sources */,
-				019BF57923573F2700F3E164 /* ViewController.swift in Sources */,
 				0D1AF00423631F97000A8F56 /* Time.swift in Sources */,
 				47589E8223745AD100D1D577 /* HistoryTableViewCell.swift in Sources */,
 				47ED904123704FC0005E0B60 /* TTSController.swift in Sources */,
