@@ -1350,11 +1350,12 @@ To finish you session, just say "Stop!"</string>
                         <outlet property="searchBar" destination="Mjc-Jn-ZhI" id="9sj-P9-JaW"/>
                         <outlet property="tableView" destination="SAD-Lb-oLA" id="bPt-tz-plP"/>
                         <outlet property="whiteView" destination="Jw2-TY-tJj" id="WtG-De-NqG"/>
+                        <segue destination="Njb-oD-Bf9" kind="show" identifier="showFavoritePose" id="Bsg-1W-A5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11A-Gw-U6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1963.7681159420292" y="-28.125"/>
+            <point key="canvasLocation" x="2016" y="25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hwf-07-BWC">
@@ -1838,4 +1839,7 @@ To finish you session, just say "Stop!"</string>
         <image name="scan" width="147" height="147"/>
         <image name="startSessionButton" width="285" height="285"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bsg-1W-A5g"/>
+    </inferredMetricsTieBreakers>
 </document>
