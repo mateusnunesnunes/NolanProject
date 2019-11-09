@@ -29,11 +29,12 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.rowHeight = 85.0
+        
         updateInterface()
-       
     }
 
     // chamar os itens do singleton para popular a tela

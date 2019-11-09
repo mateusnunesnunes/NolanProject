@@ -10,8 +10,11 @@ class CustomSegmentedControl: UIView {
     private var buttons:[UIButton]!
     private var selectorView:UIView!
     var textColor:UIColor = .gray
-    var selectorViewColor:UIColor = .black
-    var selectorTextColor:UIColor = .black
+    var selectorViewColor:UIColor = UIColor(displayP3Red: 226/255, green: 117/255, blue: 113/255, alpha: 1)
+    var selectorTextColor:UIColor = UIColor(displayP3Red: 226/255, green: 117/255, blue: 113/255, alpha: 1)
+    
+    var colors = [UIColor(displayP3Red: 226/255, green: 117/255, blue: 113/255, alpha: 1), UIColor(displayP3Red: 78/255, green: 174/255, blue: 167/255, alpha: 1), .blue]
+    
     var delegate:CustomSegmentedControlDelegate?
     //funcao que vai ser chamada quando a view for atualizada
     private func updateView(){
@@ -81,7 +84,12 @@ class CustomSegmentedControl: UIView {
                 
                 self.selectorView.frame.origin.x = selectorPosition
                 btn.titleLabel!.font = UIFont.systemFont(ofSize: 17,weight: .bold)
-                btn.setTitleColor(selectorTextColor, for: .normal)
+                
+                btn.setTitleColor(colors[buttonIndex], for: .normal)
+                
+                UIView.animate(withDuration: 0.35) {
+                    self.selectorView.backgroundColor = self.colors[buttonIndex]
+                }
             }
         }
         delegate?.segmentedChange()

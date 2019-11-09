@@ -42,7 +42,6 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         formatter.dateFormat = "YYYY-MM-dd"
         
         formatButton(view: userImageView)
-        formatButton(view: settingsContainer)
         formatButton(view: clockContainer)
         formatButton(view: calendarContainer)
         formatButton(view: chartContainer)
@@ -65,17 +64,17 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         let feedbacks = Singleton.shared.feedbacks
         
         let dates = feedbacks.map( { formatter.string(from: $0.date) } )
         allPracticedDates = Array(Set(dates))
         calendar.reloadData()
         
-    
-        
         let totalTimeSeconds = feedbacks.reduce(0, { $0 + (Array($1.scores.values).max() ?? 0) } )
         let totalMinutes = Int(ceil(totalTimeSeconds / 60))
-        clockLabel.text = totalMinutes.description + "\nminutes"
+        clockLabel.text = totalMinutes.description + "\nminute" +  (totalMinutes != 1 ? "s" : "")
         
         calendarLabel.text = allPracticedDates.count.description + "\nday" +  (allPracticedDates.count != 1 ? "s" : "")
 
@@ -85,6 +84,15 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         
         chartLabel.text = Int((totalFeedbackMark / Float(totalFeedbackCount == 0 ? 1 : totalFeedbackCount))).description + "%\naccuracy"
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // Coloca sombra na view
@@ -125,6 +133,10 @@ class ProfileViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
             return UIColor(displayP3Red: 0, green: 174/255, blue: 166/255, alpha: 1)
         }
         return nil
+    }
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillSelectionColorFor date: Date) -> UIColor? {
+        return UIColor(displayP3Red: 226/255, green: 117/255, blue: 113/255, alpha: 1)
     }
 
     

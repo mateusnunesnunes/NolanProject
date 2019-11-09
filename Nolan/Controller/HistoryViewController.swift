@@ -31,6 +31,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         poseInfoView.cornerRadius = 20
         addLightShadow(view: poseInfoView)
+    
         // Do any additional setup after loading the view.
     }
     
