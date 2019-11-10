@@ -9,10 +9,10 @@
 import Foundation
 
 enum RKFeedbackDirection: String {
-    case upward
-    case downward
-    case inward
-    case outward
+    case up // ward
+    case down //ward
+    case left // inward
+    case right // outward 
     case forward
     case backward
 }

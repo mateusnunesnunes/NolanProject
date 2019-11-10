@@ -39,7 +39,14 @@ class RKFeedbackGenerator {
                     print("Second position: \(secondPosition)")
                     print(direction, totalDifference)
                     
-                    return RKFeedback(jointName: jointName.replacingOccurrences(of: "_joint", with: ""), difference: totalDifference, direction: direction)
+                    var finalJointName = jointName.replacingOccurrences(of: "_joint", with: "")
+                    if finalJointName.contains("right") {
+                        finalJointName = finalJointName.replacingOccurrences(of: "right", with: "left")
+                    } else if finalJointName.contains("left") {
+                        finalJointName = finalJointName.replacingOccurrences(of: "left", with: "right")
+                    }
+                    
+                    return RKFeedback(jointName: finalJointName, difference: totalDifference, direction: direction)
                 }
             }
         }

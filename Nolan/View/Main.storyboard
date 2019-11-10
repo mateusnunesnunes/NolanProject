@@ -106,7 +106,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="534 minutes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s8-Qk-mne">
-                                                        <rect key="frame" x="0.0" y="73.333333333333343" width="116" height="42.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="76.333333333333343" width="116" height="39.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-2o-9jz">
-                                                        <rect key="frame" x="0.0" y="73.333333333333343" width="116" height="42.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="76.333333333333343" width="116" height="39.666666666666657"/>
                                                         <string key="text">65
 days</string>
                                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
@@ -186,7 +186,7 @@ days</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEL-qI-ZET">
-                                                        <rect key="frame" x="0.0" y="73.333333333333343" width="116" height="42.666666666666657"/>
+                                                        <rect key="frame" x="0.0" y="76.333333333333343" width="116" height="39.666666666666657"/>
                                                         <string key="text">10%
 accuracy</string>
                                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="17"/>
@@ -412,13 +412,13 @@ accuracy</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbH-XR-8gq" userLabel="lblNome">
-                                        <rect key="frame" x="31" y="300" width="80" height="37.666666666666686"/>
+                                        <rect key="frame" x="31.000000000000007" y="304.33333333333331" width="73.666666666666686" height="35"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                         <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-8G-tEc" userLabel="lblDificuldade">
-                                        <rect key="frame" x="30.999999999999996" y="337.66666666666669" width="51.666666666666657" height="25"/>
+                                        <rect key="frame" x="31" y="339.33333333333331" width="49" height="23.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -442,25 +442,25 @@ accuracy</string>
                                         <rect key="frame" x="31" y="53.000000000000007" width="352" height="67.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MK-AB-rCB" userLabel="lblCategoria">
-                                                <rect key="frame" x="10" y="35.666666666666629" width="41.333333333333336" height="20"/>
+                                                <rect key="frame" x="10" y="34.333333333333314" width="39.333333333333336" height="18.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="16"/>
                                                 <color key="textColor" red="0.50980392156862742" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKp-jy-dZH" userLabel="lblNomeSessao">
-                                                <rect key="frame" x="10" y="8.0000000000000018" width="37.333333333333336" height="17.666666666666671"/>
+                                                <rect key="frame" x="10" y="7.9999999999999982" width="34.333333333333336" height="16.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
                                                 <color key="textColor" red="0.50980392156862742" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw1-5u-fFH" userLabel="lblLength">
-                                                <rect key="frame" x="304.66666666666669" y="8.0000000000000018" width="37.333333333333314" height="17.666666666666671"/>
+                                                <rect key="frame" x="307.66666666666669" y="7.9999999999999982" width="34.333333333333314" height="16.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
                                                 <color key="textColor" red="0.50980392156862742" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3R-Ei-4R0" userLabel="lblTempo">
-                                                <rect key="frame" x="300.66666666666669" y="35.666666666666629" width="41.333333333333314" height="20"/>
+                                                <rect key="frame" x="302.66666666666669" y="34.333333333333314" width="39.333333333333314" height="18.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="16"/>
                                                 <color key="textColor" red="0.50980392156862742" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -644,7 +644,7 @@ accuracy</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OgM-eR-xWb" userLabel="lblNome">
-                                                <rect key="frame" x="10" y="57.333333333333314" width="221" height="37.666666666666657"/>
+                                                <rect key="frame" x="10" y="58.666666666666686" width="221" height="35"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -683,25 +683,25 @@ accuracy</string>
                                 <rect key="frame" x="20.666666666666657" y="423.33333333333331" width="372.66666666666674" height="72.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIFFICULTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7O-J0-d51">
-                                        <rect key="frame" x="15" y="10" width="76" height="17"/>
+                                        <rect key="frame" x="15" y="10" width="77" height="17"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CL-ka-Y0e">
-                                        <rect key="frame" x="14.999999999999996" y="32" width="41.333333333333329" height="20"/>
+                                        <rect key="frame" x="14.999999999999996" y="32" width="39.333333333333329" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZa-iz-2BQ">
-                                        <rect key="frame" x="321.33333333333331" y="32" width="41.333333333333314" height="20"/>
+                                        <rect key="frame" x="323.33333333333331" y="32" width="39.333333333333314" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjR-Wt-vgo">
-                                        <rect key="frame" x="328.66666666666663" y="10" width="34" height="17"/>
+                                        <rect key="frame" x="327.66666666666663" y="10" width="35" height="17"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -734,7 +734,7 @@ accuracy</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkT-uN-919">
-                                                            <rect key="frame" x="19.999999999999996" y="10" width="39.666666666666657" height="26"/>
+                                                            <rect key="frame" x="20.000000000000004" y="10" width="43.333333333333343" height="26"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -817,13 +817,13 @@ accuracy</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Lx-Udh">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                     </arView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WG7-Y2-k8m">
-                                        <rect key="frame" x="0.0" y="761.66666666666663" width="414" height="134.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="774.66666666666663" width="414" height="121.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojo-sr-ECT">
-                                                <rect key="frame" x="248.33333333333334" y="50" width="124.33333333333334" height="34"/>
+                                                <rect key="frame" x="248.33333333333334" y="44.666666666666742" width="124.33333333333334" height="32"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.69803921570000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Start">
@@ -835,7 +835,7 @@ accuracy</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x7-Gp-MOt">
-                                                <rect key="frame" x="41.333333333333336" y="50" width="124.33333333333331" height="34"/>
+                                                <rect key="frame" x="41.333333333333336" y="44.666666666666742" width="124.33333333333331" height="32"/>
                                                 <color key="backgroundColor" red="0.93333333330000001" green="0.42745098040000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Cancel">
@@ -857,8 +857,8 @@ accuracy</string>
                                             <constraint firstItem="ojo-sr-ECT" firstAttribute="centerY" secondItem="6x7-Gp-MOt" secondAttribute="centerY" id="yN4-8K-B0O"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sxo-qR-3yV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="90.333333333333329"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="sxo-qR-3yV">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="90.333333333333314"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVb-Lj-jLZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
@@ -868,14 +868,14 @@ accuracy</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nq5-4g-z1M">
-                                                <rect key="frame" x="0.0" y="23.333333333333336" width="414" height="20.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333329" width="414" height="20.333333333333329"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYa-zA-lQ4">
-                                                <rect key="frame" x="0.0" y="46.666666666666664" width="414" height="20.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="46.666666666666657" width="414" height="20.333333333333329"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -906,13 +906,13 @@ accuracy</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preparation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAh-nK-7Uc">
-                                                <rect key="frame" x="33.333333333333343" y="19.999999999999996" width="264.66666666666663" height="37.666666666666657"/>
+                                                <rect key="frame" x="33.333333333333343" y="20" width="264.66666666666663" height="35"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sph-dB-gvX">
-                                                <rect key="frame" x="33.333333333333343" y="77.666666666666657" width="264.66666666666663" height="269.66666666666674"/>
+                                                <rect key="frame" x="33.333333333333343" y="75.000000000000028" width="264.66666666666663" height="272.33333333333337"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <string key="text">Read it all before doing anything!
 
@@ -949,7 +949,7 @@ To finish you session, just say "Stop!"</string>
                                     <constraint firstAttribute="trailing" secondItem="Emi-Lx-Udh" secondAttribute="trailing" id="8kX-P6-ndG"/>
                                     <constraint firstItem="sxo-qR-3yV" firstAttribute="top" secondItem="Emi-Lx-Udh" secondAttribute="top" id="8kg-g4-9xd"/>
                                     <constraint firstItem="Emi-Lx-Udh" firstAttribute="trailing" secondItem="WG7-Y2-k8m" secondAttribute="trailing" id="DHV-8x-cgd"/>
-                                    <constraint firstItem="Emi-Lx-Udh" firstAttribute="top" secondItem="upJ-lK-u6i" secondAttribute="top" id="FEJ-qp-tN1"/>
+                                    <constraint firstItem="Emi-Lx-Udh" firstAttribute="top" secondItem="upJ-lK-u6i" secondAttribute="top" constant="88" id="FEJ-qp-tN1"/>
                                     <constraint firstItem="WG7-Y2-k8m" firstAttribute="leading" secondItem="Emi-Lx-Udh" secondAttribute="leading" id="Gyp-IQ-C5q"/>
                                     <constraint firstAttribute="bottom" secondItem="Emi-Lx-Udh" secondAttribute="bottom" id="Ojp-tZ-gna"/>
                                     <constraint firstItem="QM2-3V-dVQ" firstAttribute="width" secondItem="upJ-lK-u6i" secondAttribute="width" multiplier="0.8" id="POB-mV-fab"/>
@@ -1009,7 +1009,7 @@ To finish you session, just say "Stop!"</string>
                                         <rect key="frame" x="0.0" y="366" width="414" height="447"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLM-qw-kiq">
-                                                <rect key="frame" x="240" y="373" width="132.66666666666663" height="34"/>
+                                                <rect key="frame" x="240" y="373" width="132.66666666666663" height="32"/>
                                                 <color key="backgroundColor" red="0.31372549019607843" green="0.69803921568627447" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Save">
@@ -1020,7 +1020,7 @@ To finish you session, just say "Stop!"</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-bv-D9G">
-                                                <rect key="frame" x="41.333333333333329" y="373" width="132.66666666666669" height="34"/>
+                                                <rect key="frame" x="41.333333333333329" y="373" width="132.66666666666669" height="32"/>
                                                 <color key="backgroundColor" red="0.93333333333333335" green="0.42745098039215684" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Discard">
@@ -1065,13 +1065,13 @@ To finish you session, just say "Stop!"</string>
                                         <rect key="frame" x="20.666666666666657" y="275" width="372.66666666666674" height="121.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-Gb-rQg" userLabel="dataLabel">
-                                                <rect key="frame" x="19.999999999999996" y="63.666666666666686" width="51.666666666666657" height="25"/>
+                                                <rect key="frame" x="20" y="64.333333333333314" width="49" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8L-FF-Lgg" userLabel="nomeLabel">
-                                                <rect key="frame" x="20" y="26.666666666666682" width="80" height="37.666666666666657"/>
+                                                <rect key="frame" x="19.999999999999993" y="28" width="73.666666666666657" height="35"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1166,13 +1166,13 @@ To finish you session, just say "Stop!"</string>
                                         <rect key="frame" x="0.0" y="1" width="414" height="364"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Poses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-JL-ZbG">
-                                                <rect key="frame" x="10" y="0.0" width="175.33333333333334" height="31.333333333333332"/>
+                                                <rect key="frame" x="10" y="0.0" width="166" height="29.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="25"/>
                                                 <color key="textColor" red="0.8784313725490196" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xxI-7H-7S6">
-                                                <rect key="frame" x="20" y="39.333333333333343" width="374" height="222.00000000000003"/>
+                                                <rect key="frame" x="20" y="37.333333333333343" width="374" height="222.00000000000003"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="222" id="41E-jI-DnF"/>
@@ -1199,7 +1199,7 @@ To finish you session, just say "Stop!"</string>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oioioi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzr-zA-v25">
-                                                                    <rect key="frame" x="8" y="8" width="43.333333333333336" height="21"/>
+                                                                    <rect key="frame" x="8" y="8.0000000000000018" width="41.333333333333336" height="19.666666666666671"/>
                                                                     <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1207,7 +1207,7 @@ To finish you session, just say "Stop!"</string>
                                                                     <size key="shadowOffset" width="0.0" height="1"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7e-Dl-vJf">
-                                                                    <rect key="frame" x="172.66666666666666" y="193" width="39.333333333333343" height="21"/>
+                                                                    <rect key="frame" x="174.33333333333334" y="194.33333333333334" width="37.666666666666657" height="19.666666666666657"/>
                                                                     <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -1241,7 +1241,7 @@ To finish you session, just say "Stop!"</string>
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Poses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh1-m6-7kR">
-                                                <rect key="frame" x="20" y="297.33333333333331" width="102" height="30"/>
+                                                <rect key="frame" x="19.999999999999993" y="295.33333333333331" width="99.333333333333314" height="28"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
                                                 <color key="textColor" red="0.8784313725490196" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1277,7 +1277,7 @@ To finish you session, just say "Stop!"</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcd-Y2-89A">
-                                                            <rect key="frame" x="140" y="37" width="228" height="25"/>
+                                                            <rect key="frame" x="140" y="38" width="228" height="23.333333333333329"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="228" id="v8M-kX-ibe"/>
                                                             </constraints>
@@ -1503,7 +1503,7 @@ To finish you session, just say "Stop!"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYv-6Z-fW0">
-                                                            <rect key="frame" x="74.333333333333329" y="41" width="195.33333333333337" height="21.333333333333329"/>
+                                                            <rect key="frame" x="74.333333333333329" y="39.666666666666664" width="195.33333333333337" height="20"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.50980392159999999" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1515,10 +1515,10 @@ To finish you session, just say "Stop!"</string>
                                                                     <rect key="frame" x="0.0" y="0.0" width="93" height="23"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbY-aD-GgD">
-                                                                            <rect key="frame" x="44.333333333333314" y="0.0" width="23" height="23"/>
+                                                                            <rect key="frame" x="41.666666666666629" y="0.0" width="23" height="23"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wQO-kD-tSS">
-                                                                                    <rect key="frame" x="3.3333333333333144" y="3.3333333333333321" width="16.333333333333332" height="16.333333333333332"/>
+                                                                                    <rect key="frame" x="3.3333333333333712" y="3.3333333333333321" width="16.333333333333332" height="16.333333333333332"/>
                                                                                     <color key="tintColor" red="0.94901960780000005" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                                                 </imageView>
@@ -1533,7 +1533,7 @@ To finish you session, just say "Stop!"</string>
                                                                             </constraints>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xg-jq-JoH">
-                                                                            <rect key="frame" x="67.333333333333314" y="3.3333333333333321" width="25.666666666666671" height="16.333333333333332"/>
+                                                                            <rect key="frame" x="64.666666666666629" y="4.0000000000000009" width="28.333333333333329" height="15.333333333333336"/>
                                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="13"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -1552,7 +1552,7 @@ To finish you session, just say "Stop!"</string>
                                                                     <rect key="frame" x="0.0" y="23" width="93" height="23"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANr-VM-gsv">
-                                                                            <rect key="frame" x="45.333333333333314" y="0.0" width="23" height="23"/>
+                                                                            <rect key="frame" x="42.333333333333314" y="0.0" width="23" height="23"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-YY-jfY">
                                                                                     <rect key="frame" x="3.3333333333333144" y="3.3333333333333357" width="16.333333333333332" height="16.333333333333332"/>
@@ -1570,7 +1570,7 @@ To finish you session, just say "Stop!"</string>
                                                                             </constraints>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-BU-sPw">
-                                                                            <rect key="frame" x="68.333333333333314" y="3.3333333333333357" width="24.666666666666671" height="16.333333333333332"/>
+                                                                            <rect key="frame" x="65.333333333333314" y="4.0000000000000009" width="27.666666666666671" height="15.333333333333336"/>
                                                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="13"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -1588,7 +1588,7 @@ To finish you session, just say "Stop!"</string>
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-sm-2eG">
-                                                            <rect key="frame" x="74.333333333333329" y="18.666666666666671" width="195.33333333333337" height="21.333333333333329"/>
+                                                            <rect key="frame" x="74.333333333333329" y="18.666666666666668" width="195.33333333333337" height="20.000000000000004"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1633,13 +1633,13 @@ To finish you session, just say "Stop!"</string>
                                 <rect key="frame" x="20.666666666666657" y="272" width="372.66666666666674" height="108.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqd-6R-StI" userLabel="dataLabel">
-                                        <rect key="frame" x="19.999999999999996" y="55.333333333333314" width="51.666666666666657" height="25"/>
+                                        <rect key="frame" x="20" y="56.333333333333321" width="49" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                         <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Kl-BKn" userLabel="nomeLabel">
-                                        <rect key="frame" x="20" y="21.666666666666682" width="154.33333333333334" height="37.666666666666657"/>
+                                        <rect key="frame" x="20" y="23" width="145.66666666666666" height="35"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                         <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1724,13 +1724,13 @@ To finish you session, just say "Stop!"</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlD-Gs-4IS">
-                                                <rect key="frame" x="30.666666666666668" y="61.000000000000007" width="45.333333333333329" height="21.333333333333336"/>
+                                                <rect key="frame" x="30.666666666666668" y="61" width="41.666666666666657" height="20"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGb-pu-1BN">
-                                                <rect key="frame" x="338" y="61.000000000000007" width="45.333333333333314" height="21.333333333333336"/>
+                                                <rect key="frame" x="341.66666666666669" y="61" width="41.666666666666686" height="20"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1759,13 +1759,13 @@ To finish you session, just say "Stop!"</string>
                                         <rect key="frame" x="20.666666666666657" y="275" width="372.66666666666674" height="121.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQa-bZ-9i5" userLabel="dataLabel">
-                                                <rect key="frame" x="19.999999999999996" y="63.666666666666686" width="51.666666666666657" height="25"/>
+                                                <rect key="frame" x="20" y="64.333333333333314" width="49" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-Zs-Dul" userLabel="nomeLabel">
-                                                <rect key="frame" x="20" y="26.666666666666682" width="80" height="37.666666666666657"/>
+                                                <rect key="frame" x="19.999999999999993" y="28" width="73.666666666666657" height="35"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
