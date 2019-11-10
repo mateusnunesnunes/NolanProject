@@ -271,6 +271,17 @@ class Singleton {
     func requestForLocation(){
         
     }
+    
+    func getPosePosition(pose: Pose) -> (Int, Int) {
+        for i in 0..<sessions.count {
+            for j in 0..<sessions[i].pose.count {
+                if sessions[i].pose[j].jsonFilename == pose.jsonFilename {
+                    return (i, j)
+                }
+            }
+        }
+        return (-1, -1)
+    }
 }
 
 

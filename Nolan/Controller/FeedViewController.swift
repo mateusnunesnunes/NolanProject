@@ -24,7 +24,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var collectionHeightConstant = CGFloat()
     let allPoses = Singleton.shared.sessions.flatMap( {$0.pose} )
     var filteredPoses = [Pose]()
-    let favoritePoses = Singleton.shared.sessions.flatMap( {$0.pose} ).filter({$0.favorite})
+    var favoritePoses = Singleton.shared.sessions.flatMap( {$0.pose} ).filter({$0.favorite})
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         collectionHeightConstant = collectionHeight.constant
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
+        favoritePoses = Singleton.shared.sessions.flatMap( {$0.pose} ).filter({$0.favorite})
         collectionView.reloadData()
+        tableView.reloadData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -158,7 +160,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func toggleFavorite(_ sender: UIButton) {
-        filteredPoses[sender.tag].favorite.toggle()
+        let (sessionId, poseId) = Singleton.shared.getPosePosition(pose: filteredPoses[sender.tag])
+            
+        Singleton.shared.sessions[sessionId].pose[poseId].favorite.toggle()
+        
+        print("Setting \(filteredPoses[sender.tag].name) as \(filteredPoses[sender.tag].favorite)")
 
         let config = UIImage.SymbolConfiguration(textStyle: .body)
         

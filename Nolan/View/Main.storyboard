@@ -507,7 +507,7 @@ accuracy</string>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZL-V1-hrp">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XZL-V1-hrp">
                                                             <rect key="frame" x="76" y="22" width="236" height="20"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.69411764705882351" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1287,8 +1287,8 @@ To finish you session, just say "Stop!"</string>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcd-Y2-89A">
-                                                            <rect key="frame" x="89.333333333333343" y="39.666666666666664" width="76.333333333333343" height="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wcd-Y2-89A">
+                                                            <rect key="frame" x="89.333333333333329" y="39.666666666666664" width="210.66666666666669" height="20"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.69411764705882351" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1313,6 +1313,7 @@ To finish you session, just say "Stop!"</string>
                                                         <constraint firstItem="EHx-qI-o1z" firstAttribute="height" secondItem="0zd-5b-NxZ" secondAttribute="height" multiplier="0.8" id="Odd-zP-hGe"/>
                                                         <constraint firstItem="EHx-qI-o1z" firstAttribute="leading" secondItem="0zd-5b-NxZ" secondAttribute="leading" id="Qcs-zV-ydr"/>
                                                         <constraint firstItem="Wcd-Y2-89A" firstAttribute="leading" secondItem="EHx-qI-o1z" secondAttribute="trailing" constant="10" id="Y5j-5d-OfT"/>
+                                                        <constraint firstItem="4L6-lf-77C" firstAttribute="leading" secondItem="Wcd-Y2-89A" secondAttribute="trailing" constant="10" id="dtc-Mg-TEM"/>
                                                         <constraint firstAttribute="trailing" secondItem="4L6-lf-77C" secondAttribute="trailing" constant="20" id="tfo-Ur-B1L"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -1368,7 +1369,7 @@ To finish you session, just say "Stop!"</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11A-Gw-U6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="25"/>
+            <point key="canvasLocation" x="1964" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hwf-07-BWC">
@@ -1507,7 +1508,7 @@ To finish you session, just say "Stop!"</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-pG-xNQ">
-                                                            <rect key="frame" x="0.0" y="13.666666666666664" width="64.333333333333329" height="64.666666666666686"/>
+                                                            <rect key="frame" x="0.0" y="9.3333333333333357" width="73.666666666666671" height="73.333333333333314"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="SoT-pG-xNQ" secondAttribute="height" multiplier="1:1" id="VZG-zh-89U"/>
                                                             </constraints>
@@ -1516,7 +1517,7 @@ To finish you session, just say "Stop!"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYv-6Z-fW0">
-                                                            <rect key="frame" x="74.333333333333329" y="39.666666666666664" width="195.33333333333337" height="20"/>
+                                                            <rect key="frame" x="78.666666666666686" y="45.666666666666664" width="191" height="19.999999999999993"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.50980392159999999" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1600,27 +1601,27 @@ To finish you session, just say "Stop!"</string>
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-sm-2eG">
-                                                            <rect key="frame" x="74.333333333333329" y="18.666666666666668" width="195.33333333333337" height="20.000000000000004"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-sm-2eG">
+                                                            <rect key="frame" x="78.666666666666686" y="24.666666666666671" width="191" height="20"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="leading" secondItem="SoT-pG-xNQ" secondAttribute="trailing" constant="10" id="0Le-CE-jWt"/>
+                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="leading" secondItem="SoT-pG-xNQ" secondAttribute="trailing" constant="5" id="0Le-CE-jWt"/>
                                                         <constraint firstAttribute="trailing" secondItem="Hec-jz-Stv" secondAttribute="trailing" constant="10" id="4Z0-Fh-yMg"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="width" secondItem="agS-aX-qqw" secondAttribute="width" multiplier="0.25" id="9qg-un-uzN"/>
                                                         <constraint firstItem="NYv-6Z-fW0" firstAttribute="trailing" secondItem="ygr-sm-2eG" secondAttribute="trailing" id="CJ6-GW-leN"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="centerY" secondItem="agS-aX-qqw" secondAttribute="centerY" id="HDe-8s-G94"/>
                                                         <constraint firstItem="SoT-pG-xNQ" firstAttribute="leading" secondItem="agS-aX-qqw" secondAttribute="leading" id="Htl-xx-Y4S"/>
-                                                        <constraint firstItem="SoT-pG-xNQ" firstAttribute="height" secondItem="agS-aX-qqw" secondAttribute="height" multiplier="0.7" id="K0I-Hc-EFH"/>
+                                                        <constraint firstItem="SoT-pG-xNQ" firstAttribute="height" secondItem="agS-aX-qqw" secondAttribute="height" multiplier="0.8" id="K0I-Hc-EFH"/>
+                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="centerY" secondItem="SoT-pG-xNQ" secondAttribute="centerY" multiplier="0.75" id="OUw-V4-0X0"/>
                                                         <constraint firstItem="SoT-pG-xNQ" firstAttribute="centerY" secondItem="agS-aX-qqw" secondAttribute="centerY" id="Vyz-Xb-Y1l"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="leading" secondItem="ygr-sm-2eG" secondAttribute="trailing" id="ZM1-bZ-pcT"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="height" secondItem="agS-aX-qqw" secondAttribute="height" multiplier="0.5" id="c76-Ih-jNp"/>
                                                         <constraint firstItem="NYv-6Z-fW0" firstAttribute="leading" secondItem="ygr-sm-2eG" secondAttribute="leading" id="cqO-Sa-SH7"/>
                                                         <constraint firstItem="NYv-6Z-fW0" firstAttribute="top" secondItem="ygr-sm-2eG" secondAttribute="bottom" constant="1" id="dzL-hD-CnQ"/>
-                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="top" secondItem="SoT-pG-xNQ" secondAttribute="top" constant="5" id="eKu-9x-YrF"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
