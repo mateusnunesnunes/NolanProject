@@ -117,6 +117,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.topLabel.text = favoritePoses[indexPath.row].name
         cell.levelLabel.text = favoritePoses[indexPath.row].difficulty
+        cell.image.image = UIImage(named: favoritePoses[indexPath.row].imageName) ?? UIImage()
         
         
         return cell
@@ -138,9 +139,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "poses", for: indexPath) as! PosesTableViewCell
-        cell.poseImage.image  = UIImage(named:"image1")
-        
-        
+        cell.poseImage.image = UIImage(named: filteredPoses[indexPath.row].imageName) ?? UIImage()
+    
         cell.poseLabel.text = filteredPoses[indexPath.row].name
         
         if(filteredPoses[indexPath.row].favorite){

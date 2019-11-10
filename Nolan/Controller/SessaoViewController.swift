@@ -92,6 +92,8 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.bookmarkButton.tag = indexPath.row
         cell.bookmarkButton.addTarget(self, action: #selector(toggleFavorite), for: .allEvents)
         
+        cell.poseImage.image = UIImage(named: pose.imageName) ?? UIImage()
+        
         return cell
     }
     

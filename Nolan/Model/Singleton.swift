@@ -46,6 +46,7 @@ class Singleton {
                 "Imagine-se acariciando a crina de um cavalo"
                 ],
                 favorite: true,
+                imageName: "1 - YE-MA-FEN-ZONG",
                 jsonFilename: "s1p1"
             ),
             Pose(
@@ -57,6 +58,7 @@ class Singleton {
                 "Abrir e fechar seus braços, encostando uma mão na outra",
                 "Repetir esse movimento delicadamente, imitando uma garça abrindo e fechando suas asas"],
                 favorite: false,
+                imageName: "2 - BAI HE LIANG CHI",
                 jsonFilename: "s1p2"
             ),
             Pose(
@@ -68,6 +70,7 @@ class Singleton {
                     "Respirar levemente e se imaginar em contato com a natureza",
                     "Se imaginar tocando harpa em um local bem silencioso"],
                 favorite: false,
+                imageName: "3- SHOU HUI PIPA",
                 jsonFilename: "s1p3"
             ),
             Pose(
@@ -80,6 +83,7 @@ class Singleton {
                 "Imagine-se empurrando e puxando um macaco"
                 ],
                 favorite: true,
+                imageName: "4- DAO-NIAN-HOU",
                 jsonFilename: "s1p4"
             ),
             Pose(
@@ -92,6 +96,7 @@ class Singleton {
                 "Flexione os joelhos e os braços e repita"
                 ],
                 favorite: true,
+                imageName: "5- LAN QUE WEI",
                 jsonFilename: "s1p5"
             ),
             Pose(
@@ -104,6 +109,7 @@ class Singleton {
                 "Realize movimentos laterais com calma e se imagine no meio das nuvens"
                 ],
                 favorite: true,
+                imageName: "6- YUN SHOU",
                 jsonFilename: "s1p6"
             )
             ],
@@ -121,6 +127,7 @@ class Singleton {
                 "Repita o processo até que seu peso esteja equilibrado"
                 ],
                 favorite: false,
+                imageName: "7- Parting the Horse's Mane",
                 jsonFilename: "s2p1"
             ),
             Pose(
@@ -132,6 +139,7 @@ class Singleton {
                 "Posicione a mão esquerda na altura da cintura",
                 "Respire calmamente e tenha claro em sua mente o valor do contato com a natureza"],
                 favorite: true,
+                imageName: "8- PART the Wild Horse's Mane",
                 jsonFilename: "s2p2"
             ),
             Pose(
@@ -143,6 +151,7 @@ class Singleton {
                     "Posicione a mão esquerda no nivel da cintura ",
                     "Imagine seu corpo se alinhando de acordo com cada posição adotada"],
                 favorite: false,
+                imageName: "9- Gong Bu",
                 jsonFilename: "s2p3"
             ),
             Pose(
@@ -155,6 +164,7 @@ class Singleton {
                 "Continue a recuar à medida que a mão esquerda se move na frente do rosto, como se acenasse sobre o ombro direito."
                 ],
                 favorite: true,
+                imageName: "10- 左右摟膝拗步",
                 jsonFilename: "s2p4"
             )
             ],
@@ -172,6 +182,7 @@ class Singleton {
                 "Entre em sintonia com a mãe natureza"
                 ],
                 favorite: true,
+                imageName: "11- Zuo Xia Shi Duli",
                 jsonFilename: "s3p1"
             ),
             Pose(
@@ -183,6 +194,7 @@ class Singleton {
                 "Posicione a perna direita reflixonada em relação ao corpo",
                 "Posicine o braço na frente da cabeça e realize movimentos suaves e calmos"],
                 favorite: true,
+                imageName: "12- You Suo Yu Nu Chuan Suo",
                 jsonFilename: "s3p2"
             ),
             Pose(
@@ -195,6 +207,7 @@ class Singleton {
                 "Continue a recuar à medida que a mão esquerda se move na frente do rosto, como se acenasse sobre o ombro direito."
                 ],
                 favorite: true,
+                imageName: "13- 左右摟膝拗步",
                 jsonFilename: "s3p3"
             ),
             Pose(
@@ -207,6 +220,7 @@ class Singleton {
                 "Coloque seu peso no pé esquerdo e repita o processo com o outro pé"
                 ],
                 favorite: true,
+                imageName: "14- Shan Tong Bei",
                 jsonFilename: "s3p4"
             )
             ],
@@ -225,6 +239,7 @@ class Singleton {
                 ],
                 
                 favorite: false,
+                imageName: "15- Zhuan Shen Ban Lan Chui",
                 jsonFilename: "s4p1"
             ),
             Pose(
@@ -236,6 +251,7 @@ class Singleton {
                 "A mão esquerda passa por baixo do punho direito ",
                 "Cotovelos e ombros permanecem baixos e flexíveis, mantenha as pernas abertas, flexionadas, e fixas"],
                 favorite: true,
+                imageName: "16- Ru Feng Si Bi",
                 jsonFilename: "s4p2"
             ),
             Pose(
@@ -247,6 +263,7 @@ class Singleton {
                     "Curve as duas pernas, sendo que a esquerda estará na frente da outra",
                     "Imagine-se mergulhando em um mar profundo para procurar uma agulha"],
                 favorite: false,
+                imageName: "17- Hai Di Zhen",
                 jsonFilename: "s4p3"
             ),
            Pose(
@@ -259,6 +276,7 @@ class Singleton {
                "Repita o processo até que seu peso esteja equilibrado"
                ],
                favorite: false,
+               imageName: "18- Parting the Horse's Mane",
                jsonFilename: "s4p4"
            )
             ],

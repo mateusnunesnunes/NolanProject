@@ -17,6 +17,7 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var nomeLabel: UILabel!
     
     @IBOutlet weak var poseInfoContainerView: UIView!
+    @IBOutlet weak var poseImage: UIImageView!
     
     var pose: Pose?
     
@@ -33,6 +34,8 @@ class PoseDescriptionViewController: UIViewController, UITableViewDataSource, UI
         nomeLabel.text = pose?.name ?? "No pose defined"
         difficultyLabel.text = pose?.difficulty ?? "Undefined"
         typeLabel.text = pose?.types ?? "Undefined"
+        
+        poseImage.image = UIImage(named: pose?.imageName ?? "")
         
         shadowView(v: poseInfoContainerView, blur: 4, y: 2, opacity: 0.25)
     }

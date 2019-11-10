@@ -18,15 +18,17 @@ class Pose {
     var steps: [String]
 //    var videoGif:
     var favorite: Bool
+    var imageName: String
     
     var jsonFilename: String
     
-    init(name: String, difficulty: String, types: String, steps: [String], favorite: Bool, jsonFilename: String) {
+    init(name: String, difficulty: String, types: String, steps: [String], favorite: Bool, imageName: String, jsonFilename: String) {
         self.name = name
         self.difficulty = difficulty
         self.types = types
         self.steps = steps
         self.favorite = favorite
+        self.imageName = imageName
         self.jsonFilename = jsonFilename
     }
 }
