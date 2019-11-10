@@ -73,21 +73,40 @@ class SessaoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SessionPose", for: indexPath) as! SessionPoseTableViewCell
 
-        cell.levelLabel.text = Singleton.shared.sessions[sessionIndex].pose[indexPath.row].difficulty
-        cell.poseLabel.text = Singleton.shared.sessions[sessionIndex].pose[indexPath.row].name
-//        cell.poseImage.image = Singleton.shared.sessions[indexPath.row].pose[]
+        let pose = Singleton.shared.sessions[sessionIndex].pose[indexPath.row]
         
-        if cell.bookmarkButton.isEnabled == true{
-            
-            
-            
-        } else{
-            
-            
-            
+        cell.levelLabel.text = pose.difficulty
+        cell.poseLabel.text = pose.name
+//        cell.poseImage.image = Singleton.shared.sessions[indexPath.row].pose[]
+
+        let config = UIImage.SymbolConfiguration(textStyle: .body)
+        
+        if pose.favorite {
+            let favoriteImage = UIImage(systemName: "bookmark.fill", withConfiguration: config)
+            cell.bookmarkButton.setImage(favoriteImage, for: .normal)
+        } else {
+            let favoriteImage = UIImage(systemName: "bookmark", withConfiguration: config)
+            cell.bookmarkButton.setImage(favoriteImage, for: .normal)
         }
         
+        cell.bookmarkButton.tag = indexPath.row
+        cell.bookmarkButton.addTarget(self, action: #selector(toggleFavorite), for: .allEvents)
+        
         return cell
+    }
+    
+    @objc func toggleFavorite(_ sender: UIButton) {
+        Singleton.shared.sessions[sessionIndex].pose[sender.tag].favorite.toggle()
+        
+        let config = UIImage.SymbolConfiguration(textStyle: .body)
+        
+        if Singleton.shared.sessions[sessionIndex].pose[sender.tag].favorite {
+             let favoriteImage = UIImage(systemName: "bookmark.fill", withConfiguration: config)
+             sender.setImage(favoriteImage, for: .normal)
+         } else {
+             let favoriteImage = UIImage(systemName: "bookmark", withConfiguration: config)
+             sender.setImage(favoriteImage, for: .normal)
+         }
     }
     
     

@@ -36,7 +36,6 @@ class TrainColViewController: UIViewController, UICollectionViewDelegate, UIColl
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        
                 //Configurações SegmentedControl
         self.codeSegmented = CustomSegmentedControl(frame:CGRect(x: 0, y: 10, width: (self.view.frame.width), height: 50),buttonTitle: ["Focus","Concentration","Balance"])
         codeSegmented.backgroundColor = .clear

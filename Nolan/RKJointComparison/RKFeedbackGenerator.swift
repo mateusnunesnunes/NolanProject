@@ -65,10 +65,10 @@ class RKFeedbackGenerator {
             print(xDifference, yDifference, zDifference)
             
             if abs(xDifference) >= abs(yDifference) && abs(xDifference) >= abs(zDifference) {
-                let direction: RKFeedbackDirection = xDifference > 0 ? .outward : .inward
+                let direction: RKFeedbackDirection = xDifference > 0 ? .right : .left
                 return (direction, xDifference)
             } else if abs(yDifference) >= abs(xDifference) && abs(yDifference) >= abs(zDifference) {
-                let direction: RKFeedbackDirection = yDifference > 0 ? .upward : .downward
+                let direction: RKFeedbackDirection = yDifference > 0 ? .up : .down
                 return (direction, yDifference)
             } else {
                 let direction: RKFeedbackDirection = zDifference > 0 ? .forward : .backward

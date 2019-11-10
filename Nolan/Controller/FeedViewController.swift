@@ -29,6 +29,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
@@ -52,6 +57,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         collectionHeightConstant = collectionHeight.constant
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        collectionView.reloadData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -144,7 +151,24 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.buttonFavorite.setImage(favoriteImage, for: .normal)
         }
         
+        cell.buttonFavorite.tag = indexPath.row
+        cell.buttonFavorite.addTarget(self, action: #selector(toggleFavorite), for: .allEvents)
+        
         return cell
+    }
+    
+    @objc func toggleFavorite(_ sender: UIButton) {
+        filteredPoses[sender.tag].favorite.toggle()
+
+        let config = UIImage.SymbolConfiguration(textStyle: .body)
+        
+        if filteredPoses[sender.tag].favorite {
+            let favoriteImage = UIImage(systemName: "bookmark.fill", withConfiguration: config)
+            sender.setImage(favoriteImage, for: .normal)
+        } else {
+            let favoriteImage = UIImage(systemName: "bookmark", withConfiguration: config)
+            sender.setImage(favoriteImage, for: .normal)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
