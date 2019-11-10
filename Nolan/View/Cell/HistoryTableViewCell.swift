@@ -32,7 +32,7 @@ class HistoryTableViewCell: UITableViewCell {
     func setup(feedbackSession: RKFeedbackSession) {
         self.feedbackSession = feedbackSession
         
-        poseImage.image = UIImage()
+        poseImage.image = (UIImage(named: feedbackSession.pose.imageName) ?? UIImage()).withAlignmentRectInsets(UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
         poseDifficultyLabel.text = feedbackSession.pose.difficulty
         poseNameLabel.text = feedbackSession.pose.name
         

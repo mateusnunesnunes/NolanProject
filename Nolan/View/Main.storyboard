@@ -39,7 +39,7 @@
                                                     <constraint firstAttribute="width" secondItem="ehX-1u-NWS" secondAttribute="height" multiplier="1:1" id="r3W-qg-LAG"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-C2-PuT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enzo Maruffa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-C2-PuT">
                                                 <rect key="frame" x="102.66666666666667" y="36.333333333333336" width="165.33333333333331" height="72.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -500,6 +500,7 @@ accuracy</string>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="2bX-a9-pdD">
                                                             <rect key="frame" x="0.0" y="8.6666666666666643" width="68" height="68"/>
+                                                            <color key="backgroundColor" red="0.88445663450000001" green="0.45940917730000003" blue="0.44312348959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="2bX-a9-pdD" secondAttribute="height" multiplier="1:1" id="Yqv-0N-H3W"/>
                                                             </constraints>
@@ -636,10 +637,21 @@ accuracy</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29n-Ky-NIO" userLabel="ImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6BH-xo-aSm">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEt-8B-UU7">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="362.66666666666669"/>
-                                        <color key="backgroundColor" red="0.30949652189999999" green="0.68260848519999995" blue="0.65490299460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6BH-xo-aSm">
+                                                <rect key="frame" x="0.0" y="40" width="414" height="229"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.42745098040000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6BH-xo-aSm" firstAttribute="leading" secondItem="AEt-8B-UU7" secondAttribute="leading" id="54Q-vh-Wza"/>
+                                            <constraint firstAttribute="trailing" secondItem="6BH-xo-aSm" secondAttribute="trailing" id="uha-2R-zby"/>
+                                            <constraint firstItem="6BH-xo-aSm" firstAttribute="top" secondItem="AEt-8B-UU7" secondAttribute="top" constant="40" id="w1P-hO-Wvy"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Moi-dd-8fI">
                                         <rect key="frame" x="20.666666666666657" y="279" width="372.66666666666674" height="116"/>
                                         <subviews>
@@ -679,14 +691,14 @@ accuracy</string>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="AEt-8B-UU7" firstAttribute="centerX" secondItem="29n-Ky-NIO" secondAttribute="centerX" id="3Kc-VP-vGK"/>
                                     <constraint firstItem="Moi-dd-8fI" firstAttribute="height" secondItem="29n-Ky-NIO" secondAttribute="height" multiplier="0.32" id="DHs-eH-aUw"/>
+                                    <constraint firstItem="AEt-8B-UU7" firstAttribute="width" secondItem="29n-Ky-NIO" secondAttribute="width" id="MLT-CR-Tde"/>
+                                    <constraint firstItem="6BH-xo-aSm" firstAttribute="bottom" secondItem="Moi-dd-8fI" secondAttribute="top" constant="-10" id="Thh-Dx-Xhz"/>
+                                    <constraint firstItem="AEt-8B-UU7" firstAttribute="centerY" secondItem="29n-Ky-NIO" secondAttribute="centerY" id="WI9-mt-a1H"/>
                                     <constraint firstItem="Moi-dd-8fI" firstAttribute="width" secondItem="29n-Ky-NIO" secondAttribute="width" multiplier="0.9" id="Z8Q-dz-7DN"/>
-                                    <constraint firstItem="6BH-xo-aSm" firstAttribute="width" secondItem="29n-Ky-NIO" secondAttribute="width" id="bsn-tV-uds"/>
-                                    <constraint firstItem="Moi-dd-8fI" firstAttribute="centerY" secondItem="6BH-xo-aSm" secondAttribute="bottom" multiplier="0.93" id="dOy-Cv-SN8"/>
-                                    <constraint firstItem="Moi-dd-8fI" firstAttribute="centerX" secondItem="6BH-xo-aSm" secondAttribute="centerX" id="e2E-pH-T3f"/>
-                                    <constraint firstItem="6BH-xo-aSm" firstAttribute="centerY" secondItem="29n-Ky-NIO" secondAttribute="centerY" id="fo7-iR-4pf"/>
-                                    <constraint firstItem="6BH-xo-aSm" firstAttribute="centerX" secondItem="29n-Ky-NIO" secondAttribute="centerX" id="iBz-py-3Gp"/>
-                                    <constraint firstItem="6BH-xo-aSm" firstAttribute="height" secondItem="29n-Ky-NIO" secondAttribute="height" id="zsJ-vo-cjE"/>
+                                    <constraint firstItem="AEt-8B-UU7" firstAttribute="height" secondItem="29n-Ky-NIO" secondAttribute="height" id="d9V-X9-HAv"/>
+                                    <constraint firstItem="Moi-dd-8fI" firstAttribute="centerY" secondItem="AEt-8B-UU7" secondAttribute="bottom" multiplier="0.93" id="kJM-8L-idm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghj-Te-Eud" userLabel="InfosView">
@@ -828,13 +840,13 @@ accuracy</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Lx-Udh">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </arView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WG7-Y2-k8m">
-                                        <rect key="frame" x="0.0" y="774.66666666666663" width="414" height="121.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="761.66666666666663" width="414" height="134.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojo-sr-ECT">
-                                                <rect key="frame" x="248.33333333333334" y="43.666666666666742" width="124.33333333333334" height="34"/>
+                                                <rect key="frame" x="248.33333333333334" y="50" width="124.33333333333334" height="34"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.69803921570000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Start">
@@ -846,7 +858,7 @@ accuracy</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x7-Gp-MOt">
-                                                <rect key="frame" x="41.333333333333336" y="43.666666666666742" width="124.33333333333331" height="34"/>
+                                                <rect key="frame" x="41.333333333333336" y="50" width="124.33333333333331" height="34"/>
                                                 <color key="backgroundColor" red="0.93333333330000001" green="0.42745098040000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Cancel">
@@ -958,9 +970,9 @@ To finish you session, just say "Stop!"</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Emi-Lx-Udh" secondAttribute="trailing" id="8kX-P6-ndG"/>
-                                    <constraint firstItem="sxo-qR-3yV" firstAttribute="top" secondItem="Emi-Lx-Udh" secondAttribute="top" id="8kg-g4-9xd"/>
+                                    <constraint firstItem="sxo-qR-3yV" firstAttribute="top" secondItem="Emi-Lx-Udh" secondAttribute="top" constant="88" id="8kg-g4-9xd"/>
                                     <constraint firstItem="Emi-Lx-Udh" firstAttribute="trailing" secondItem="WG7-Y2-k8m" secondAttribute="trailing" id="DHV-8x-cgd"/>
-                                    <constraint firstItem="Emi-Lx-Udh" firstAttribute="top" secondItem="upJ-lK-u6i" secondAttribute="top" constant="88" id="FEJ-qp-tN1"/>
+                                    <constraint firstItem="Emi-Lx-Udh" firstAttribute="top" secondItem="upJ-lK-u6i" secondAttribute="top" id="FEJ-qp-tN1"/>
                                     <constraint firstItem="WG7-Y2-k8m" firstAttribute="leading" secondItem="Emi-Lx-Udh" secondAttribute="leading" id="Gyp-IQ-C5q"/>
                                     <constraint firstAttribute="bottom" secondItem="Emi-Lx-Udh" secondAttribute="bottom" id="Ojp-tZ-gna"/>
                                     <constraint firstItem="QM2-3V-dVQ" firstAttribute="width" secondItem="upJ-lK-u6i" secondAttribute="width" multiplier="0.8" id="POB-mV-fab"/>
@@ -1013,14 +1025,25 @@ To finish you session, just say "Stop!"</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAe-ud-voc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="heP-Ah-oEz">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-Tn-qGd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="325.33333333333331"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="heP-Ah-oEz">
+                                                <rect key="frame" x="0.0" y="40.000000000000014" width="414" height="191.33333333333337"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.69803921570000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="heP-Ah-oEz" firstAttribute="top" secondItem="HfH-Tn-qGd" secondAttribute="top" constant="40" id="LIq-wc-ABb"/>
+                                            <constraint firstItem="heP-Ah-oEz" firstAttribute="leading" secondItem="HfH-Tn-qGd" secondAttribute="leading" id="TaR-SZ-xs6"/>
+                                            <constraint firstAttribute="trailing" secondItem="heP-Ah-oEz" secondAttribute="trailing" id="xJA-Nb-HR5"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Az1-lz-Ebj">
-                                        <rect key="frame" x="0.0" y="366" width="414" height="447"/>
+                                        <rect key="frame" x="0.0" y="373.33333333333337" width="414" height="447.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLM-qw-kiq">
-                                                <rect key="frame" x="240" y="373" width="132.66666666666663" height="34"/>
+                                                <rect key="frame" x="240" y="373.33333333333331" width="132.66666666666663" height="34"/>
                                                 <color key="backgroundColor" red="0.31372549019607843" green="0.69803921568627447" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Save">
@@ -1031,7 +1054,7 @@ To finish you session, just say "Stop!"</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-bv-D9G">
-                                                <rect key="frame" x="41.333333333333329" y="373" width="132.66666666666669" height="34"/>
+                                                <rect key="frame" x="41.333333333333329" y="373.33333333333331" width="132.66666666666669" height="34"/>
                                                 <color key="backgroundColor" red="0.93333333333333335" green="0.42745098039215684" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                 <state key="normal" title="Discard">
@@ -1042,10 +1065,10 @@ To finish you session, just say "Stop!"</string>
                                                 </connections>
                                             </button>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIR-cU-oej">
-                                                <rect key="frame" x="41.333333333333343" y="78" width="331.33333333333326" height="246"/>
+                                                <rect key="frame" x="41.333333333333343" y="78.333333333333371" width="331.33333333333326" height="246"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-s7-Sxy" customClass="LineChartView" customModule="Charts">
-                                                        <rect key="frame" x="8.3333333333333428" y="6.3333333333333144" width="314.66666666666663" height="233.66666666666666"/>
+                                                        <rect key="frame" x="8.3333333333333428" y="6" width="314.66666666666663" height="233.66666666666666"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
@@ -1073,16 +1096,16 @@ To finish you session, just say "Stop!"</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUn-ZI-UIz">
-                                        <rect key="frame" x="20.666666666666657" y="275" width="372.66666666666674" height="121.66666666666669"/>
+                                        <rect key="frame" x="20.666666666666657" y="241.33333333333337" width="372.66666666666674" height="122"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-Gb-rQg" userLabel="dataLabel">
-                                                <rect key="frame" x="19.999999999999996" y="63.666666666666686" width="51.666666666666657" height="25"/>
+                                                <rect key="frame" x="19.999999999999996" y="63.999999999999972" width="51.666666666666657" height="25"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8L-FF-Lgg" userLabel="nomeLabel">
-                                                <rect key="frame" x="20" y="26.666666666666682" width="80" height="37.666666666666657"/>
+                                                <rect key="frame" x="20" y="26.999999999999968" width="80" height="37.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="30"/>
                                                 <color key="textColor" red="0.95808070899999997" green="0.42357340459999998" blue="0.4158155322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1099,16 +1122,19 @@ To finish you session, just say "Stop!"</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="HfH-Tn-qGd" firstAttribute="top" secondItem="YAe-ud-voc" secondAttribute="top" id="0xU-8W-Ddj"/>
                                     <constraint firstItem="bUn-ZI-UIz" firstAttribute="height" secondItem="YAe-ud-voc" secondAttribute="height" multiplier="0.15" id="1mc-da-erz"/>
                                     <constraint firstItem="bUn-ZI-UIz" firstAttribute="width" secondItem="YAe-ud-voc" secondAttribute="width" multiplier="0.9" id="6PO-mT-J5C"/>
-                                    <constraint firstItem="heP-Ah-oEz" firstAttribute="centerX" secondItem="YAe-ud-voc" secondAttribute="centerX" id="EGE-9R-ynW"/>
-                                    <constraint firstItem="Az1-lz-Ebj" firstAttribute="top" secondItem="heP-Ah-oEz" secondAttribute="bottom" id="EGH-t0-Uo9"/>
-                                    <constraint firstItem="heP-Ah-oEz" firstAttribute="top" secondItem="YAe-ud-voc" secondAttribute="top" id="K8w-MG-Jz8"/>
-                                    <constraint firstItem="heP-Ah-oEz" firstAttribute="width" secondItem="YAe-ud-voc" secondAttribute="width" id="V8B-OK-LkQ"/>
-                                    <constraint firstItem="heP-Ah-oEz" firstAttribute="height" secondItem="YAe-ud-voc" secondAttribute="height" multiplier="0.45" id="abl-YI-biN"/>
-                                    <constraint firstItem="bUn-ZI-UIz" firstAttribute="centerY" secondItem="heP-Ah-oEz" secondAttribute="bottom" constant="-30" id="atB-qn-ZyS"/>
+                                    <constraint firstItem="HfH-Tn-qGd" firstAttribute="height" secondItem="YAe-ud-voc" secondAttribute="height" multiplier="0.4" id="BCd-KP-DaB"/>
+                                    <constraint firstItem="HfH-Tn-qGd" firstAttribute="leading" secondItem="YAe-ud-voc" secondAttribute="leading" id="I3J-PE-ptF"/>
                                     <constraint firstItem="Az1-lz-Ebj" firstAttribute="height" secondItem="YAe-ud-voc" secondAttribute="height" multiplier="0.55" id="eQr-5C-NLr"/>
-                                    <constraint firstItem="bUn-ZI-UIz" firstAttribute="centerX" secondItem="heP-Ah-oEz" secondAttribute="centerX" id="uDX-YT-ez4"/>
+                                    <constraint firstItem="HfH-Tn-qGd" firstAttribute="width" secondItem="YAe-ud-voc" secondAttribute="width" id="exw-VS-lLe"/>
+                                    <constraint firstItem="bUn-ZI-UIz" firstAttribute="centerX" secondItem="heP-Ah-oEz" secondAttribute="centerX" id="ezg-1M-N9y"/>
+                                    <constraint firstItem="Az1-lz-Ebj" firstAttribute="top" secondItem="bUn-ZI-UIz" secondAttribute="bottom" constant="10" id="jvD-eS-Ka0"/>
+                                    <constraint firstItem="bUn-ZI-UIz" firstAttribute="centerY" secondItem="HfH-Tn-qGd" secondAttribute="bottom" multiplier="0.93" id="ksa-yS-c0A"/>
+                                    <constraint firstItem="Az1-lz-Ebj" firstAttribute="centerX" secondItem="bUn-ZI-UIz" secondAttribute="centerX" id="pdG-oc-idn"/>
+                                    <constraint firstAttribute="trailing" secondItem="HfH-Tn-qGd" secondAttribute="trailing" id="s3N-tq-AzY"/>
+                                    <constraint firstItem="heP-Ah-oEz" firstAttribute="bottom" secondItem="bUn-ZI-UIz" secondAttribute="top" constant="-10" id="tsR-AI-TQH"/>
                                     <constraint firstItem="Az1-lz-Ebj" firstAttribute="centerX" secondItem="YAe-ud-voc" secondAttribute="centerX" id="uh1-N5-e1a"/>
                                     <constraint firstItem="Az1-lz-Ebj" firstAttribute="width" secondItem="YAe-ud-voc" secondAttribute="width" id="wfg-Ws-sGq"/>
                                 </constraints>
@@ -1501,7 +1527,7 @@ To finish you session, just say "Stop!"</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmz-Oj-bdY" userLabel="ViewTableView">
                                 <rect key="frame" x="20.666666666666657" y="400.66666666666674" width="372.66666666666674" height="412.33333333333326"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-XM-8VS">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-XM-8VS">
                                         <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="412.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
@@ -1512,8 +1538,9 @@ To finish you session, just say "Stop!"</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="92"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-pG-xNQ">
-                                                            <rect key="frame" x="0.0" y="9.3333333333333357" width="73.666666666666671" height="73.333333333333314"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-pG-xNQ">
+                                                            <rect key="frame" x="10" y="9.3333333333333357" width="73.666666666666671" height="73.333333333333314"/>
+                                                            <color key="backgroundColor" red="0.93333333330000001" green="0.42745098040000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="SoT-pG-xNQ" secondAttribute="height" multiplier="1:1" id="VZG-zh-89U"/>
                                                             </constraints>
@@ -1522,7 +1549,7 @@ To finish you session, just say "Stop!"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYv-6Z-fW0">
-                                                            <rect key="frame" x="78.666666666666686" y="46.333333333333336" width="191" height="21.333333333333336"/>
+                                                            <rect key="frame" x="93.666666666666686" y="46.333333333333336" width="176" height="21.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.50980392159999999" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -1607,19 +1634,19 @@ To finish you session, just say "Stop!"</string>
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Pose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-sm-2eG">
-                                                            <rect key="frame" x="78.666666666666686" y="24" width="191" height="21.333333333333329"/>
+                                                            <rect key="frame" x="93.666666666666686" y="24" width="176" height="21.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.69411764710000001" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="leading" secondItem="SoT-pG-xNQ" secondAttribute="trailing" constant="5" id="0Le-CE-jWt"/>
+                                                        <constraint firstItem="ygr-sm-2eG" firstAttribute="leading" secondItem="SoT-pG-xNQ" secondAttribute="trailing" constant="10" id="0Le-CE-jWt"/>
                                                         <constraint firstAttribute="trailing" secondItem="Hec-jz-Stv" secondAttribute="trailing" constant="10" id="4Z0-Fh-yMg"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="width" secondItem="agS-aX-qqw" secondAttribute="width" multiplier="0.25" id="9qg-un-uzN"/>
                                                         <constraint firstItem="NYv-6Z-fW0" firstAttribute="trailing" secondItem="ygr-sm-2eG" secondAttribute="trailing" id="CJ6-GW-leN"/>
                                                         <constraint firstItem="Hec-jz-Stv" firstAttribute="centerY" secondItem="agS-aX-qqw" secondAttribute="centerY" id="HDe-8s-G94"/>
-                                                        <constraint firstItem="SoT-pG-xNQ" firstAttribute="leading" secondItem="agS-aX-qqw" secondAttribute="leading" id="Htl-xx-Y4S"/>
+                                                        <constraint firstItem="SoT-pG-xNQ" firstAttribute="leading" secondItem="agS-aX-qqw" secondAttribute="leading" constant="10" id="Htl-xx-Y4S"/>
                                                         <constraint firstItem="SoT-pG-xNQ" firstAttribute="height" secondItem="agS-aX-qqw" secondAttribute="height" multiplier="0.8" id="K0I-Hc-EFH"/>
                                                         <constraint firstItem="ygr-sm-2eG" firstAttribute="centerY" secondItem="SoT-pG-xNQ" secondAttribute="centerY" multiplier="0.75" id="OUw-V4-0X0"/>
                                                         <constraint firstItem="SoT-pG-xNQ" firstAttribute="centerY" secondItem="agS-aX-qqw" secondAttribute="centerY" id="Vyz-Xb-Y1l"/>
@@ -1714,8 +1741,9 @@ To finish you session, just say "Stop!"</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRa-oI-wvE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="Akl-Q8-vJb">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="Akl-Q8-vJb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
+                                        <color key="backgroundColor" red="0.31372549020000001" green="0.69803921570000005" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DK2-x3-W9b">
                                         <rect key="frame" x="0.0" y="366" width="414" height="447"/>
@@ -1834,6 +1862,7 @@ To finish you session, just say "Stop!"</string>
                         <outlet property="difficultyLabel" destination="AlD-Gs-4IS" id="2dt-F2-07H"/>
                         <outlet property="performanceChart" destination="hnk-YX-uOh" id="xQ0-K6-0Jf"/>
                         <outlet property="performanceChartWrapper" destination="dXr-4z-33p" id="cH9-x0-rDa"/>
+                        <outlet property="poseImageView" destination="Akl-Q8-vJb" id="CMF-ty-8Nh"/>
                         <outlet property="poseInfoContainerView" destination="do3-ZA-XSr" id="TdG-A6-H0A"/>
                         <outlet property="poseNameLabel" destination="wGA-Zs-Dul" id="VhI-XF-kfD"/>
                         <outlet property="typeLabel" destination="NGb-pu-1BN" id="u4u-T3-RH9"/>

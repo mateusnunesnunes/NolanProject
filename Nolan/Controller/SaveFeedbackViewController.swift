@@ -35,6 +35,9 @@ class SaveFeedbackViewController: UIViewController {
             
             nameLabel.text = feedbackSession.pose.name
             
+            
+            poseImage.image = UIImage(named: feedbackSession.pose.imageName) ?? UIImage()
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM dd, yyyy"
             

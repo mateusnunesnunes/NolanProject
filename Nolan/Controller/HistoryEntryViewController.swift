@@ -22,6 +22,8 @@ class HistoryEntryViewController: UIViewController {
     
     @IBOutlet weak var poseInfoContainerView: UIView!
     
+    @IBOutlet weak var poseImageView: UIImageView!
+    
     var feedbackSession: RKFeedbackSession?
     
     override func viewDidLoad() {
@@ -35,6 +37,8 @@ class HistoryEntryViewController: UIViewController {
             poseNameLabel.text = feedbackSession.pose.name
             difficultyLabel.text = feedbackSession.pose.difficulty
             typeLabel.text = feedbackSession.pose.types
+            
+            poseImageView.image = UIImage(named: feedbackSession.pose.imageName) ?? UIImage()
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMM dd, yyyy"
