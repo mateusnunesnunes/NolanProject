@@ -147,7 +147,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
             self.shouldUpdate = true
             if self.bodyPlaced {
                 self.currentTime += 0.1
-                manualStartButton.isEnabled = true
+                self.manualStartButton.isEnabled = true
             }
         }
         
