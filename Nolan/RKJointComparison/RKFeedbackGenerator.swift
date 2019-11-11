@@ -46,6 +46,10 @@ class RKFeedbackGenerator {
                         finalJointName = finalJointName.replacingOccurrences(of: "left", with: "right")
                     }
                     
+                    for i in 0..<10 {
+                        finalJointName = jointName.replacingOccurrences(of: "i.description", with: "")
+                    }
+                    
                     return RKFeedback(jointName: finalJointName, difference: totalDifference, direction: direction)
                 }
             }
@@ -65,13 +69,13 @@ class RKFeedbackGenerator {
             print(xDifference, yDifference, zDifference)
             
             if abs(xDifference) >= abs(yDifference) && abs(xDifference) >= abs(zDifference) {
-                let direction: RKFeedbackDirection = xDifference > 0 ? .right : .left
+                let direction: RKFeedbackDirection = xDifference > 0 ? .left : .right
                 return (direction, xDifference)
             } else if abs(yDifference) >= abs(xDifference) && abs(yDifference) >= abs(zDifference) {
                 let direction: RKFeedbackDirection = yDifference > 0 ? .up : .down
                 return (direction, yDifference)
             } else {
-                let direction: RKFeedbackDirection = zDifference > 0 ? .forward : .backward
+                let direction: RKFeedbackDirection = zDifference > 0 ? .backward : .forward
                 return (direction, zDifference)
             }
             
