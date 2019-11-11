@@ -47,7 +47,7 @@ class RKFeedbackGenerator {
                     }
                     
                     for i in 0..<10 {
-                        finalJointName = jointName.replacingOccurrences(of: "i.description", with: "")
+                        finalJointName = jointName.replacingOccurrences(of: i.description, with: "")
                     }
                     
                     return RKFeedback(jointName: finalJointName, difference: totalDifference, direction: direction)

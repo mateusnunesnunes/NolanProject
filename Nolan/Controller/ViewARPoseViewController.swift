@@ -93,6 +93,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.tabBarController?.tabBar.isHidden = true
         
+        manualStartButton.isEnabled = false
         startView.alpha = 1
         manualControlsView.alpha = 0
         
@@ -146,6 +147,7 @@ class ViewARPoseViewController: UIViewController, ARSessionDelegate {
             self.shouldUpdate = true
             if self.bodyPlaced {
                 self.currentTime += 0.1
+                manualStartButton.isEnabled = true
             }
         }
         
